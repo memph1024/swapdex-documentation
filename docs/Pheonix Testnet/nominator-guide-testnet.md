@@ -13,7 +13,7 @@ The main difference between a **Validator** and a **Nominator** is the active pa
 
 Nominators are recommended to set up two separate stash and controller accounts. Explanation and reasoning for generating distinct accounts for this purpose is elaborated in the keys section of the Wiki.
 
-You can generate your stash and controller account via any of the recommended methods that are detailed on the account generation page.
+You can generate your stash and controller account via any of the recommended methods that are detailed on the [account generation page](./account-generation.md).
 
 !!! hint
     Payouts can go to any custom address. If you'd like to redirect payments to an account that is neither the controller nor the stash account, set one up. Note that it is extremely unsafe to set an exchange address as the recipient of the staking rewards.

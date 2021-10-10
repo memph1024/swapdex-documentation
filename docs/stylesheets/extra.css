@@ -7,3 +7,24 @@
     display: block;
     margin: auto;
 }
+
+.cards-container {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: #90030C;
+  flex-flow: row wrap;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.cards, .cards-container {
+  align-items: left;
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  width: 100%;
+  border: 1px solid #FFF;
+}
+

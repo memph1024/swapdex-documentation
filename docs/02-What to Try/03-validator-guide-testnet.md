@@ -1,4 +1,4 @@
-# Become a Validator
+# <b>Become a Validator</b>
 
 ![Become a Validator](assets/swapdex-bull.png)
 

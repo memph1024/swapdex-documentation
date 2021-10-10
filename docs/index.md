@@ -102,7 +102,7 @@ Phoenix is an early release of the code that is available and will eventually ho
     <tr>
         <td>
             <a href="docs\Pheonix Testnet\account-generation.md">
-                <img src="assets/swapdex-testnet-launch.png" alt="Drawing" width="250" height="150">
+                <img src="assets/swapdex-logo-white.png" alt="Drawing" width="250" height="150">
                     <div class="cards-body">
                         <h5>Set an Identity</h5>
                     </div>
@@ -110,7 +110,7 @@ Phoenix is an early release of the code that is available and will eventually ho
         </td>
         <td>
             <a href="/docs/learn-balance-transfers">
-                <img src="/assets/swapdex-testnet-launch.png" alt="Drawing" width="250" height="150">
+                <img src="/assets/swapdex-logo-white.png" alt="Drawing" width="250" height="150">
                     <div class="cards-body">
                         <h5>Become a Nominator</h5>
                     </div>
@@ -118,7 +118,7 @@ Phoenix is an early release of the code that is available and will eventually ho
         </td>
         <td>
             <a href="/docs/learn-staking">
-                <img class="guide-image" src="/assets/swapdex-testnet-launch.png" alt="Drawing" width="250" height="150">
+                <img class="guide-image" src="/assets/swapdex-logo-white.png" alt="Drawing" width="250" height="150">
                     <div margin: -1px>
                         <h5>Become a Validator</h5>
                     </div>

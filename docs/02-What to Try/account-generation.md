@@ -1,4 +1,4 @@
-# Account Generation
+# <b>Account Generation</b>
 
 An address is the public part of a SwapDex account. The private part is the key used to access this address. The public and private parts together make up a SwapDex-Substrate account.
 

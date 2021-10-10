@@ -1,4 +1,4 @@
-# Substrate Keys
+# <b>Substrate Keys</b>
 
 Public and private keys are an essential aspect of most crypto-systems and an essential component that enables blockchains to exist.
 

@@ -11,7 +11,7 @@ To connect to the Starkley Tech node, use the endpoint in your JavaScript apps l
 const{ ApiPromise, WsProvider } = require('@polkadot/api')
 
 (async () => {
-    const provider = new WsProvider('wss://kusama-rpc.polkadot.io/')
+    const provider = new WsProvider('wss.swapdex.starkleytech.com')
     const api = await ApiPromise.create({ provider })
     // ...
 ```

@@ -6,14 +6,28 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-  - toc:
-      toc_depth: 3
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
 theme:
-    
-  markdown_extensions:
+  font:
+    text: Nunito
+
   features:
     - navigation.instant
     - navigation.tracking
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - toc.integrate
   name: material
   custom_dir: overrides
   logo: assets/swapdex-logo-circlewhite.png
@@ -33,4 +47,48 @@ extra:
 extra_css:
   - stylesheets/extra.css
 
- 
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+
+nav:
+  - Home: 'index.md'
+  - 'Get Started': 
+      - 'get-started/index.md'
+      - 'Faucet': 'get-started/faucet.md'
+      - 'Claims': 'get-started/claims.md'
+      - 'Endpoints': 'get-started/endpoints.md'
+      - 'Transer Balances': 'get-started/transfer-balances.md'
+  - 'What to Try?':
+      - 'Create an Account': 'what-to-try/account-generation.md'
+      - 'Become a Nominator': 'what-to-try/nominator.md'
+      - 'Become a Validator': 'what-to-try/validator.md'
+      - 'Set an Identity': 'what-to-try/identity.md'
+      - 'Stop Validating': 'what-to-try/stop-validating.md'
+      - 'Explore the Governance': 'what-to-try/democracy.md'
+      - 'Use the Treasury': 'what-to-try/treasury.md'
+  - 'Developer Guides':
+      - 'dev-guides/index.md'
+      - 'Tutorials':
+          - 'dev-guides/Tutorials/index.md'
+          - 'EVM Tutorial':
+              - 'dev-guides/Tutorials/evm-tutorial/index.md'
+              - 'Tools and Resources': 
+                  - 'Libraries': 'dev-guides/Tutorials/evm-tutorial/evm-tools-and-res/eth-libs.md'
+                  - 'Tools': 'dev-guides/Tutorials/evm-tutorial/evm-tools-and-res/waffle.md'
+              - 'Guides':
+                  - 'Basic Guide': 'dev-guides/Tutorials/evm-tutorial/Tutorial/basic-evm-tutorial.md'
+                  - 'Intermediate Guide': 'dev-guides/Tutorials/evm-tutorial/Tutorial/intermediate-evm-tutorial.md'
+                  - 'Advanced Guide': 'dev-guides/Tutorials/evm-tutorial/Tutorial/advanced-evm-tutorial.md'
+  - 'Deep Dives':
+      - 'EVM Pallet': 'deep-dives/evm-pallet.md'
+      - 'Keys': 'deep-dives/substrate_keys.md'
+      - 'Using Web3.js': 'deep-dives/Using-Web3js.md'        
+
+
+
+
+    
+    

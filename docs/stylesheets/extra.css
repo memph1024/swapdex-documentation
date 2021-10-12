@@ -2,6 +2,7 @@
     --md-primary-fg-color:        #E83F81;
     --md-primary-fg-color--light: #ECB7B7;
     --md-primary-fg-color--dark:  #90030C;
+    --md-h1-font-family: "poppins"
   }
   img[src*='#center'] { 
     display: block;
@@ -26,5 +27,26 @@
 .table {
   width: 100%;
   border: 1px solid #FFF;
+  margin: -5px;
+  text-align: center;
 }
+
+.cards-body {
+  margin-top: -30px;
+  margin-bottom: 30px;
+}
+
+.md-typeset h5 {
+  text-transform: uppercase;
+  text-align: center !important;
+  color:        #E83F81;
+}
+
+@media only screen and (max-width: 600px) {
+  .md-typeset h5 {
+      text-transform: uppercase;
+      font-size: 9px;
+      text-align: center;
+  }
+  }
 

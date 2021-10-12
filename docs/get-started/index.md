@@ -11,7 +11,7 @@ For brand-new learners of Blockchain technology:
 !!!hint
     This is recommended for users with backgrounds of all levels, and the course is free!
 
-## <b>Brand new to Phoenix?</b>
+## **Brand new to Phoenix?**
 
 For brand-new learners of Phoenix, check-out:
 

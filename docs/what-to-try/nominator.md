@@ -11,7 +11,7 @@ The main difference between a **Validator** and a **Nominator** is the active pa
 !!! info
     In this guide, we use the terms "account" and "wallet" interchangeably.
 
-Nominators are recommended to set up two separate stash and controller accounts. Explanation and reasoning for generating distinct accounts for this purpose is elaborated in the [keys section](../03-Deep%20Dives/substrate_keys.md) of the Wiki.
+Nominators are recommended to set up two separate stash and controller accounts. Explanation and reasoning for generating distinct accounts for this purpose is elaborated in the [keys section](../04-Deep%20Dives/substrate_keys.md) of the Wiki.
 
 You can generate your stash and controller account via any of the recommended methods that are detailed on the [account generation page](./account-generation.md).
 

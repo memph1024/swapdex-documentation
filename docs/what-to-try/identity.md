@@ -1,6 +1,6 @@
 # <b>Get an Identiy</b>
 
-Phoenix provides a naming system that allows participants to add personal information to their on-chain account and subsequently ask for verification of this information by registrars.
+Kusari provides a naming system that allows participants to add personal information to their on-chain account and subsequently ask for verification of this information by registrars.
 
 ## **Setting an Identity**
 

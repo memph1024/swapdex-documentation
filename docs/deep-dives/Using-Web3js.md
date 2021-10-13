@@ -1,1 +1,1 @@
-# <b>Using Web3.js with Phoenix</b>
+# <b>Using Web3.js with Kusari</b>

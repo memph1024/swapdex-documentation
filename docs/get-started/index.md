@@ -1,6 +1,6 @@
 # <b>Getting Started</b>
 
-It's time to get started on the Phoenix network! Please check out our recommended list for getting started.
+It's time to get started on the Kusari network! Please check out our recommended list for getting started.
 
 ## Brand new to blockchain?
 
@@ -11,20 +11,20 @@ For brand-new learners of Blockchain technology:
 !!!hint
     This is recommended for users with backgrounds of all levels, and the course is free!
 
-## **Brand new to Phoenix?**
+## **Brand new to Kusari?**
 
-For brand-new learners of Phoenix, check-out:
+For brand-new learners of Kusari, check-out:
 
-- Reading the Phoenix Overview page
+- Reading the Kusari Overview page
 - Reading our articles on Medium
-- Creating a Phoenix Account
-- Using Phoenix endpoints
-- Claiming Phoenix TSDX coins
-- Running a Validator on Phoenix
-- Staking as a Nominator on Phoenix
+- Creating a Kusari Account
+- Using Kusari endpoints
+- Claiming Kusari TSDX coins
+- Running a Validator on Kusari
+- Staking as a Nominator on Kusari
 
-## <b>Developing on Phoenix?</b>
+## <b>Developing on Kusari?</b>
 
-For developers who want to leverage on Phoenix's unique advantages, please visit:
+For developers who want to leverage on Kusari's unique advantages, please visit:
 
 - The builders guide 

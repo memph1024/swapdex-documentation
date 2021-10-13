@@ -48,5 +48,8 @@
       font-size: 9px;
       text-align: center;
   }
+  .cards-body {
+    margin-top: -15px !important;
+  }
   }
 

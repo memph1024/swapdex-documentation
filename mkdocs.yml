@@ -55,6 +55,7 @@ extra_javascript:
 
 nav:
   - Home: 'index.md'
+  - 'Credits': 'credits.md'
   - 'Get Started': 
       - 'get-started/index.md'
       - 'Faucet': 'get-started/faucet.md'

@@ -1,13 +1,13 @@
 # <b>Smart Contracts</b>
 ---
-On Phoenix you have two out-of-the-box solutions to kickstart your Smart Contract development.
+On Kusari you have two out-of-the-box solutions to kickstart your Smart Contract development.
 
 - The EVM (Ethereum Virtual Machine) pallet, which presents an Ethereum compatibility layer
 - The Contracts pallet, which is a FRAME library for Wasm based smart contracts
 
 ## **EVM Contracts by Frontier**
 ---
-[Frontier](https://paritytech.github.io/frontier/) is the Ethereum compatibility layer for Substrate chains. It enables Phoenix to run Ethereum contacts (EVM) natively, that means for instance that all existing Ethereum RPC methods work, so none of your dapps will break. Furthermore, it allows you to run your EVM smart contract natively in Substrate, tightly integrated with the rest of the Substrate ecosystem.
+[Frontier](https://paritytech.github.io/frontier/) is the Ethereum compatibility layer for Substrate chains. It enables Kusari to run Ethereum contacts (EVM) natively, that means for instance that all existing Ethereum RPC methods work, so none of your dapps will break. Furthermore, it allows you to run your EVM smart contract natively in Substrate, tightly integrated with the rest of the Substrate ecosystem.
 
 Read more in our EVM Pallet Deep Dive!
 

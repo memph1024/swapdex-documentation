@@ -78,9 +78,10 @@ nav:
               - 'Tools and Resources': 
                   - 'Libraries': 'dev-guides/Tutorials/evm-tutorial/evm-tools-and-res/eth-libs.md'
                   - 'Tools': 'dev-guides/Tutorials/evm-tutorial/evm-tools-and-res/waffle.md'
+                  - 'EVM Balances': 'dev-guides/Tutorials/evm-tutorial/evm-tools-and-res/evm-balances.md'
               - 'Guides':
-                  - 'Basic Guide': 'dev-guides/Tutorials/evm-tutorial/Tutorial/basic-evm-tutorial.md'
-                  - 'Intermediate Guide': 'dev-guides/Tutorials/evm-tutorial/Tutorial/intermediate-evm-tutorial.md'
+                  - 'Setting up an Kusari node for local development': 'dev-guides/Tutorials/evm-tutorial/Tutorial/local-dev-node-setup.md'
+                  - 'Intermediate Guide': 'dev-guides/Tutorials/evm-tutorial/Tutorial/using-mm.md'
                   - 'Advanced Guide': 'dev-guides/Tutorials/evm-tutorial/Tutorial/advanced-evm-tutorial.md'
   - 'Deep Dives':
       - 'EVM Pallet': 'deep-dives/evm-pallet.md'

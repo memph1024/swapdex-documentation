@@ -1,6 +1,6 @@
-# <b>Phoenix Endpoints</b>
+# <b>Kusari Endpoints</b>
 
-When interacting with the Phoenix network via our [substrate explorer app](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/settings) or other UIs and programmatic methods, you'd ideally be running your own node (text guide, video guide). Granted, that's not something everyone wants to do, so convenience trumps ideals in most cases. To facilitate this convenience, Kusama has several public endpoints you can use for your apps provided by infrastructure and API services providers in the ecosystem.
+When interacting with the Kusari network via our [substrate explorer app](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/settings) or other UIs and programmatic methods, you'd ideally be running your own node (text guide, video guide). Granted, that's not something everyone wants to do, so convenience trumps ideals in most cases. To facilitate this convenience, Kusama has several public endpoints you can use for your apps provided by infrastructure and API services providers in the ecosystem.
 
 ## <b>Starkley Tech Archive Node</b>
 
@@ -15,6 +15,6 @@ const{ ApiPromise, WsProvider } = require('@polkadot/api')
     const api = await ApiPromise.create({ provider })
     // ...
 ```
-or in Phoenix Substrate Explorer by clicking on the top-left corner of the screen and openig up the TEST NETWORK group and selecting SwapDex Phoenix and **via Starkley Tech**
+or in Kusari Substrate Explorer by clicking on the top-left corner of the screen and openig up the TEST NETWORK group and selecting SwapDex Kusari and **via Starkley Tech**
 
-![endpoint](assets/phoenix-endpoint.png)
+![endpoint](assets/Kusari-endpoint.png)

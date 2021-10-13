@@ -1,14 +1,14 @@
 
-<h1><b>Phoenix</b></h1>
+<h1><b>Kusari</b></h1>
 ---
 !!! Warning
     Work in progress content can change and it's not definitive :building_construction:.
 
 **SwapDex's Canary Network**
 
-Phoenix is an early release of the code that is available and will eventually hold real economic value in the future. For developers and our community, Phoenix is a proving ground for runtime upgrades, on-chain governance, and DApps.
+Kusari is an early release of the code that is available and will eventually hold real economic value in the future. For developers and our community, Kusari is a proving ground for runtime upgrades, on-chain governance, and DApps.
 
-## **Interact with Phoenix**
+## **Interact with Kusari**
 ---
 <table class = "table">
 <link rel="stylesheets" type="text/css" href="extra.css">
@@ -130,14 +130,14 @@ Phoenix is an early release of the code that is available and will eventually ho
     </tr>
 </table>
 ---
-Phoenix is owned by those who hold the Test SwapDex Coins (TSDX). There's no central kill switch and all changes are made through the protocol's on-chain governance. Phoenix is experimental. There are no guarantees.
+Kusari is owned by those who hold the Test SwapDex Coins (TSDX). There's no central kill switch and all changes are made through the protocol's on-chain governance. Kusari is experimental. There are no guarantees.
 
-Phoenix is a permissionless network and anyone can come along and start using it.
+Kusari is a permissionless network and anyone can come along and start using it.
 
 !!!hint
-    As a TSDX holder, you can interact with all the features of the Phoenix network such as staking (i.e. validating or nominating), governance, DApp development, basic transfers and everything else.
+    As a TSDX holder, you can interact with all the features of the Kusari network such as staking (i.e. validating or nominating), governance, DApp development, basic transfers and everything else.
 
-**Expect Chaos.** Phoenix is getting more battle-tested day-by-day but it's built on the foundations of moving fast and trying new things.
+**Expect Chaos.** Kusari is getting more battle-tested day-by-day but it's built on the foundations of moving fast and trying new things.
 
 
 ## **Disclaimer:**

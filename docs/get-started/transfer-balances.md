@@ -5,7 +5,7 @@ Balance transfers are used to send TSDX balances from one account to another acc
 !!! hint
     This guide assumes that you've already created an account and have some funds that are ready to be transferred.
 
-## <b>Phoenix Subtrate Explorer App</b>
+## <b>Kusari Subtrate Explorer App</b>
 
 Let's begin by opening [Substrate Explorer App](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/explorer). There are two ways to make a balance transfer:
 
@@ -69,13 +69,13 @@ You can also check for locks by navigating to `Accounts > Accounts` in [Substrat
 
 ### <b>Existing Recovery Info</b>
 
-Currently, Phoenix does not use the [Recovery Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#recovery), so this is probably not the reason for your coins having existing references.
+Currently, Kusari does not use the [Recovery Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#recovery), so this is probably not the reason for your coins having existing references.
 
-On Phoenix, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)` chain state. This can be found under `Developer > Chain state` in [Substrate Explorer App](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/explorer).
+On Kusari, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)` chain state. This can be found under `Developer > Chain state` in [Substrate Explorer App](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/explorer).
 
 ### <b>Existing Non-TSDX Assets</b>
 
-Currently, Phoenix does not use the [Assets Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#assets), so this is probably not the reason for your tokens having existing references.
+Currently, Kusari does not use the [Assets Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#assets), so this is probably not the reason for your tokens having existing references.
 
 ## <b>From the Accounts Page</b>
 

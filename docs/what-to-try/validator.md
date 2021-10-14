@@ -1,11 +1,9 @@
 # <b>RUN A NODE AND BECOME A VALIDATOR</b>
 ---
 
-![Become a Validator](assets/swapdex-bull.png)
+The following guide will teach you how to set up a Kusari Validator. The process of becoming a validator requires two steps. The first step is to set up a network node. The second step is to assign your node to your account and apply for validator candidacy.
 
-The following guide will teach you how to set up a Smart Dex Chain Validator. The process of becoming a validator requires two steps. The first step is to set up a network node. The second step is to assign your node to your account and apply for validator candidacy.
-
-Network validators are the foundation of a decentralized proof-of-stake network because they are responsible for concluding on a consensus by creating new and validating already produced blocks. That said, network validators are the prime target for adversaries that aim to sabotage the network. The Smart Dex Chain has many layers to protect the network from attacks. The first layer is the security of each validator itself. Another layer is the slashing mechanism that detects validator nodes that display abnormal or dangerous behavior and punishes them with slashes. A slash will, in all cases, lead to the loss of funds. 
+Network validators are the foundation of a decentralized proof-of-stake network because they are responsible for concluding on a consensus by creating new and validating already produced blocks. That said, network validators are the prime target for adversaries that aim to sabotage the network. The Kusari has many layers to protect the network from attacks. The first layer is the security of each validator itself. Another layer is the slashing mechanism that detects validator nodes that display abnormal or dangerous behavior and punishes them with slashes. A slash will, in all cases, lead to the loss of funds. 
 
 !!! warning
     Hence the warning: Running a validator on a live network is a lot of responsibility! You will be accountable for your stake and the stake of your current nominators. If you make a mistake and get slashed, your money and your reputation will be at risk. However, running a validator can also be very rewarding, knowing that you contribute to the security of a decentralized network while growing your stash.
@@ -19,7 +17,7 @@ You can operate a network node on a local computer, a professional server-rig in
 !!! tip
     The most common way for a beginner to run a validator is on a VPS running Linux. You may choose whatever VPS providers that you prefer. 
 
-We benchmarked the transactions weights on the Smart Dex Chain Testnet on standard hardware. We recommend that validators run at least the standard hardware to ensure they can process all blocks in time. The following are not minimum requirements, but if you decide to run with less than this, beware that you might have a performance issue.
+We benchmarked the transactions weights on the Kusari network on standard hardware. We recommend that validators run at least the standard hardware to ensure they can process all blocks in time. The following are not minimum requirements, but if you decide to run with less than this, beware that you might have a performance issue.
 
 ### Lower-end Hardware :
 
@@ -30,7 +28,7 @@ We benchmarked the transactions weights on the Smart Dex Chain Testnet on standa
 - 60GB ram, 300 GB Storage, 6 CPU, <strong>stable server uplink connection with fixed IP</strong>
 
 !!! info
-    Anything between the lower-end and ideal hardware should be sufficient to run a validator on the Smart Dex Chain testnet. 
+    Anything between the lower-end and ideal hardware should be sufficient to run a validator on the Kusari network. 
 
 
 ## Using Ubuntu 20.04 : 
@@ -63,7 +61,7 @@ sudo ntpq -p
     Skipping this can result in the validator node missing block authorship opportunities. If the clock is out of sync (even by a small amount), the blocks the validator produces may not get accepted by the network. This will result in ImOnline heartbeats making it on chain, but zero allocated blocks making it on chain. 
 
 
-## Installing the Smart Dex Chain Testnet Binary
+## Installing the Kusari network Binary
 ---
 ### Install and enable Chrony
 We learned in the previous step that the new versions of Ubunutu ship the NTP client by default. However, Chrony is another time sync. tool that delivers better and more stable performance. Therefore, we recommend installing and enabling Chrony on top of the NTP client to ensure synchronized clocks and uninterrupted validator operations.
@@ -168,13 +166,13 @@ Check if your node is appearing in the telemetry UI : [https://telemetry.polkado
     If you want to find your node here you must have changed the name parameter in the previous step (--name "A Node Name")
 
 !!! success
-    Congrats! If you checked and found your node on the telemetry page, you successfully set up your server to become a SwapDex testnet validator!
+    Congrats! If you checked and found your node on the telemetry page, you successfully set up your server to become a Kusari validator!
 
 
 ## Part 2 - Assign the node to an account
 ---
-The second part of this guide will complete the validator setup by connecting your server with your substrate wallet.
-Make sure you have some KSI (Testnet Coins) in your substrate wallet. In case you need KSI please visit our discord server and ask one of the admins. 
+The second part of this guide will complete the validator setup by connecting your server with your Kusari account.
+Make sure you have some KSI in your substrate wallet. In case you need KSI please see the [faucet](../get-started/faucet.md) section. 
 
 ### What are stash and controller accounts?
 

@@ -4,7 +4,7 @@
 Kusari uses a sophisticated governance mechanism to evolve gracefully over time at the ultimate behest of its assembled stakeholders. 
 The stated goal is to ensure that the majority of the stake can always command the network. 
 
-To do this, we bring together various novel mechanisms, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. [WebAssembly](https://guide.kusama.network/docs/learn-wasm)) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting. Stake-weighted referenda must agree upon all changes to the protocol.
+To do this, we brrowed and adjusted various mechanisms from Polkadot, Kusama and Substrate, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. [WebAssembly](https://guide.kusama.network/docs/learn-wasm)) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting. Stake-weighted referenda must agree upon all changes to the protocol.
 
 ## <b>Mechanism</b>
 ---
@@ -216,9 +216,9 @@ All three tallying mechanisms - majority carries, super-majority approve, and su
 !!! hint
     Video explainer on Council
 
-To represent passive stakeholders, Polkadot introduces the idea of a "council". 
+To represent passive stakeholders, Kusari uses the idea of a "council". 
 The council is an on-chain entity comprising several actors, each represented as an on-chain account. 
-On Kusari, the council currently consists of 8 members. This is expected to increase over the next few months to 19 seats. In general, the council will end up having a fixed number of seats. On Kusari, this will be 19 seats.
+On Kusari, the council will consist of 19 seats.
 
 Along with controlling the treasury, the council is called upon primarily for three tasks of governance: proposing sensible referenda, cancelling uncontroversially dangerous or malicious referenda, and electing the technical committee.
 
@@ -239,7 +239,7 @@ If the cancellation is controversial enough that the council cannot get a two-th
 A proposal can be blacklisted by [Sudo Pallet](https://substrate.dev/rustdocs/latest/pallet_sudo/index.html). A blacklisted proposal and its related referendum (if any) is immediately canceled. Additionally, a blacklisted proposal's hash cannot re-appear in the proposal queue. 
 Blacklisting is useful when removing erroneous proposals that could be submitted with the same hash, i.e. proposal #2 in which the submitter used plain text to make a suggestion.
 
-Upon seeing their proposal removed, a submitter who is not properly introduced to the democracy system of Polkadot might be tempted to re-submit the same proposal. That said, this is far from a fool-proof method of preventing invalid proposals from being submitted - a single changed character in a proposal's text will also change the hash of the proposal, rendering the per-hash blacklist invalid.
+Upon seeing their proposal removed, a submitter who is not properly introduced to the democracy system of Kusari might be tempted to re-submit the same proposal. That said, this is far from a fool-proof method of preventing invalid proposals from being submitted - a single changed character in a proposal's text will also change the hash of the proposal, rendering the per-hash blacklist invalid.
 
 ### **How to become a council member?**
 

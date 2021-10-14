@@ -1,24 +1,34 @@
 # <b>ACCOUNT GENERATION</b>
 ---
 
-An address is the public part of a SwapDex account. The private part is the key used to access this address. The public and private parts together make up a SwapDex-Substrate account.
+To start interacting with Kusari, you need a wallet or account that enables you to send transactions, participate in the chain governance, run a validator or nominate to earn interest. 
 
-There are several ways to generate a SwapDex-Substrate accounts but we recommend the following procedure:
+The following guide will show you how easy setting up a Kusari account is and what exact steps you need to take. 
 
-!!! tip
-    Polkadot{.js} Browser Extenstion RECOMMENDED FOR MOST USERS
+If you encounter any issues or problems, please feel free to reach out to us on [Discord](https://discord.gg/DAHehdnP).
 
-## **Disclaimer: Key Security**
 ---
 
-The only ways to access your account are via your secret seed or your account's JSON file in combination with a password. It would be best if you kept them both secure and private. If you share them with anyone, they will have full access to your account, including all of your funds. This information is a target for hackers and others with bad intentions. 
+Before we start, let's get some terms right, and let's spend a couple of seconds talking about the concept of keys.
 
-On this page, we recommend various account generation methods that have different convenience and security tradeoffs. Please review this page carefully before making your account to understand the risks of the account generation method you choose and how to mitigate them to keep your funds safe properly.
+A standard wallet or account is composed out of two keys:
+
+- The {==PUBLIC KEY==} (Wallet address)
+- The {==PRIVATE KEY==} (The key that allows you to access and manage your funds) 
+
+Your Kusari account follows the same rules. Therefore, we will continue with a section on key security to make you aware that You must keep your PRIVATE KEY, SEED PHRASE, or JSON KEYSTORE file secret at all times. 
 
 ## **Storing your key safely**
 ---
 
-The seed is your key to the account. Knowing the seed allows you to re-generate and control this account or anyone else who knows the seed.
+The only ways to access your account are via your secret seed or your account's JSON file in combination with a password. It would be best if you kept them both secure and private. If you share them with anyone, they will have full access to your account, including all of your funds. This information is a target for hackers and others with bad intentions. 
+
+In this guide, we recommend the **Polkadot{.js}** browser plug-in as the best method to create your Kusari account.
+
+!!! tip
+    [Polkadot{.js}](https://polkadot.js.org/extension/) Browser Extension RECOMMENDED FOR MOST USERS
+
+The seed is your key to the account. Knowing the seed allows you to re-generate and control your account or anyone else who knows the seed.
 
 It is imperative to store the seed somewhere safe, secret, and secure. If you lose access to your account (i.e., forget the password for your account's JSON file), you can re-create it by entering the seed. This also means that somebody else can control your account if they have access to your seed.
 
@@ -34,14 +44,15 @@ The JSON file is encrypted with a password, which means you can import it into a
 ## **Polkadot{.js} Browser Extension**
 ---
 
-Since Polkadot and SwapDex share the same foundation, namely Substrate, the Polkadot{.js} browser extension is a recommended way to create SwapDex-Substrate accounts.
+Since Polkadot and Kusari share the same foundation, namely Substrate, the Polkadot{.js} browser extension is the recommended way to create your Kusari account.
 
 - [Polkadot{.js} Browser Extension for Chrome & Brave](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd)
 - [Polkadot{.js} Browser Extension for Firefox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension/)
 
-The Polkadot{.js} browser extension provides a reasonable balance of security and usability. It provides a separate local mechanism to generate your address and interact with Polkadot.
-This method involves installing the Polkadot{.js} plugin and using it as a "virtual vault," separate from your browser, to store your private keys. It also allows the signing of transactions and similar functionality.
-It is still running on the same computer you use to connect to the internet and thus is less secure than using Parity Signer or other air-gapped approaches.
+The Polkadot{.js} browser extension provides a reasonable balance of security and usability. It's comparable to MetaMask for Ethereum. It provides a separate local mechanism to generate your address and interact with Kusari.
+
+So let's start installing the Polkadot{.js} plugin to enable you to interact with Kusari.
+
 
 ## **Create an Account**
 ---

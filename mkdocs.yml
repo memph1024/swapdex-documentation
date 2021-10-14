@@ -20,6 +20,7 @@ markdown_extensions:
 theme:
   font:
     text: Nunito
+    code: Roboto Mono
 
   features:
     - navigation.instant
@@ -36,6 +37,7 @@ theme:
   
 plugins:
   - search
+  - mkdocs-video
 
 extra:
   # Default mkdocs-material alternate links for untranslated pages
@@ -55,6 +57,7 @@ extra_javascript:
 
 nav:
   - Home: 'index.md'
+  - 'Credits': 'credits.md'
   - 'Get Started': 
       - 'get-started/index.md'
       - 'Faucet': 'get-started/faucet.md'
@@ -80,9 +83,8 @@ nav:
                   - 'Tools': 'dev-guides/Tutorials/evm-tutorial/evm-tools-and-res/waffle.md'
                   - 'EVM Balances': 'dev-guides/Tutorials/evm-tutorial/evm-tools-and-res/evm-balances.md'
               - 'Guides':
-                  - 'Setting up an Kusari node for local development': 'dev-guides/Tutorials/evm-tutorial/Tutorial/local-dev-node-setup.md'
-                  - 'Intermediate Guide': 'dev-guides/Tutorials/evm-tutorial/Tutorial/using-mm.md'
-                  - 'Advanced Guide': 'dev-guides/Tutorials/evm-tutorial/Tutorial/advanced-evm-tutorial.md'
+                  - 'Connect to Kusari': 'dev-guides/Tutorials/evm-tutorial/Tutorial/using-mm.md'
+                  - 'Deploy with Truffle': 'dev-guides/Tutorials/evm-tutorial/Tutorial/using-truffle.md'
   - 'Deep Dives':
       - 'EVM Pallet': 'deep-dives/evm-pallet.md'
       - 'Keys': 'deep-dives/substrate_keys.md'

@@ -3,9 +3,8 @@
 
 The "EVM" module in Substrate provides support for executing Ethereum contracts on a substrate chain. To perform any gas or balance-related actions on the EVM, the calling account must have a EVM balance.
 
----
-
 ## **Balance Conversion**
+---
 
 To use Ethereum contracts on a Substrate chain, the chain must have a protocol that support thes following requirements:
 
@@ -42,9 +41,8 @@ Note that these reconverted 32-byte addresses have no inherent relationship to t
 !!! Note
     Note that these actions are not reversible: we cannot convert from an EVM address back to its Ethereum address, nor can we convert from an Ethereum address back to its "source" Substrate address.
 
----
-
 ## **Managing Ethereum Balances on Substrate**
+---
 
 Two operations are possible: 
 
@@ -77,3 +75,7 @@ The balance of the 20-byte Ethereum address and the 32-byte EVM address should b
     Each EVM address is deterministically mapped to another substrate address which maintains its balance within the balances pallet, and which can be used to sent funds directly via a basic transfer. This substrate address is equivalent to the 20-byte EVM address for all intents and purposes, and is a deterministic computation from the original substrate address — it can be used in other pallets freely as a "proxy" for the EVM address. However, it does not have a private key, so it cannot sign.
 
     Funds must be withdrawn from an EVM account (20-byte address) via the pallet_evm::withdraw function, as the "substrate-ethereum equivalent" does not have a known private key from which to send transactions.
+
+<br></br>
+
+<p align=right> Written by Masterdubs & Petar </p>

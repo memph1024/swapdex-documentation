@@ -2,7 +2,6 @@
     --md-primary-fg-color:        #E83F81;
     --md-primary-fg-color--light: #ECB7B7;
     --md-primary-fg-color--dark:  #90030C;
-    --md-h1-font-family: "poppins"
   }
   img[src*='#center'] { 
     display: block;
@@ -52,4 +51,36 @@
     margin-top: -15px !important;
   }
   }
+
+div.admonition.warning {
+  font-size: .80rem;
+}
+
+div.admonition.hint {
+  font-size: .80rem;
+}
+
+div.admonition.example {
+  font-size: .80rem;
+}
+
+div.admonition.note {
+  font-size: .80rem;
+}
+
+div.admonition.anstract {
+  font-size: .80rem;
+}
+
+div.admonition.info {
+  font-size: .80rem;
+}
+
+div.admonition.tip {
+  font-size: .80rem;
+}
+
+div.admonition.success {
+  font-size: .80rem;
+}
 

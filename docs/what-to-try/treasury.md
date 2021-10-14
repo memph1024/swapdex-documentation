@@ -1,4 +1,5 @@
-# <b>Spend the Treasury</b>
+# <b>SPEND THE TREASURY</b>
+---
 
 The Treasury is a pot of funds collected through transaction fees, slashing, staking inefficiencies, etc. The funds held in the Treasury can be spent by making a spending proposal that, if approved by the Council, will enter a waiting period before distribution. This waiting period is known as the budget period, and its duration is subject to governance, with the current default set to 6 days. The Treasury attempts to spend as many proposals in the queue as it can without running out of funds.
 
@@ -18,7 +19,7 @@ Proposals may consist of (but are not limited to):
 The Treasury is ultimately controlled by the Council, and how the funds will be spent is up to their judgment.
 
 ## **Funding the Treasury**
-
+---
 The Treasury is funded from different sources:
 
 - **Slashing**: When a validator is slashed for any reason, the slashed amount is sent to the Treasury with a reward going to the entity that reported the validator (another validator). The reward is taken from the slash amount and varies per offence and number of reporters.
@@ -26,8 +27,8 @@ The Treasury is funded from different sources:
 - **Staking inefficiency**: Inflation is designed to be 20% in the first year, and the ideal staking ratio is set at 50%, meaning half of all tokens should be locked in staking. - Any deviation from this ratio will cause a proportional amount of the inflation to go to the Treasury. In other words, if 50% of all tokens are staked, then 100% of the inflation goes to the validators as reward. If the staking rate is greater than or less than 50%, then the validators will receive less, with the remainder going to the Treasury.
 
 ## **Creating a Treasury Proposal**
-
-The proposer has to deposit 5% of the requested amount or 0.067 TSDX (whichever is higher) as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded otherwise. These values are subject to governance so they may change in the future.
+---
+The proposer has to deposit 5% of the requested amount or 0.067 KSI (whichever is higher) as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded otherwise. These values are subject to governance so they may change in the future.
 
 Please note that there is no way for a user to revoke a treasury proposal after it has been submitted. The Council will either accept or reject the proposal, and if the proposal is rejected, the bonded funds are burned.
 
@@ -55,7 +56,7 @@ At this point, a Council member can create a motion to accept or to reject the t
 The threshold for accepting a treasury proposal is at least three-fifths of the Council. On the other hand, the threshold for rejecting a proposal is at least one-half of the Council.
 
 ## **Tipping**
-
+---
 Next to the proposals process, a separate system for making tips exists for the Treasury. Tips can be suggested by anyone and are supported by members of the Council. Tips do not have any definite value; the final value of the tip is decided based on the median of all tips issued by the tippers.
 
 Currently, the tippers are the same as the members of the Council. However, being a tipper is not the direct responsibility of the Council, and at some point the Council and the tippers may be different groups of accounts.
@@ -80,16 +81,16 @@ Since the tipper group is the same as the Council, the Council must now collecti
 
 Charlie, Dave, and Eve all review the report and make tips according to their personal valuation of the benefit Bob has provided to Kusari.
 
-Charlie tips 1 TSDX. Dave tips 3 TSDX. Eve tips 10 TSDX.
+Charlie tips 1 KSI. Dave tips 3 KSI. Eve tips 10 KSI.
 
 The tip could have been closed out with only two of the three tippers. Once more than half of the tippers group have issued tip valuations, the countdown to close the tip will begin. In this case, the third tipper issued their tip before the end of the closing period, so all three were able to make their tip valuations known.
 
-Now the actual tip that will be paid out to Bob is the median of these tips, so Bob will be paid out 3 TSDX from the Treasury.
+Now the actual tip that will be paid out to Bob is the median of these tips, so Bob will be paid out 3 KSI from the Treasury.
 
 In order for Bob to be paid his tip, some account must call the close_tip extrinsic at the end of the closing period for the tip. This extrinsic may be called by anyone.
 
 ## **Bounties Spending**
-
+---
 There are practical limits to Council Members curation capabilities when it comes to treasury proposals: Council members likely do not have the expertise to make a proper assessment of the activities described in all proposals. Even if individual Councillors have that expertise, it is highly unlikely that a majority of members are capable in such diverse topics.
 
 Bounties Spending proposals aim to delegate the curation activity of spending proposals to experts called Curators: They can be defined as addresses with agency over a portion of the Treasury with the goal of fixing a bug or vulnerability, developing a strategy, or monitoring a set of tasks related to a specific topic: all for the benefit of the Kusari ecosystem.
@@ -127,7 +128,7 @@ The curator can close the bounty once they approve the completion of its tasks. 
 A bounty can be closed by using the extrinsics tab and selecting the Treasury pallet, then `Award_bounty`, making sure the right bounty is to be closed and finally sign the transaction. It is important to note that those who received a reward after the bounty is completed, must claim the specific amount of the payout from the payout address, by calling Claim_bounty after the curator closed the allocation.
 
 ## **FAQ**
-
+---
 ### **What prevents the Treasury from being captured by a majority of the council?**
 
 The majority of the Council can decide the outcome of a treasury spend proposal. In an adversarial mindset, we may consider the possibility that the Council may at some point go rogue and attempt to steal all of the treasury funds. It is a possibility that the treasury pot becomes so great, that a large financial incentive would present itself.
@@ -141,3 +142,7 @@ Concretely, there are a couple on-chain methods that resist this kind of attack.
 ### **Further Reading**
 
 - [Substrate's Treasury Pallet](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs) - The Rust implementation of the Treasury. ([Docs](https://substrate.dev/rustdocs/latest/pallet_treasury/index.html))
+
+<br></br>
+
+<p align=right> Written by Masterdubs & Petar </p>

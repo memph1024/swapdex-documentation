@@ -21,3 +21,7 @@
      KusariProvider = new ethers.providers.JsonRpcProvider(('https://rpc-testnet.swapdex.network/rpc') 
      const devProvider = new ethers.providers.JsonRpcProvider('http://localhost:9933/'); })
  ```
+
+ <br></br>
+
+<p align=right> Written by Masterdubs & Petar </p>

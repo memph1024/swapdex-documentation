@@ -31,7 +31,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
         </td>
         <td>
             <a href="/get-started/transfer-balances/">
-                <img src="/assets/swapdex-docs-balance-transfers.png" alt="Drawing" width="300" height="150">
+                <img src="assets/swapdex-docs-balance-transfers.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Balance Transfers</h5>
                     </div>
@@ -39,7 +39,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
         </td>
         <td>
             <a href="what-to-try/nominator/">
-                <img class="guide-image" src="/assets/swapdex-docs-staking.png" alt="Drawing" width="300" height="150">
+                <img class="guide-image" src="assets/swapdex-docs-staking.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Staking</h5>
                     </div>
@@ -61,7 +61,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
         </td>
         <td>
             <a href="/docs/learn-balance-transfers">
-                <img src="/assets/swapdex-docs-bridge.png" alt="Drawing" width="300" height="150">
+                <img src="assets/swapdex-docs-bridge.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Bridges</h5>
                     </div>
@@ -69,7 +69,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
         </td>
         <td>
             <a href="/what-to-try/democracy/">
-                <img class="guide-image" src="/assets/swapdex-docs-vote-for-councilors.png" alt="Drawing" width="300" height="150">
+                <img class="guide-image" src="assets/swapdex-docs-vote-for-councilors.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Vote for Councilors</h5>
                     </div>
@@ -91,7 +91,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
         </td>
         <td>
             <a href="/what-to-try/democracy/">
-                <img src="/assets/swapdex-docs-council-candidacy.png" alt="Drawing" width="300" height="150">
+                <img src="assets/swapdex-docs-council-candidacy.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Council Candidacy</h5>
                     </div>
@@ -99,7 +99,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
         </td>
         <td>
             <a href="/what-to-try/treasury/">
-                <img class="guide-image" src="/assets/swapdex-docs-treasury.png" alt="Drawing" width="300" height="150">
+                <img class="guide-image" src="assets/swapdex-docs-treasury.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Treasury</h5>
                     </div>
@@ -121,7 +121,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
         </td>
         <td>
             <a href="/what-to-try/nominator/">
-                <img src="/assets/swapdex-docs-become-a-nominator.png" alt="Drawing" width="300" height="150">
+                <img src="assets/swapdex-docs-become-a-nominator.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Become a Nominator</h5>
                     </div>
@@ -129,7 +129,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
         </td>
         <td>
             <a href="/what-to-try/validator/">
-                <img class="guide-image" src="/assets/swapdex-docs-become-a-validator.png" alt="Drawing" width="300" height="150">
+                <img class="guide-image" src="assets/swapdex-docs-become-a-validator.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Become a Validator</h5>
                     </div>

@@ -1,4 +1,5 @@
-# <b>Exploring Democracy</b>
+# <b>EXPLORING DEMOCRACY</b>
+---
 
 Kusari uses a sophisticated governance mechanism to evolve gracefully over time at the ultimate behest of its assembled stakeholders. 
 The stated goal is to ensure that the majority of the stake can always command the network. 
@@ -6,11 +7,13 @@ The stated goal is to ensure that the majority of the stake can always command t
 To do this, we bring together various novel mechanisms, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. [WebAssembly](https://guide.kusama.network/docs/learn-wasm)) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting. Stake-weighted referenda must agree upon all changes to the protocol.
 
 ## <b>Mechanism</b>
+---
 
 To make any changes to the network, the idea is to compose active coin holders and the council together to administrate a network upgrade decision.
 No matter whether the proposal is proposed by the public (coin holders) or the council, it finally will have to go through a referendum to let all holders, weighted by stake, make the decision.
 
 ## <b>Referenda</b>
+---
 
 Referenda are straightforward, inclusive, stake-based voting schemes. Each referendum has a specific proposal associated with it that takes the form of a privileged function call in the runtime (that includes the most powerful call: `set_code`, which can switch out the entire code of the runtime, achieving what would otherwise require a "hard fork").
 
@@ -29,6 +32,7 @@ For the first two ways that a referendum is launched, this is a fixed time. For 
 Emergency proposals deal with significant problems with the network that need to be "fast-tracked". These will have a shorter enactment time.
 
 ## <b>Proposing a Referendum</b>
+---
 
 ### **Public referenda**
 
@@ -37,7 +41,7 @@ If someone agrees with the proposal, they may deposit the same amount of coins t
 The proposal with the highest bonded support will be selected to be a referendum in the next voting cycle.
 
 !!! note
-    Note that this may be different from the absolute number of seconds; for instance, three accounts bonding 20 TSDX each would "outweigh" ten accounts bonding a single DOT each. The bonded coins will be released once the proposal is tabled (that is, brought to a vote).
+    Note that this may be different from the absolute number of seconds; for instance, three accounts bonding 20 KSI each would "outweigh" ten accounts bonding a single DOT each. The bonded coins will be released once the proposal is tabled (that is, brought to a vote).
 
 There can be a maximum of 100 public proposals in the proposal queue.
 
@@ -76,9 +80,9 @@ Example:
 
 Grandad: Votes `No` with 10 TDSX for a 128 week lock period  => 10 * 6 = 60 Votes
 
-Lucious: Votes `Yes` with 20 TSDX for a 4 week lock period => 20 * 1 = 20 Votes
+Lucious: Votes `Yes` with 20 KSI for a 4 week lock period => 20 * 1 = 20 Votes
 
-Petar: Votes `Yes` with 15 TSDX for a 8 week lock period => 15 * 2 = 30 Votes
+Petar: Votes `Yes` with 15 KSI for a 8 week lock period => 15 * 2 = 30 Votes
 ```
 
 Even though combined both Lucious and Petar vote with more TDSX than Grandad, the lock period for both of them is less than Grandad's, leading to their voting power counting as less.
@@ -132,14 +136,14 @@ To know more about where these above formulas come from, please read the [democr
 Example:
 
 Assume:
-- We only have 1_500 TSDX tokens in total.
+- We only have 1_500 KSI tokens in total.
 - Public proposal
 
-John  - 500 TSDX
-Peter - 100 TSDX
-Lilly - 150 TSDX
-JJ    - 150 TSDX
-Ken   - 600 TSDX
+John  - 500 KSI
+Peter - 100 KSI
+Lilly - 150 KSI
+JJ    - 150 KSI
+Ken   - 600 KSI
 
 John: Votes `Yes` for a 4 week lock period  => 500 * 1 = 500 Votes
 
@@ -278,6 +282,7 @@ The above example shows that candidate C wins the election in round 1, while can
 For the top-N (say 4 in this example) runners-up, they can remain and their votes persist until the next election. After round 2, even though candidates A & B get the same number of votes in this round, candidate A gets elected because after adding the older unused approvals, it is higher than B.
 
 ## **Technical Committee**
+---
 
 The Technical Committee is one of the three chambers of Kusari governance (along with the Council and the Referendum chamber). The Technical Committee is composed of the teams that have successfully implemented or specified either a SwapDex/Kusari runtime. Teams are added or removed from the Technical Committee via a simple majority vote of the Council.
 
@@ -286,7 +291,7 @@ The Technical Committee can, along with the Council, produce emergency referenda
 Fast-tracked referenda are the only type of referenda that can be active alongside another active referendum. Thus, with fast-tracked referenda it is possible to have two active referendums at the same time. Voting on one does not prevent a user from voting on the other.
 
 ## **Freqently Asked Quesitons**
-
+---
 ### **How can I appeal to the council to enact a change on my behalf?**
 
 In some circumstances, you may want to appeal to the on-chain council to enact a change on your behalf. One example of this circumstance is the case of lost or locked funds when the funds were lost due to a human interface error (such as inputting an address for another network). When these circumstances can be proven beyond a reasonable doubt to be an error, the council may consider a governance motion to correct it.
@@ -294,3 +299,7 @@ In some circumstances, you may want to appeal to the on-chain council to enact a
 The first step to appeal to the council is to get in contact with the councillors. There is no singular place where you are guaranteed to grab every councillor's ear with your message. However, there are a handful of good places to start where you can get the attention of some of them. Our [Discord Server](https://discord.gg/NadFhHSY) is one such place. After creating an account and joining our server, you can post a well-thought-through message here that lays down your case and provides justification for why you think the council should consider enacting a change to the protocol on your behalf.
 
 At some point you will likely need a place for a longer-form discussion. When you write a post on Discord make sure you present all the evidence for your circumstances and state clearly what kind of change you would suggest to the councillors to enact. Remember - the councillors do not need to make the change, it is your responsibility to make a strong case for why the change should be made.
+
+<br></br>
+
+<p align=right> Written by Masterdubs & Petar </p>

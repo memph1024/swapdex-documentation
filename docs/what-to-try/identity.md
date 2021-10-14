@@ -1,8 +1,10 @@
-# <b>Get an Identiy</b>
+# <b>SET AN IDENTIY AND GAIN TRUST</b>
+---
 
 Kusari provides a naming system that allows participants to add personal information to their on-chain account and subsequently ask for verification of this information by registrars.
 
 ## **Setting an Identity**
+---
 
 Users can set an identity by registering through default fields such as legal name, display name, website, Twitter handle, Riot handle, etc. along with some extra, custom fields for which they would like attestations (see Judgements).
 
@@ -17,7 +19,7 @@ A pop-up window will appear, offering the default fields.
 ![set-identiy](assets/set-identity-02.png#center)
 
 ## **Judgement**
-
+---
 After a user injects their information on chain, they can request judgement from a registrar. Users declare a maximum fee that they are willing to pay for judgement, and registrars whose fee is below that amount can provide a judgement.
 
 When a registrar provides judgement, they can select up to six levels of confidence in their attestation:
@@ -63,8 +65,9 @@ Submit the transaction, and the requested judgement will be cancelled.
 
 
 ## **Registars**
+---
 
-Registrars can set a fee for their services and limit their attestation to certain fields. For example, a registrar could charge 1 TSDX to verify one's legal name, email, and GPG key. When a user requests judgement, they will pay this fee to the registrar who provides the judgement on those claims. Users set a maximum fee they are willing to pay and only registrars below this amount would provide judgement.
+Registrars can set a fee for their services and limit their attestation to certain fields. For example, a registrar could charge 1 KSI to verify one's legal name, email, and GPG key. When a user requests judgement, they will pay this fee to the registrar who provides the judgement on those claims. Users set a maximum fee they are willing to pay and only registrars below this amount would provide judgement.
 
 ### **Becoming a Registar**
 
@@ -76,9 +79,10 @@ Go to the Democracy tab, select "Submit preimage", and input the information for
 
 Copy the preimage hash. Submit the preimage by signing a transaction.
 
-Next, select "Submit Proposal" and enter the previously copied preimage hash. The locked balance field needs to be at least 100 TSDX. You can find out the minimum by querying the chain state under Chain State -> Constants -> democracy -> minimumDeposit.
+Next, select "Submit Proposal" and enter the previously copied preimage hash. The locked balance field needs to be at least 100 KSI. You can find out the minimum by querying the chain state under Chain State -> Constants -> democracy -> minimumDeposit.
 
 ## **Clearing and Killing an Identity**
+---
 
 **Clearing**: Users can clear their identity information and have their deposit returned. Clearing an identity also clears all sub accounts and returns their deposits.
 
@@ -89,3 +93,7 @@ To clear an identity:
 3. Select 'Clear Identity', and sign and submit the transaction.
 
 **Killing**: The Council can kill an identity that it deems erroneous. This results in a slash of the deposit.
+
+<br></br>
+
+<p align=right> Written by Masterdubs & Petar </p>

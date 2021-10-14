@@ -1,4 +1,4 @@
-# **Honor to whom honor is due**
+# **HONOR TO WHON HONOR IS DUE** :sparkles:
 ---
 
 This documentation is standing on the shoulders of many brilliant minds within the blockchain universe.
@@ -12,10 +12,15 @@ The entire SwapDex Team would like to thank and credit the following projects an
 - [Edgeware](https://edgewa.re/)
 - [Galital](https://galital.com/)
 - [Substrate](https://www.substrate.io/)
+- [Truffle](https://www.trufflesuite.com/)
 - [Parity Technology](https://www.parity.io/)
 
-Special thanks goes to Edgeware and their development guides.
+Special thanks goes to Edgeware and Truffle for their development guides.
 
-Much love :heart: and respect, 
+Much love and respect :heart:, 
 
 The SwapDex Team
+
+<br></br>
+
+<p align=right> Written by The SwapDex Team </p>

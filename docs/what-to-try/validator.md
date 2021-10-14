@@ -1,4 +1,5 @@
-# <b>Become a Validator</b>
+# <b>RUN A NODE AND BECOME A VALIDATOR</b>
+---
 
 ![Become a Validator](assets/swapdex-bull.png)
 
@@ -10,7 +11,7 @@ Network validators are the foundation of a decentralized proof-of-stake network 
     Hence the warning: Running a validator on a live network is a lot of responsibility! You will be accountable for your stake and the stake of your current nominators. If you make a mistake and get slashed, your money and your reputation will be at risk. However, running a validator can also be very rewarding, knowing that you contribute to the security of a decentralized network while growing your stash.
 
 ## Setp 1 - Setup a Network Node
-
+---
 ## Requirements
 
 You can operate a network node on a local computer, a professional server-rig in your basement, or on a remotely hosted virtual private server (VPS) in the clouds. It's up to you to choose the infrastructure you feel most comfortable with. What doesn't change are the requirements of a network node that operates as a validator. Validators should always be online and powerful enough to create and validate the authoring process of new blocks. If your validator is failing at one of these requirements, it will get punished by slashes.
@@ -33,7 +34,7 @@ We benchmarked the transactions weights on the Smart Dex Chain Testnet on standa
 
 
 ## Using Ubuntu 20.04 : 
-
+---
 ### Update your Ubuntu
 ```
 sudo apt-get update
@@ -63,7 +64,7 @@ sudo ntpq -p
 
 
 ## Installing the Smart Dex Chain Testnet Binary
-
+---
 ### Install and enable Chrony
 We learned in the previous step that the new versions of Ubunutu ship the NTP client by default. However, Chrony is another time sync. tool that delivers better and more stable performance. Therefore, we recommend installing and enabling Chrony on top of the NTP client to ensure synchronized clocks and uninterrupted validator operations.
 ```
@@ -171,9 +172,9 @@ Check if your node is appearing in the telemetry UI : [https://telemetry.polkado
 
 
 ## Part 2 - Assign the node to an account
-
+---
 The second part of this guide will complete the validator setup by connecting your server with your substrate wallet.
-Make sure you have some TSDX (Testnet Coins) in your substrate wallet. In case you need TSDX please visit our discord server and ask one of the admins. 
+Make sure you have some KSI (Testnet Coins) in your substrate wallet. In case you need KSI please visit our discord server and ask one of the admins. 
 
 ### What are stash and controller accounts?
 
@@ -202,7 +203,7 @@ Save your mnemonic seed
 then name your account and add a password
 ![Controller](assets/controllerAccount3.png) 
 
-Then send some TSDX (from your stash account) to cover the network fees
+Then send some KSI (from your stash account) to cover the network fees
 
 You can proceed to the next steps
 

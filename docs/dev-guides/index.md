@@ -22,7 +22,7 @@ The experience of deploying to an EVM-based chain may be more familiar to develo
 - **Caching.** Contracts are cached by default and therefore means they only need to be deployed once and afterward be instantiated as many times as you want. This helps to keep the storage load on the chain down to the minimum. On top of this, when a contract is no longer being used and the existential deposit is drained, the code will be erased from storage (known as reaping).
 
 
-## **Ink**
+## **Ink!**
 ---
 [ink!](https://github.com/paritytech/ink) is a domain specific language for writing smart contracts in Rust and compiles to Wasm code. As it states in its README, it is still in an experimental phase so brave developers should be aware that they might have a bumpy - but workable - development experience. There are some projects that have built projects in ink! with a decent level of complexity such as Plasm's [Plasma contracts](https://github.com/staketechnologies/Plasm), so it is mature enough to start building interesting things.
 
@@ -36,3 +36,6 @@ ink! has laid much of the groundwork for a new smart contract stack that is base
 - [Contracts pallet](https://github.com/paritytech/substrate/tree/master/frame/contracts)
 
 
+<br></br>
+
+<p align=right> Written by Masterdubs & Petar </p>

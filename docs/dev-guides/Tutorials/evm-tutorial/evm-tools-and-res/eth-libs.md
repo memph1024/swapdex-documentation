@@ -92,3 +92,7 @@ RPC_URL = 'https://rpc-testnet.swapdex.network/rpc'
 
 web3 = Web3(Web3.HTTPProvider('RPC_URL'))
 ```
+
+<br></br>
+
+<p align=right> Written by Masterdubs & Petar </p>

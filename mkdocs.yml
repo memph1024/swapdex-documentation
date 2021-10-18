@@ -88,7 +88,8 @@ nav:
   - 'Deep Dives':
       - 'EVM Pallet': 'deep-dives/evm-pallet.md'
       - 'Keys': 'deep-dives/substrate_keys.md'
-      - 'Using Web3.js': 'deep-dives/Using-Web3js.md'        
+      - 'Using Web3.js': 'deep-dives/Using-Web3js.md' 
+      - 'Staking': 'deep-dives/staking.md'       
 
 
 

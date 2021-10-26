@@ -113,7 +113,7 @@ We benchmarked the transactions weights on the Kusari network on standard hardwa
 
 ### **Ideal Hardware :**
 
-- 60GB ram, 300 GB Storage, 6 CPU, <strong>stable server uplink connection with fixed IP</strong>
+- 16GB ram, 300 GB Storage, 6 CPU, <strong>stable server uplink connection with fixed IP</strong>
 
 !!! info
     Anything between the lower-end and ideal hardware should be sufficient to run a validator on the testnet.
@@ -121,7 +121,7 @@ We benchmarked the transactions weights on the Kusari network on standard hardwa
 ### **Software Setup**
 
 !!! tip
-    :point_right: **Login to your Server (VPS)**
+    :point_right: **This guide is for the Ubuntu 21.04 OS**
 
 
 !!! Hint
@@ -272,7 +272,7 @@ Copy the session key. It will look like this:
 - **Stash account** - Select your Stash account. In this example, we will bond 1000 TSDX, where the minimum bonding amount is 1. Make sure that your Stash account contains at least this much. You can, of course, stake more than this.
 - **Controller account** - Select the Controller account created earlier. This account will also need a small amount of TSDX in order to start and stop validating.
 - **Value bonded** - How much TSDX from the Stash account you want to bond/stake. Note that you do not need to bond all of the TSDX in that account. Also note that you can always bond more TSDX later. However, withdrawing any bonded amount requires the duration of the unbonding period.
-- **Payment destination** - The account where the rewards from validating are sent. More info here. Starting with runtime version v23 natively included in client version 0.9.3, payouts can go to any custom address. If you'd like to redirect payments to an account that is neither the controller nor the stash account, set one up. Note that it is extremely unsafe to set an exchange address as the recipient of the staking rewards.
+- **Payment destination** - The account where the rewards from validating are sent. Payouts can go to any custom address. If you'd like to redirect payments to an account that is neither the controller nor the stash account, set one up. Note that it is extremely unsafe to set an exchange address as the recipient of the staking rewards.
 ---
 
 - Paste the session key

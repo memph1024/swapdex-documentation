@@ -64,7 +64,7 @@ sudo ntpq -p
 ## Installing the Kusari network Binary
 ---
 ### Install and enable Chrony
-We learned in the previous step that the new versions of Ubunutu ship the NTP client by default. However, Chrony is another time sync. tool that delivers better and more stable performance. Therefore, we recommend installing and enabling Chrony on top of the NTP client to ensure synchronized clocks and uninterrupted validator operations.
+We learned in the previous step that the new versions of Ubunutu ship the NTP client by default. However, Chrony is another time sync tool that delivers better and more stable performance. Therefore, we recommend installing and enabling Chrony on top of the NTP client to ensure synchronized clocks and uninterrupted validator operations.
 ```
 sudo apt install chrony
 sudo systemctl enable chrony

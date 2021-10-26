@@ -1,7 +1,7 @@
 # <b>BECOME A VALIDATOR</b>
 ---
 
-The following guide will teach you how to set up a Kusari Validator. The process of becoming a validator requires two steps. 
+The following guide will teach you how to set up a Testnet Validator. The process of becoming a validator requires two steps. 
 
 - The first step is to set up a network node. 
 - The second step is to assign your node to your account and apply for validator candidacy.

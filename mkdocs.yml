@@ -16,6 +16,8 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.tabbed:
+      alternate_style: true 
 
 theme:
   font:
@@ -23,12 +25,14 @@ theme:
     code: Roboto Mono
 
   features:
+    - content.code.annotate
     - navigation.instant
     - navigation.tracking
     - navigation.tabs
     - navigation.indexes
     - navigation.top
     - toc.integrate
+    
   name: material
   custom_dir: overrides
   logo: assets/swapdex-logo-circlewhite.png
@@ -67,7 +71,8 @@ nav:
   - 'What to Try?':
       - 'Create an Account': 'what-to-try/account-generation.md'
       - 'Become a Nominator': 'what-to-try/nominator.md'
-      - 'Become a Validator': 'what-to-try/validator.md'
+      - 'Become a Validator': 'what-to-try/validator-docker.md'
+      #- 'Become a Validator': 'what-to-try/validator.md'
       - 'Set an Identity': 'what-to-try/identity.md'
       - 'Stop Validating': 'what-to-try/stop-validating.md'
       - 'Explore the Governance': 'what-to-try/democracy.md'
@@ -88,7 +93,8 @@ nav:
   - 'Deep Dives':
       - 'EVM Pallet': 'deep-dives/evm-pallet.md'
       - 'Keys': 'deep-dives/substrate_keys.md'
-      - 'Using Web3.js': 'deep-dives/Using-Web3js.md'        
+      - 'Using Web3.js': 'deep-dives/Using-Web3js.md' 
+      - 'Staking': 'deep-dives/staking.md'       
 
 
 

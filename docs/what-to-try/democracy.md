@@ -4,7 +4,7 @@
 Kusari uses a sophisticated governance mechanism to evolve gracefully over time at the ultimate behest of its assembled stakeholders. 
 The stated goal is to ensure that the majority of the stake can always command the network. 
 
-To do this, we bring together various novel mechanisms, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. [WebAssembly](https://guide.kusama.network/docs/learn-wasm)) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting. Stake-weighted referenda must agree upon all changes to the protocol.
+To do this, we brrowed and adjusted various mechanisms from Polkadot, Kusama and Substrate, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. [WebAssembly](https://guide.kusama.network/docs/learn-wasm)) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting. Stake-weighted referenda must agree upon all changes to the protocol.
 
 ## <b>Mechanism</b>
 ---
@@ -36,12 +36,12 @@ Emergency proposals deal with significant problems with the network that need to
 
 ### **Public referenda**
 
-Anyone can propose a referendum by depositing the minimum amount of tokens for a certain period (number of blocks). 
+Anyone can propose a referendum by depositing the minimum amount of coins for a certain period (number of blocks). 
 If someone agrees with the proposal, they may deposit the same amount of coins to support it - this action is called seconding. 
 The proposal with the highest bonded support will be selected to be a referendum in the next voting cycle.
 
 !!! note
-    Note that this may be different from the absolute number of seconds; for instance, three accounts bonding 20 KSI each would "outweigh" ten accounts bonding a single DOT each. The bonded coins will be released once the proposal is tabled (that is, brought to a vote).
+    Note that this may be different from the absolute number of seconds; for instance, three accounts bonding 20 KSI each would "outweigh" ten accounts bonding a single KSI each. The bonded coins will be released once the proposal is tabled (that is, brought to a vote).
 
 There can be a maximum of 100 public proposals in the proposal queue.
 
@@ -64,11 +64,11 @@ An emergency referendum co-occurring as a regular referendum (either public- or 
 
 ### **Voting on referendum**
 
-To vote, a voter generally must lock their tokens up for at least the enactment delay period beyond the end of the referendum. 
+To vote, a voter generally must lock their coins up for at least the enactment delay period beyond the end of the referendum. 
 This ensures that some minimal economic buy-in to the result is needed and dissuades vote selling.
 
 It is possible to vote without locking at all, but your vote is worth a small fraction of an ordinary vote, given your stake. 
-At the same time, holding only a small amount of tokens does not mean that the holder cannot influence the referendum result, thanks to time-locking. 
+At the same time, holding only a small amount of coins does not mean that the holder cannot influence the referendum result, thanks to time-locking. 
 You can read more about this at Voluntary Locking.
 
 !!! hint
@@ -106,9 +106,9 @@ approve - the number of aye votes
 
 against - the number of nay votes
 
-turnout - the total number of voting tokens (does not include conviction)
+turnout - the total number of voting coins (does not include conviction)
 
-electorate - the total number of DOT tokens issued in the network
+electorate - the total number of KSI coins issued in the network
 ```
 
 ### **Super-Majority Approve**
@@ -136,7 +136,7 @@ To know more about where these above formulas come from, please read the [democr
 Example:
 
 Assume:
-- We only have 1_500 KSI tokens in total.
+- We only have 1.500 KSI coins in total.
 - Public proposal
 
 John  - 500 KSI
@@ -162,11 +162,11 @@ electorate = 1500
 ![example-vote-02](assets/example-vote-02.svg#center)
 
 Since the above example is a public referendum, `Super-Majority Approve` would be used to calculate the result.
-`Super-Majority Approve` requires more **aye** votes to pass the referendum when turnout is low, therefore, based on the above result, the referendum will be rejected. In addition, only the winning voter's coinss are locked. If the voters on the losing side of the referendum believe that the outcome will have negative effects, their tokens are transferrable so they will not be locked into the decision. Moreover, winning proposals are autonomously enacted only after some enactment period.
+`Super-Majority Approve` requires more **aye** votes to pass the referendum when turnout is low, therefore, based on the above result, the referendum will be rejected. In addition, only the winning voter's coinss are locked. If the voters on the losing side of the referendum believe that the outcome will have negative effects, their coins are transferrable so they will not be locked into the decision. Moreover, winning proposals are autonomously enacted only after some enactment period.
 
 ### **Voluntary Locking**
 
-Kusari utilizes an idea called Voluntary Locking that allows coin holders to increase their voting power by declaring how long they are willing to lock up their tokens, hence, the number of votes for each coin holder will be calculated by the following formula:
+Kusari utilizes an idea called Voluntary Locking that allows coin holders to increase their voting power by declaring how long they are willing to lock up their coins, hence, the number of votes for each coin holder will be calculated by the following formula:
 
 ```
 votes = coins * conviction_multiplier
@@ -186,9 +186,9 @@ The conviction multiplier increases the vote multiplier by one every time the nu
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in total), and one lock period equals 8 days on Kusari. Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction by 5.5, for instance.
 
-While a token is locked, you can still use it for voting and staking; you are only prohibited from transferring these tokens to another account.
+While a coin is locked, you can still use it for voting and staking; you are only prohibited from transferring these coins to another account.
 
-Votes are still "counted" at the same time (at the end of the voting period), no matter for how long the tokens are locked.
+Votes are still "counted" at the same time (at the end of the voting period), no matter for how long the coins are locked.
 
 ### **Adaptive Quorum Biasing**
 
@@ -203,7 +203,7 @@ If a publicly submitted referendum only has a 25% turnout, the tally of **"aye"*
 In contrast, when it has a 75% turnout, the tally of "aye" votes has to reach 54%, which means that the super-majority required decreases as the turnout increases.
 
 When the council proposes a new proposal through unanimous consent, the referendum would be put to a vote using "Negative Turnout Bias". 
-In this case, it is easier to pass this proposal with low turnout and requires a super-majority to reject. As more token holders participate in voting, the bias approaches a plain majority carries.
+In this case, it is easier to pass this proposal with low turnout and requires a super-majority to reject. As more coin holders participate in voting, the bias approaches a plain majority carries.
 
 Referring to the above image, when a referendum only has 25% turnout, the tally of **"aye"** votes has to reach 34% for it to pass.
 
@@ -216,9 +216,9 @@ All three tallying mechanisms - majority carries, super-majority approve, and su
 !!! hint
     Video explainer on Council
 
-To represent passive stakeholders, Polkadot introduces the idea of a "council". 
+To represent passive stakeholders, Kusari uses the idea of a "council". 
 The council is an on-chain entity comprising several actors, each represented as an on-chain account. 
-On Kusari, the council currently consists of 8 members. This is expected to increase over the next few months to 19 seats. In general, the council will end up having a fixed number of seats. On Kusari, this will be 19 seats.
+On Kusari, the council will consist of 19 seats.
 
 Along with controlling the treasury, the council is called upon primarily for three tasks of governance: proposing sensible referenda, cancelling uncontroversially dangerous or malicious referenda, and electing the technical committee.
 
@@ -239,7 +239,7 @@ If the cancellation is controversial enough that the council cannot get a two-th
 A proposal can be blacklisted by [Sudo Pallet](https://substrate.dev/rustdocs/latest/pallet_sudo/index.html). A blacklisted proposal and its related referendum (if any) is immediately canceled. Additionally, a blacklisted proposal's hash cannot re-appear in the proposal queue. 
 Blacklisting is useful when removing erroneous proposals that could be submitted with the same hash, i.e. proposal #2 in which the submitter used plain text to make a suggestion.
 
-Upon seeing their proposal removed, a submitter who is not properly introduced to the democracy system of Polkadot might be tempted to re-submit the same proposal. That said, this is far from a fool-proof method of preventing invalid proposals from being submitted - a single changed character in a proposal's text will also change the hash of the proposal, rendering the per-hash blacklist invalid.
+Upon seeing their proposal removed, a submitter who is not properly introduced to the democracy system of Kusari might be tempted to re-submit the same proposal. That said, this is far from a fool-proof method of preventing invalid proposals from being submitted - a single changed character in a proposal's text will also change the hash of the proposal, rendering the per-hash blacklist invalid.
 
 ### **How to become a council member?**
 
@@ -251,7 +251,7 @@ Council elections are handled by the same [Phragmén election process](https://a
 
 At the end of each term, Phragmén election algorithm runs and the result will choose the new councillors based on the vote configurations of all voters. The election also chooses a set number of runners up (currently 19 on Kusari) that will remain in the queue with their votes intact.
 
-As opposed to a "first-past-the-post" electoral system, where voters can only vote for a single candidate from a list, a Phragmén election is a more expressive way to include each voters' views. Token holders can treat it as a way to support as many candidates as they want. The election algorithm will find a fair subset of the candidates that most closely matches the expressed indications of the electorate as a whole.
+As opposed to a "first-past-the-post" electoral system, where voters can only vote for a single candidate from a list, a Phragmén election is a more expressive way to include each voters' views. coin holders can treat it as a way to support as many candidates as they want. The election algorithm will find a fair subset of the candidates that most closely matches the expressed indications of the electorate as a whole.
 
 Let's take a look at the example below.
 

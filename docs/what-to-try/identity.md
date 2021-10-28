@@ -1,4 +1,4 @@
-# <b>SET AN IDENTIY AND GAIN TRUST</b>
+# <b>SET AN IDENTITY TO GAIN TRUST</b>
 ---
 
 Kusari provides a naming system that allows participants to add personal information to their on-chain account and subsequently ask for verification of this information by registrars.

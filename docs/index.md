@@ -1,5 +1,5 @@
 
-<h1><b>KUSARI</b></h1>
+# ![kusari](assets/kusari-text.png)
 ---
 !!! Warning
     Work in progress content can change and it's not definitive :building_construction:.
@@ -38,7 +38,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
             </a>
         </td>
         <td>
-            <a href="what-to-try/nominator/">
+            <a href="deep-dives/staking/">
                 <img class="guide-image" src="assets/swapdex-docs-staking.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Staking</h5>
@@ -128,7 +128,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
             </a>
         </td>
         <td>
-            <a href="/what-to-try/validator/">
+            <a href="/what-to-try/validator-docker/">
                 <img class="guide-image" src="assets/swapdex-docs-become-a-validator.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Become a Validator</h5>

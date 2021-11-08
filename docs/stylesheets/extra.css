@@ -84,3 +84,31 @@ div.admonition.success {
   font-size: .80rem;
 }
 
+table.error-table{
+  font-family: "Nunito";
+  border: 1px solid #333333;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+table.error-table td, table.error-table th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 5px;
+}
+table.error-table tbody td {
+  font-size: 13px;
+}
+table.error-table td:nth-child(1) {
+  background-color: rgb(235, 235, 235);
+}
+table.error-table thead {
+  background: #ec4880;
+  border-bottom: 2px solid #444444;
+}
+table.error-table thead th {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 1px solid #444444;
+}

@@ -78,9 +78,10 @@ nav:
       - 'Explore the Governance': 'what-to-try/democracy.md'
       - 'Use the Treasury': 'what-to-try/treasury.md'
   - 'Validator Guides':
-      - 'Create an Account': 'what-to-try/account-generation.md'
-      - 'Become a Validator': 'what-to-try/validator-docker.md'
+      - 'Become a Validator': 'validator-guides/validator-docker.md'
+      - 'Create an Account': 'validator-guides/account-generation.md'
       - 'Validator Payout Overview': 'validator-guides/validator-payout-overview.md'
+      - 'Secure your Validator': 'validator-guides/secure-validator.md'
   - 'Troubleshooting':
       - 'Resolve Errors' : 'troubleshooting/01-substrate-error-codes.md'
       - 'Glossary' : 'troubleshooting/02-Glossary.md'

@@ -71,17 +71,18 @@ nav:
   - 'What to Try?':
       - 'Create an Account': 'what-to-try/account-generation.md'
       - 'Become a Nominator': 'what-to-try/nominator.md'
-      - 'Become a Validator': 'what-to-try/validator-docker.md'
-      #- 'Become a Validator': 'what-to-try/validator.md'
+      #- 'Become a Validator': 'what-to-try/validator-docker.md'
+      - 'Become a Validator': 'what-to-try/validator.md'
       - 'Set an Identity': 'what-to-try/identity.md'
-      - 'Stop Validating': 'what-to-try/stop-validating.md'
+      #- 'Stop Validating': 'what-to-try/stop-validating.md'
       - 'Explore the Governance': 'what-to-try/democracy.md'
       - 'Use the Treasury': 'what-to-try/treasury.md'
   - 'Validator Guides':
-      - 'Become a Validator': 'validator-guides/validator-docker.md'
+      - 'Become a Validator': 'validator-guides/validator.md'
       - 'Create an Account': 'validator-guides/account-generation.md'
       - 'Validator Payout Overview': 'validator-guides/validator-payout-overview.md'
       - 'Secure your Validator': 'validator-guides/secure-validator.md'
+      - 'Stop Validating': 'validator-guides/stop-validating.md'
   - 'Troubleshooting':
       - 'Resolve Errors' : 'troubleshooting/01-substrate-error-codes.md'
       - 'Glossary' : 'troubleshooting/02-Glossary.md'

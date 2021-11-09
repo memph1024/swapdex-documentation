@@ -62,6 +62,8 @@ Session keys should be generated and kept within your client. When you generate 
 
 - Kusari/SwapDex should run as a non-root user.
 
+---
+
 ## **Recommended Reads**
 - [Certus One's Knowledge Base](https://kb.certus.one/)
 

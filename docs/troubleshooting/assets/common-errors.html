@@ -1,0 +1,209 @@
+<style>
+
+
+:root {
+    --bg-table-stripe: #f6f6f5;
+    --b-table: #e3e3e2;
+    --caption: #EC4880;
+}
+
+table {
+    background-color: transparent;
+    border-collapse:collapse;
+  	font-family: Arial, Helvetica, sans-serif
+}
+
+th {
+    text-align:left
+}
+
+.dcf-txt-center {
+      text-align: center!important
+    }
+
+    .dcf-txt-left {
+      text-align: left!important
+    }
+
+    .dcf-txt-right {
+      text-align: right!important
+    }
+    
+.dcf-table caption {
+      color: var(--caption);
+      font-size: 1.13em;
+      font-weight: 700;
+      padding-bottom: .56rem
+    }
+
+    .dcf-table thead {
+      font-size: .84em
+    }
+
+    .dcf-table tbody {
+      border-bottom: 1px solid var(--b-table);
+      border-top: 1px solid var(--b-table);
+      font-size: .84em
+    }
+
+    .dcf-table tfoot {
+      font-size: .84em
+    }
+
+    .dcf-table td, .dcf-table th {
+      padding-right: 1.78em
+    }
+
+    .dcf-table-bordered, .dcf-table-bordered td, .dcf-table-bordered th {
+      border: 1px solid var(--b-table)
+    }
+
+    .dcf-table-bordered td, .dcf-table-bordered th, .dcf-table-striped td, .dcf-table-striped th {
+      padding-left: 1em;
+      padding-right: 1em
+    }
+
+    .dcf-table-bordered tr:not(:last-child), .dcf-table-striped tr:not(:last-child) {
+      border-bottom: 1px solid var(--b-table)
+    }
+
+    .dcf-table-striped tbody tr:nth-of-type(2n) {
+      background-color: var(--bg-table-stripe)
+    }
+
+    .dcf-table thead td, .dcf-table thead th {
+      padding-bottom: .75em;
+      vertical-align: bottom;
+	  background-color: #EC4880
+    }
+	
+	th[scope=row] {
+    background-color: #D9D8DA;
+}
+
+    .dcf-table tbody td, .dcf-table tbody th, .dcf-table tfoot td, .dcf-table tfoot th {
+      padding-top: .75em;
+      vertical-align: top
+    }
+
+    .dcf-table tbody td, .dcf-table tbody th {
+      padding-bottom: .75em
+    }
+
+    .dcf-table-bordered thead th {
+      padding-top: 1.33em
+    }
+
+    .dcf-wrapper-table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      left: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      padding-bottom: 1em;
+      position: relative;
+      right: 50%;
+      width: 100vw
+    }
+
+    @media only screen and (max-width:42.09em) {
+      .dcf-table-responsive thead {
+        clip: rect(0 0 0 0);
+        -webkit-clip-path: inset(50%);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        width: 1px;
+        white-space: nowrap
+      }
+      .dcf-table-responsive tr {
+        display: block
+      }
+      .dcf-table-responsive td {
+        -webkit-column-gap: 3.16vw;
+        -moz-column-gap: 3.16vw;
+        column-gap: 3.16vw;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        text-align: left!important
+      }
+      .dcf-table-responsive.dcf-table-bordered, .dcf-table-responsive.dcf-table-bordered thead th {
+        border-width: 0
+      }
+      .dcf-table-responsive.dcf-table-bordered tbody td {
+        border-top-width: 0
+      }
+      .dcf-table-responsive:not(.dcf-table-bordered) tbody tr {
+        padding-bottom: .75em
+      }
+      .dcf-table-responsive:not(.dcf-table-bordered) tbody td {
+        padding-bottom: 0
+      }
+      .dcf-table-responsive:not(.dcf-table-bordered):not(.dcf-table-striped) tbody td {
+        padding-right: 0
+      }
+      .dcf-table-responsive.dcf-table-bordered tbody tr:last-child td:last-child {
+        border-bottom-width: 0
+      }
+      .dcf-table-responsive tbody td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: 700;
+        padding-right: 1.78em
+      }
+    }
+
+.dcf-overflow-x-auto {
+      overflow-x: auto!important;
+      -webkit-overflow-scrolling: touch
+    }
+    
+</style>
+
+<table class="dcf-table dcf-table-responsive dcf-table-bordered dcf-table-striped dcf-w-100%">
+	<thead>
+		<tr>
+			<th scope="col">Error</th>
+			<th scope="col">Description</th>
+			<th scope="col">Solution</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">BadOrigin</th>
+			<td data-label="Desctiption">You are not allowed to do this operation, e.g. trying to create a council motion with a non-council account.</td>
+			<td data-label="Solution">Either switch to an account that has the necessary permissions, or check if the operation you're trying to execute is permitted at all (e.g. calling system.setCode to do a runtime upgrade directly, without voting).</td>
+		</tr>
+		<tr>
+			<th scope="row">BadProof</th>
+			<td data-label="Desctiption">The transaction's signature seems invalid.</td>
+			<td data-label="Solution">It's possible that the node you're connected to is following an obsolete fork - trying again after it catches up usually resolves the issue. To check for bigger problems, inspect the last finalized and current best block of the node you're connected to and compare the values to chain stats exposed by other nodes - are they in sync? If not, try connecting to a different node.</td>
+		</tr>
+		<tr>
+			<th scope="row">Future</th>
+			<td data-label="Desctiption">Transaction nonce too high, i.e. it's &quot;from the future&quot;.</td>
+			<td data-label="Solution">Reduce the nonce to +1 of current nonce. Check current nonce by inspecting the address you're using to send the transaction.</td>
+		</tr>
+		<tr>
+			<th scope="row">Stale</th>
+			<td data-label="Desctiption">Transaction nonce too low.</td>
+			<td data-label="Solution">Increase the nonce to +1 of current nonce. Check current nonce by inspecting the address you're using to send the transaction.</td>
+		</tr>
+		<tr>
+			<th scope="row">ExhaustsResources</th>
+			<td data-label="Desctiption">There aren't enough resources left in the current block to submit this transaction.</td>
+			<td data-label="Solution">Try again in the next block.</td>
+		</tr>
+		<tr>
+			<th scope="row">Payment</th>
+			<td data-label="Desctiption">Unable to pay for TX fee.</td>
+			<td data-label="Solution">You might not have enough free balance to cover the fee this transaction would incur.</td>
+		</tr>
+		<tr>
+			<th scope="row">Temporarily banned</th>
+			<td data-label="Desctiption">The transaction is temporarily banned.</td>
+			<td data-label="Solution">The tx is already in pool. Either try on a different node, or wait to see if the initial transaction goes through.</td>
+		</tr>
+	</tbody>
+</table>

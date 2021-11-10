@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>validator.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="bhow-to-setup-a-validatorb"><b>HOW TO SETUP A VALIDATOR</b></h1>
+<hr>
+<p>The following guide will teach you how to set up a Kusari test validator. The process of becoming a validator requires two steps. The first step is to set up a network node. The second step is to assign your node to your account and apply for validator candidacy.</p>
+<p>Network validators are the foundation of a decentralized proof-of-stake network because they are responsible for concluding on a consensus by creating new and validating already produced blocks. That said, network validators are the prime target for adversaries that aim to sabotage the network. The Kusari has many layers to protect the network from attacks. The first layer is the security of each validator itself. Another layer is the slashing mechanism that detects validator nodes that display abnormal or dangerous behavior and punishes them with slashes. A slash will, in all cases, lead to the loss of funds.</p>
+<p>!!! warning
+Hence the warning: Running a validator on a live network is a lot of responsibility! You will be accountable for your stake and the stake of your current nominators. If you make a mistake and get slashed, your money and your reputation will be at risk. However, running a validator can also be very rewarding, knowing that you contribute to the security of a decentralized network while growing your stash.</p>
+<h2 id="setp-1---setup-a-network-node">Setp 1 - Setup a Network Node</h2>
+<hr>
+<h2 id="requirements">Requirements</h2>
+<p>You can operate a network node on a local computer, a professional server-rig in your basement, or on a remotely hosted virtual private server (VPS) in the clouds. It's up to you to choose the infrastructure you feel most comfortable with. What doesn't change are the requirements of a network node that operates as a validator. Validators should always be online and powerful enough to create and validate the authoring process of new blocks. If your validator is failing at one of these requirements, it will get punished by slashes.</p>
+<p>!!! tip
+The most common way for a beginner to run a validator is on a VPS running Linux. You may choose whatever VPS providers that you prefer.</p>
+<p>We benchmarked the transactions weights on the Kusari network on standard hardware. We recommend that validators run at least the standard hardware to ensure they can process all blocks in time. The following are not minimum requirements, but if you decide to run with less than this, beware that you might have a performance issue.</p>
+<h3 id="lower-end-hardware">Lower-end Hardware :</h3>
+<ul>
+<li>6GB ram, 60 GB Storage, 2 CPU , <strong>stable server uplink connection with fixed IP</strong></li>
+</ul>
+<h3 id="ideal-hardware">Ideal Hardware :</h3>
+<ul>
+<li>16GB ram, 300 GB Storage, 6 CPU, <strong>stable server uplink connection with fixed IP</strong></li>
+</ul>
+<p>!!! info
+Anything between the lower-end and ideal hardware should be sufficient to run a validator on the Kusari test network.</p>
+<h2 id="using-ubuntu-2004--2104">Using Ubuntu 20.04 &amp; 21.04:</h2>
+<hr>
+<h3 id="update-your-ubuntu">Update your Ubuntu</h3>
+<pre class="hljs"><code><div>sudo apt-get update
+</div></code></pre>
+<h3 id="network-time-protocol-ntp-client">Network Time Protocol (NTP) Client</h3>
+<p>We currently require that the clocks of all validators on the network stay reasonably in sync. The NTP client is a piece of software that allows you to synchronize your server's clock with the clocks of the remaining servers connected to the blockchain.</p>
+<p>!!! info
+If you are using Ubuntu 18.04 / 19.04 / 20.04, NTP Client should be installed by default. You can check if your server is already running NTP by executing the following command:<br>
+<code>    timedatectl    </code>
+If NTP is installed and running, you should see System clock synchronized: yes (or a similar message).</p>
+<p>Otherwise install the NTP client by running the following command:</p>
+<pre class="hljs"><code><div>sudo apt-get install ntp
+</div></code></pre>
+<p>NTP will be started automatically after install. You can query your NTP client for status information to verify that everything is working:</p>
+<pre class="hljs"><code><div>sudo ntpq -p
+</div></code></pre>
+<p>!!! warning
+Skipping this can result in the validator node missing block authorship opportunities. If the clock is out of sync (even by a small amount), the blocks produced by your validator may not get accepted by the network.</p>
+<h2 id="installing-the-kusari-test-network-binary">Installing the Kusari test network Binary</h2>
+<hr>
+<h3 id="install-and-enable-chrony">Install and enable Chrony</h3>
+<p>We learned in the previous step that the new versions of Ubunutu ship with the NTP client by default. However, Chrony is another time sync tool that delivers better and more stable performance. Therefore, we recommend installing and enabling Chrony on top of the NTP client to ensure synchronized clocks and uninterrupted validator operations.</p>
+<pre class="hljs"><code><div>sudo apt install chrony
+sudo systemctl enable chrony
+</div></code></pre>
+<h3 id="fundamental-security-measures">Fundamental Security Measures</h3>
+<p>Security is of utmost importance if you consider operating a successfull validator on a live network. We will show you how to create a fundamental layer of protection by installing a firewall and a fail2ban service.</p>
+<p><strong>Configure a Firewall</strong></p>
+<p>The default firewall configuration tool for Ubuntu is <a href="https://help.ubuntu.com/community/UFW">ufw</a>. UFW stands for uncomplicated firewall and helps ease IP-tables firewall configuration, and provides a user-friendly way to create an IPv4 or IPv6 host-based firewall.</p>
+<p>Configure firewall ports to allow SSH and Validator service to communicate.</p>
+<pre class="hljs"><code><div>sudo ufw allow 22
+sudo ufw allow 30333
+sudo ufw enable
+</div></code></pre>
+<p><strong>Setup Fail2Ban</strong></p>
+<p><a href="https://www.fail2ban.org/wiki/index.php/Main_Page">Fail2Ban</a> is a tool that scans log files and bans IPs that show malicious signs for instance too many password failures, seeking for exploits, etc.
+Generally Fail2Ban is then used to update firewall rules to reject the IP addresses for a specified amount of time.
+It provides basic-level protection against distributed brute-force attacks.</p>
+<pre class="hljs"><code><div>sudo apt install -y fail2ban &amp;&amp; sudo systemctl enable fail2ban &amp;&amp; sudo service fail2ban start
+</div></code></pre>
+<p>!!! success
+Congratulations! You implemented a fundamental layer of protection.</p>
+<h3 id="install-kusari-testnet-validator-binaries">Install Kusari testnet Validator binaries</h3>
+<p>The following command will fetch / download the Kusari Testnet validator binaries and copy them to a specific folder</p>
+<pre class="hljs"><code><div>wget https://github.com/starkleytech/swapdex/releases/download/2.0.1/swapdex &amp;&amp; sudo chmod +x ./swapdex &amp;&amp; sudo mv ./swapdex /usr/bin/swapdex
+</div></code></pre>
+<p>!!! Warning
+Make sure that the link matches exactly and never use another source to download the binaries!</p>
+<h3 id="create-user-account-for-validator-operations">Create User Account for Validator Operations</h3>
+<p>For security reasons we recommend to run a validator as non-root user.
+For that we create a dedicated user account which will be used to run the validator.</p>
+<pre class="hljs"><code><div>sudo adduser TKSI-validator
+</div></code></pre>
+<p>!!! info
+when adding the new account you will be asked to provide a password and some additional information.
+Only the password is mandatory, the other parameters can be left blank.</p>
+<h3 id="create-the-kusari-testnet-validator-service-file">Create the Kusari Testnet Validator Service File</h3>
+<p>In the next step, we will use <a href="https://help.ubuntu.com/community/Nano">Nano</a>, a simple terminal-based text editor, to create a file that contains service instructions.
+The following command creates a file named <code>kusari.service</code> at the following location: <code>lib/systemd/system/</code></p>
+<pre class="hljs"><code><div>sudo nano /lib/systemd/system/kusari.service
+</div></code></pre>
+<p>!!! warning
+The following code-block contains the content that must be inserted into the Nano text editor!
+Make sure to <strong>change &quot;A Node Name&quot; and replace it your preferred name</strong></p>
+<p><strong>Content of the swapdex.service file</strong>:</p>
+<pre class="hljs"><code><div>[Unit]
+Description=swapdex Validator
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/swapdex --port &quot;30333&quot; --name &quot;{==A Node Name==}&quot; --validator --chain swapdex   
+User=swapdex
+Restart=always
+ExecStartPre=/bin/sleep 5
+RestartSec=30s
+LimitNOFILE=8192
+
+[Install]
+WantedBy=multi-user.target
+</div></code></pre>
+<p>!!! hint
+If you want to add a more ports to enable RPC calls, a websocket or monitoring, you can set it up by including the following flags in line 6. <code>--prometheus-port</code> <code>--rpc-port</code> and <code>--ws-port</code></p>
+<p>then start the service</p>
+<pre class="hljs"><code><div>sudo systemctl enable swapdex &amp;&amp; sudo service swapdex start 
+</div></code></pre>
+<p>!!! Success
+Your validator will now run as a systemd process so that it will automatically restart on server reboots or crashes (and helps to avoid to getting slashed!)
+For more information on systemd you can watch this quick <a href="https://youtu.be/N1vgvhiyq0E">tutorial</a> on YouTube.</p>
+<h3 id="check-if-validator-is-started">Check if validator is started</h3>
+<p>To ensure that the Kusari Testnet Validator process works please execute the following command:</p>
+<pre class="hljs"><code><div>ps aux | grep swapdex
+</div></code></pre>
+<p>You should see a similar output:</p>
+<pre class="hljs"><code><div>swapdex   8108  9.9 21.0 1117976 419772 ?      Ssl  May17 601:17 /usr/bin/swapdex --port 30333 --name &quot;A Node Name&quot; --validator --chain swapdex
+</div></code></pre>
+<p>Check if your node is appearing in the telemetry UI : <a href="https://telemetry.polkadot.io/#list/swapdex">https://telemetry.polkadot.io/#list/swapdex</a></p>
+<p>!!! info
+If you want to find your node here you must have changed the name parameter in the previous step (<code>--name &quot;A Node Name&quot;</code>)</p>
+<p>!!! success
+Congrats! If you checked and found your node on the telemetry page, you successfully set up your server to become a Kusari Testnet Validator!</p>
+<h2 id="part-2---assign-the-node-to-an-account">Part 2 - Assign the node to an account</h2>
+<hr>
+<p>The second part of this guide will complete the validator setup by connecting your server with your Substrate account.
+Make sure you have some TKSI in your substrate wallet. In case you need TKSI please see the <a href="../get-started/faucet.md">faucet</a> and <a href="../get-started/claims.md">claim</a> section.</p>
+<h3 id="what-are-stash-and-controller-accounts">What are stash and controller accounts?</h3>
+<p>The divison into two wallets or accounts is an additional security feature we implemented to protect your funds in case of fradulent attacks.</p>
+<p>!!! hint
+In short:
+The <strong>Stash-Account</strong> is where you keep all the funds you want to stake. We recommend to protect it's private key with a hardware wallet like Ledger or Trezor.
+The <strong>Controller-Account</strong>  is used to control actions related to your staking
+However, you can start and operate a validator without hardware wallets. This may be a viable option on a testnet but is certainly not recommended once liqudity is provided.</p>
+<p>The Stash Account will be used to bond/unbond your funds and to choose the address of the Controller Account.
+The Controller Account will be used to take actions on behalf of the bonded funds.
+However, the Controller Account can't move the bonded funds out of the Stash Account.</p>
+<p>!!! warning
+<strong>Never disclose your Keystore file or your 12/24 words seed phrase.</strong></p>
+<p>Before we start with the creation of both accounts please consider to download the Polkadot{.js} browser extension is our recommended way to create substrate based accounts. <a href="https://polkadot.js.org/extension/">Pokadot.js</a> is very comparable with Meta Mask for Ethereum especially in terms of usability, security and functionality.</p>
+<p>!!! tip
+<img class="emoji" alt="point_right" src="data:image/png;base64,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" /> Download <a href="https://polkadot.js.org/extension/">Pokadot.js</a> browser extension</p>
+<h3 id="create-the-controller-account">Create the Controller Account</h3>
+<p><strong>Step 1:</strong> Open the <a href="https://polkadot.js.org/extension/">Polkadot{.js}</a> browser extension by clicking the logo on the top bar of your browser. You will see a browser popup, not unlike the one below.</p>
+<p><img src="assets/polkadot_plugin_js.png#center" alt="browser_extension"></p>
+<p><strong>Step 2:</strong> Click the big plus button or select &quot;Create new account&quot; from the small plus icon in the top right. The Polkadot{.js} plugin will then use system randomness to make a new seed for you and display it to you in the form of twelve words.</p>
+<p><img src="assets/polkadot_plugin_js_new.png#center" alt="browser_extenstion_01"></p>
+<p><strong>Step 3:</strong> You should back up these words as explained above. It is imperative to store the seed somewhere safe, secret, and secure. If you cannot access your account via Polkadot{.js} for some reason, you can re-enter your seed through the &quot;Add account menu&quot; by selecting &quot;Import account from pre-existing seed&quot;.</p>
+<p><img src="assets/polkadot_plugin_js_new_03.png#center" alt="browser_extenstion_02"></p>
+<p><strong>Step 4:</strong> Name your Account</p>
+<p>The account name is arbitrary and for your use only. It is not stored on the blockchain and will not be visible to other users who look at your address via a block explorer. If you're juggling multiple accounts, it helps to make this as descriptive and detailed as needed.</p>
+<p><strong>Step 5:</strong> Enter Password</p>
+<p>You will use the password to encrypt this account's information. You will need to re-enter it when using the account for all outgoing transactions or sign a cryptographic message.</p>
+<p>!!! warning
+Note that this password does NOT protect your seed phrase. If someone knows the twelve words in your mnemonic seed, they still control your account even if they do not know the password.</p>
+<p>!!! hint
+<img class="emoji" alt="point_right" src="data:image/png;base64,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" /> <strong>Repeat this process to create your stash account</strong></p>
+<h3 id="create-session-keys">Create Session Keys:</h3>
+<p>Login to your VPS server.</p>
+<p>Session keys are needed to associate your node with your controller account. To generate the session keys you can run the following command in your terminal:</p>
+<pre class="hljs"><code><div>curl -H &quot;Content-Type: application/json&quot; -d '{&quot;id&quot;:1, &quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;: &quot;author_rotateKeys&quot;, &quot;params&quot;:[]}' http://localhost:8545
+</div></code></pre>
+<p>The output will have a hex-encoded &quot;result&quot; field. The result is the concatenation of the four public keys. Save this result for a later step.
+Copy the session key. It will look like this:</p>
+<pre class="hljs"><code><div>0x13660593581b2e728ee32122636f8996c6fd9c22f33beaa05e2797899c5458b0c888149bf3c0b5ca7fb7296e69fefd85e4e3d5b76848db890207575e49031f37d846e78babf8051c123b498ffe6f12e712f97f6b2f3b54345ffe51145a16bb22187d415c2101b9883668ce93c46f7ba556b394c59781854737b6c941747c0964
+</div></code></pre>
+<h3 id="apply-on-kusari-testnet-explorer">Apply on Kusari Testnet Explorer</h3>
+<hr>
+<ul>
+<li>
+<p>Visit the substrate <a href="https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Frpc-testnet.swapdex.network%2Fws#/accounts">testnet explorer</a></p>
+</li>
+<li>
+<p>Go to the Network Tab -&gt; Staking -&gt; Account Actions (<a href="https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Frpc-testnet.swapdex.network%2Fws#/staking/actions">Link</a>)
+<img src="assets/validator_01.png" alt="img"></p>
+</li>
+<li>
+<p>Hit the <code>+ Validator</code> Button
+<img src="assets/validator_02.png" alt="img"></p>
+</li>
+<li>
+<p>Fill in the form
+<img src="assets/validator_03.png" alt="img"></p>
+</li>
+<li>
+<p><strong>Stash account</strong> - Select your Stash account. In this example, we will bond 1000 TSDX, where the minimum bonding amount is 1. Make sure that your Stash account contains at least this much. You can, of course, stake more than this.</p>
+</li>
+<li>
+<p><strong>Controller account</strong> - Select the Controller account created earlier. This account will also need a small amount of TSDX in order to start and stop validating.</p>
+</li>
+<li>
+<p><strong>Value bonded</strong> - How much TSDX from the Stash account you want to bond/stake. Note that you do not need to bond all of the TSDX in that account. Also note that you can always bond more TSDX later. However, withdrawing any bonded amount requires the duration of the unbonding period.</p>
+</li>
+<li>
+<p><strong>Payment destination</strong> - The account where the rewards from validating are sent. Payouts can go to any custom address. If you'd like to redirect payments to an account that is neither the controller nor the stash account, set one up. Note that it is extremely unsafe to set an exchange address as the recipient of the staking rewards.</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Paste the session key
+<img src="assets/validator_04.png" alt="img"></li>
+</ul>
+<p>Here you will need to input the Sesssion Keys, which is the Hex output from the command we executed earlier. The keys will show as pending until applied at the start of a new session.</p>
+<p>The <strong>&quot;reward commission percentage&quot;</strong> is the commission percentage that you can declare against your validator's rewards. This is the rate that your validator will be commissioned with.</p>
+<p>!!! Note:
+setting a commission rate of 100% suggests that you do not want your validator to receive nominations.</p>
+<p>You can also determine if you would like to receive nominations with the &quot;allows new nominations&quot; option.</p>
+<ul>
+<li>
+<p>Hit bond &amp; validate</p>
+</li>
+<li>
+<p>Visit the <strong><a href="https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Frpc-testnet.swapdex.network%2Fws#/staking/waiting">Waiting Tab</a></strong> to see your validator waiting until the era finishes</p>
+</li>
+</ul>
+<p>!!! success
+Alright mate! You are all set <img class="emoji" alt="smile" src="data:image/png;base64,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" /></p>
+<p><br></br></p>
+<p align=right> Written by Masterdubs & Petar </p>
+
+</body>
+</html>

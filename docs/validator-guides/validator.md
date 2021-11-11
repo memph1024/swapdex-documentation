@@ -135,7 +135,7 @@ Description=swapdex Validator
 After=network-online.target
 
 [Service]
-ExecStart=/usr/bin/swapdex --port "30333" --name "{==A Node Name==}" --validator --chain swapdex   
+ExecStart=/usr/bin/swapdex --port "30333" --name "{==A Node Name==}" --validator --chain phoenix   
 User=swapdex
 Restart=always
 ExecStartPre=/bin/sleep 5

@@ -109,7 +109,7 @@ wget https://download.starkleytech.com/swapdex/FILE_NAME_FROM_ABOVE -O swapdex &
 For security reasons we recommend to run a validator as non-root user.
 For that we create a dedicated user account which will be used to run the validator.
 ```
-sudo adduser TKSI-validator
+sudo adduser swapdex
 ```
 !!! info
     when adding the new account you will be asked to provide a password and some additional information.

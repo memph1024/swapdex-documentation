@@ -117,7 +117,7 @@ sudo adduser TKSI-validator
 
 ### Create the Kusari Testnet Validator Service File
 In the next step, we will use [Nano](https://help.ubuntu.com/community/Nano), a simple terminal-based text editor, to create a file that contains service instructions.
-The following command creates a file named `kusari.service` at the following location: `lib/systemd/system/`
+The following command creates a file named `swapdex.service` at the following location: `lib/systemd/system/`
 
 ```
 sudo nano /lib/systemd/system/swapdex.service
@@ -136,7 +136,6 @@ After=network-online.target
 
 [Service]
 ExecStart=/usr/bin/swapdex --port "30333" --name "{==A Node Name==}" --validator --chain phoenix   
-User=swapdex
 Restart=always
 ExecStartPre=/bin/sleep 5
 RestartSec=30s

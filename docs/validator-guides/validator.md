@@ -239,7 +239,7 @@ Login to your VPS server.
 Session keys are needed to associate your node with your controller account. To generate the session keys you can run the following command in your terminal: 
 
 ```
-curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:8545
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
 ```
 
 The output will have a hex-encoded "result" field. The result is the concatenation of the four public keys. Save this result for a later step.

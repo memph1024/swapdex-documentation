@@ -120,7 +120,7 @@ In the next step, we will use [Nano](https://help.ubuntu.com/community/Nano), a 
 The following command creates a file named `kusari.service` at the following location: `lib/systemd/system/`
 
 ```
-sudo nano /lib/systemd/system/kusari.service
+sudo nano /lib/systemd/system/swapdex.service
 ```
 
 !!! warning

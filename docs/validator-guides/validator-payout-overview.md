@@ -141,8 +141,8 @@ v1:
 (9 / 18) * 1.6 = 0.8 KSI        -> validator self-stake share
 (9 / 18) * 1.6 = 0.8 KSI        -> nominator stake share
 
-v1 validator total reward: 0.4 + 0.8 = 1.2 DOT
-v1 nominator reward: 0.8 DOT
+v1 validator total reward: 0.4 + 0.8 = 1.2 KSI
+v1 nominator reward: 0.8 KSI
 
 ---------------------------------------------------------------------------------------------------
 
@@ -154,7 +154,7 @@ v2:
 (6 / 9) * 1.2 = 0.8 KSI          -> nominator stake share
 
 v2 validator total reward: 0.8 + 0.4 = 1.2 KSI
-v2 nominator reward: 0.8 DOT
+v2 nominator reward: 0.8 KSI
 
 ---------------------------------------------------------------------------------------------------
 
@@ -165,8 +165,8 @@ v3:
 (4 / 8) * 1.8 = 0.9 KSI          -> validator self-stake share
 (4 / 8) * 1.8 = 0.9 KSI          -> nominator stake share
 
-v3 validator total reward: 0.2 + 0.9 DOT = 1.1 DOT
-v3 nominator reward: 0.9 DOT
+v3 validator total reward: 0.2 + 0.9 KSI = 1.1 KSI
+v3 nominator reward: 0.9 KSI
 
 ---------------------------------------------------------------------------------------------------
 
@@ -177,8 +177,8 @@ v4:
 (1 / 6) * 2 = 0.33 KSI           -> validator self-stake share
 (5 / 6) * 2 = 1.67 KSI           -> nominator stake share
 
-v4 validator total reward: 0 + 0.33 DOT = 0.33 DOT
-v4 nominator reward: 1.67 DOT
+v4 validator total reward: 0 + 0.33 KSI = 0.33 KSI
+v4 nominator reward: 1.67 KSI
 ```
 
 <br></br>

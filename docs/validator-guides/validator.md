@@ -135,7 +135,7 @@ Description=swapdex Validator
 After=network-online.target
 
 [Service]
-ExecStart=/usr/bin/swapdex --port "30333" --name "NODE NAME" --validator --chain phoenix
+ExecStart=/usr/bin/swapdex --port "30333" --name "{==A Node Name==}" --validator --chain phoenix
 User=swapdex
 Restart=always
 ExecStartPre=/bin/sleep 5
@@ -145,6 +145,9 @@ LimitNOFILE=8192
 [Install]
 WantedBy=multi-user.target
 ```
+
+Hit ctrl+x and then hit Y to confirm save of the file.
+
 !!! hint
     If you want to add a more ports to enable RPC calls, a websocket or monitoring, you can set it up by including the following flags in line 6. `--prometheus-port` `--rpc-port` and `--ws-port`
 

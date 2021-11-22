@@ -171,7 +171,7 @@ You should see a similar output:
 swapdex   8108  9.9 21.0 1117976 419772 ?      Ssl  May17 601:17 /usr/bin/swapdex --port 30333 --name "A Node Name" --validator --chain swapdex
 ```
 
-Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/swapdex](https://telemetry.polkadot.io/#list/swapdex)
+Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/swapdex](https://telemetry.polkadot.io/#list/0x811edb0ea924fcec6b9d10417c724d924d1c15a4ca500802a8bc3a02d6ae8494)
 
 !!! info
     If you want to find your node here you must have changed the name parameter in the previous step (`--name "A Node Name"`)

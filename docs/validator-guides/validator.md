@@ -135,7 +135,7 @@ Description=swapdex Validator
 After=network-online.target
 
 [Service]
-ExecStart=/usr/bin/swapdex --port "30333" --name "{==A Node Name==}" --validator --chain phoenix
+ExecStart=/usr/bin/swapdex --port "30333" --name "{==A Node Name==}" --validator --chain phoenix --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 User=swapdex
 Restart=always
 ExecStartPre=/bin/sleep 5

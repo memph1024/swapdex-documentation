@@ -5,7 +5,7 @@ The Kusari network is SwapDex's experimental, community-focused research & devel
 
 You can claim KSI by visiting :
 !!! hint
-    **The deadline for a snapshot for claiming KSI is October, 24th 2021**
+    **The deadline for a snapshot for claiming KSI was October, 24th 2021**
 
 <br></br>
 

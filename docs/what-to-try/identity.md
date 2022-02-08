@@ -10,7 +10,7 @@ Users can set an identity by registering through default fields such as legal na
 
 Users must reserve funds in a bond to store their information on chain: 0.033333, and 0.008333 per each field beyond the legal name. These funds are locked, not spent - they are returned when the identity is cleared.
 
-The easierst way to create a on-chain identiy is to click the gear icon next to your account on the [Substrate Explorer App](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/explorer) and select "Set on-chain identity".
+The easierst way to create a on-chain identiy is to click the gear icon next to your account on the <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Substrate Explorer App</a> and select "Set on-chain identity".
 
 ![set-identiy](assets/set-identiy-01.png#center)
 
@@ -35,12 +35,12 @@ A seventh state, "fee paid", is for when a user has requested judgement and it i
 
 Registrars gain trust by performing proper due diligence and would presumably be replaced for issuing faulty judgements.
 
-To be judged after submitting your identity information, go to the "[Extrinsics UI](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/extrinsics)" and select the `identity pallet`, then `requestJudgement`. For the `reg_index` put the index of the registrar you want to be judged by, and for the `max_fee` put the maximum you're willing to pay for these confirmations
+To be judged after submitting your identity information, go to the "<a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/extrinsics" target="_blank">Extrinsics UI</a>" and select the `identity pallet`, then `requestJudgement`. For the `reg_index` put the index of the registrar you want to be judged by, and for the `max_fee` put the maximum you're willing to pay for these confirmations
 
 ![identity-judgement](assets/identity-judgement-03.png)
 
 !!! hint
-    If you don't know which registrar to pick, first check the available registrars by going to "[Chain State UI](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/chainstate)" and selecting identity.registrars() to get the full list.
+    If you don't know which registrar to pick, first check the available registrars by going to "<a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/chainstate" target="_blank">Chain State UI</a>" and selecting identity.registrars() to get the full list.
 
 ### **Requesting a Judgement**
 
@@ -59,7 +59,7 @@ Once the registrar has confirmed the identity, a green checkmark should appear n
 
 You may decide that you do not want to be judged by a registrar (for instance, because you realize you entered incorrect data or selected the wrong registrar). In this case, after submitting the request for judgement but before your identity has been judged, you can issue a call to cancel the judgement using an extrinsic.
 
-To do this, first, go to the "[Extrinsics UI](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/chainstate)" and select the `identity pallet`, then `cancelRequest`. Ensure that you are calling this from the correct account (the one for which you initially requested judgement). For the `reg_index`, put the index of the registrar from which you requested judgement.
+To do this, first, go to the "<a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/extrinsics" target="_blank">Extrinsics UI</a>" and select the `identity pallet`, then `cancelRequest`. Ensure that you are calling this from the correct account (the one for which you initially requested judgement). For the `reg_index`, put the index of the registrar from which you requested judgement.
 
 Submit the transaction, and the requested judgement will be cancelled.
 

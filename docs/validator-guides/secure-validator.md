@@ -36,7 +36,7 @@ Session keys should be generated and kept within your client. When you generate 
 
 ## **Monitoring Tools**
 
-- [Telemetry](https://github.com/paritytech/substrate-telemetry) This tracks your node details including the version you are running, block height, CPU & memory usage, block propagation time, etc.
+- <a href="https://telemetry.polkadot.io/#list/0x4959f8d87d40d9ef516459ff177111bb03d875e5a7ed69282f6b689a707b69f5" target="_blank"> Telemetry UI </a> This tracks your node details including the version you are running, block height, CPU & memory usage, block propagation time, etc.
 - Prometheus-based monitoring stack, including Grafana for dashboards and log aggregation. It includes alerting, querying, visualization, and monitoring features and works for both cloud and on-premise systems. The data from substrate-telemetry can be made available to Prometheus through exporters like [this](https://github.com/w3f/substrate-telemetry-exporter).
 
 ---
@@ -46,7 +46,7 @@ Session keys should be generated and kept within your client. When you generate 
 - Always update the security patches for your OS.
 - Enable and set up a firewall.
 - Never allow password-based SSH, only use key-based access.
-- Disable non-essential SSH subsystems (banner, motd, scp, X11 forwarding) and harden your SSH configuration ([reasonable guide to begin with](https://stribika.github.io/2015/01/04/secure-secure-shell.html)).
+- Disable non-essential SSH subsystems (banner, motd, scp, X11 forwarding) and harden your SSH configuration (<a href="https://stribika.github.io/2015/01/04/secure-secure-shell.html" target="_blank"> reasonable guide to begin with </a>).
 - Back up your storage regularly.
 
 ---
@@ -65,6 +65,6 @@ Session keys should be generated and kept within your client. When you generate 
 ---
 
 ## **Recommended Reads**
-- [Certus One's Knowledge Base](https://kb.certus.one/)
+- <a href="https://kb.certus.one/" target="_blank"> Certus One's Knowledge Base </a>
 
 <p align=right> Written by Masterdubs & Petar </p>

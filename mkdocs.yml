@@ -1,6 +1,6 @@
-site_name: SwapDex Wiki
-copyright: Copyright &copy; 2021 SwapDex
-repo_url: https://github.com/Swapdex-Protocol/swapdex-documentation
+site_name: Kusari Knowledge Base
+copyright: Copyright &copy; 2022 Kusari
+repo_url: https://github.com/kusari-network/kusari-docs.git
 
 markdown_extensions:
   - admonition
@@ -35,13 +35,14 @@ theme:
     
   name: material
   custom_dir: overrides
-  logo: assets/swapdex-logo-circlewhite.png
-  favicon: assets/swapdex-icon.png
+  logo: assets/logokusari.png
+  favicon: assets/logokusari.png
   language: en
   
 plugins:
   - search
   - mkdocs-video
+  
 
 extra:
   # Default mkdocs-material alternate links for untranslated pages
@@ -60,21 +61,22 @@ extra_javascript:
 
 
 nav:
-  - Home: 'index.md'
+  - Home: 
+      - 'index.md'
+      - 'Quick Start' : 'home/quick-start.md'
+      - 'FAQs': 'home/FAQs.md'
   - 'Credits': 'credits.md'
   - 'Get Started': 
       - 'get-started/index.md'
       - 'Faucet': 'get-started/faucet.md'
       - 'Claims': 'get-started/claims.md'
+      - 'EVM <-> Substrate Transfers' : 'get-started/internal-transfer.md'
       - 'Endpoints': 'get-started/endpoints.md'
-      - 'Transer Balances': 'get-started/transfer-balances.md'
+      - 'Transfer Balances': 'get-started/transfer-balances.md'
   - 'What to Try?':
       - 'Create an Account': 'what-to-try/account-generation.md'
       - 'Become a Nominator': 'what-to-try/nominator.md'
-      #- 'Become a Validator': 'what-to-try/validator-docker.md'
-      - 'Become a Validator': 'what-to-try/validator.md'
       - 'Set an Identity': 'what-to-try/identity.md'
-      #- 'Stop Validating': 'what-to-try/stop-validating.md'
       - 'Explore the Governance': 'what-to-try/democracy.md'
       - 'Use the Treasury': 'what-to-try/treasury.md'
   - 'Validator Guides':
@@ -103,7 +105,8 @@ nav:
       - 'EVM Pallet': 'deep-dives/evm-pallet.md'
       - 'Keys': 'deep-dives/substrate_keys.md'
       - 'Using Web3.js': 'deep-dives/Using-Web3js.md' 
-      - 'Staking': 'deep-dives/staking.md'       
+      - 'Staking': 'deep-dives/staking.md'
+      - 'Bridges': 'deep-dives/bridges.md'       
 
 
 

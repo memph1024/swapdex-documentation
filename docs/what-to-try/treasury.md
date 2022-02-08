@@ -40,7 +40,7 @@ Spreading the word about the proposal's explanation is ultimately up to the prop
 
 ### **Creating the Proposal**
 
-One way to create the proposal is to use the [Substrate Explorer App](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/treasury). From the website, use the Governance tab and select the Treasury, then click on submit proposal and enter the desired amount and recipient.
+One way to create the proposal is to use the <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Substrate Explorer App</a>. From the website, use the Governance tab and select the Treasury, then click on submit proposal and enter the desired amount and recipient.
 
 ![treasury-proposal](assets/treasury-proposal-01.png#center)
 
@@ -113,9 +113,9 @@ The bounty has a predetermined duration of 90 days with the possibility of being
 
 ### **Creating a Bounty Proposal**
 
-Anyone can create a Bounty proposal using [Substrate Explorer App](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/bounties): Users are able to submit a proposal on the dedicated Bounty section under Governance. The development of a robust user interface to view and manage bounties in the [Substrate Explorer App](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/bounties) is still under development and it will serve Council members, Curators and Beneficiaries of the bounties, as well as all users observing the on-chain treasury governance. For now, the help of a Councillor is needed to open a bounty proposal as a motion to be voted.
+Anyone can create a Bounty proposal using <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Substrate Explorer App</a>: Users are able to submit a proposal on the dedicated Bounty section under Governance. The development of a robust user interface to view and manage bounties in the <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Substrate Explorer App</a> is still under development and it will serve Council members, Curators and Beneficiaries of the bounties, as well as all users observing the on-chain treasury governance. For now, the help of a Councillor is needed to open a bounty proposal as a motion to be voted.
 
-To submit a bounty, please visit [Substrate Explorer App](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/bounties) and click on the governance tab in the options bar on the top of the site. After, click on 'Bounties' and find the button '+ Add Bounty' on the upper-right side of the interface. Complete the bounty title, the requested allocation (including curator's fee) and confirm the call.
+To submit a bounty, please visit <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Substrate Explorer App</a> and click on the governance tab in the options bar on the top of the site. After, click on 'Bounties' and find the button '+ Add Bounty' on the upper-right side of the interface. Complete the bounty title, the requested allocation (including curator's fee) and confirm the call.
 
 After this, a Council member will need to assist you to pass the bounty proposal for vote as a motion. You can contact the Council by joining our Discord server and publishing a short description of your bounty, with a link to one of the forums for contextual information.
 
@@ -141,7 +141,7 @@ Concretely, there are a couple on-chain methods that resist this kind of attack.
 
 ### **Further Reading**
 
-- [Substrate's Treasury Pallet](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs) - The Rust implementation of the Treasury. ([Docs](https://substrate.dev/rustdocs/latest/pallet_treasury/index.html))
+- <a href="https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs" target="_blank">Substrate's Treasury Pallet</a> - The Rust implementation of the Treasury (<a href="https://substrate.dev/rustdocs/latest/pallet_treasury/index.html" target="_blank">Docs</a>)
 
 <br></br>
 

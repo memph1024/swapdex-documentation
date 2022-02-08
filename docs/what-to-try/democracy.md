@@ -4,7 +4,7 @@
 Kusari uses a sophisticated governance mechanism to evolve gracefully over time at the ultimate behest of its assembled stakeholders. 
 The stated goal is to ensure that the majority of the stake can always command the network. 
 
-To do this, we borrowed and adjusted various mechanisms from Polkadot, Kusama and Substrate, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. [WebAssembly](https://guide.kusama.network/docs/learn-wasm)) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting. Stake-weighted referenda must agree upon all changes to the protocol.
+To do this, we brrowed and adjusted various mechanisms from Polkadot, Kusama and Substrate, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. <a href="https://guide.kusama.network/docs/learn-wasm" target="_blank">WebAssembly</a>) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting. Stake-weighted referenda must agree upon all changes to the protocol.
 
 ## <b>Mechanism</b>
 ---
@@ -130,7 +130,7 @@ Majority-carries, a simple comparison of votes; if there are more aye votes than
 
 ![super-majority](assets/simple-majority.svg#center)
 
-To know more about where these above formulas come from, please read the [democracy pallet](https://github.com/paritytech/substrate/blob/master/frame/democracy/src/vote_threshold.rs).
+To know more about where these above formulas come from, please read the <a href="https://github.com/paritytech/substrate/blob/master/frame/democracy/src/vote_threshold.rs" target="_blank">democracy pallet</a>.
 
 ```
 Example:
@@ -236,7 +236,7 @@ If the cancellation is controversial enough that the council cannot get a two-th
 
 ### **Blacklisting**
 
-A proposal can be blacklisted by [Sudo Pallet](https://substrate.dev/rustdocs/latest/pallet_sudo/index.html). A blacklisted proposal and its related referendum (if any) is immediately canceled. Additionally, a blacklisted proposal's hash cannot re-appear in the proposal queue. 
+A proposal can be blacklisted by <a href="https://substrate.dev/rustdocs/latest/pallet_sudo/index.html" target="_blank">Sudo Pallet</a>. A blacklisted proposal and its related referendum (if any) is immediately canceled. Additionally, a blacklisted proposal's hash cannot re-appear in the proposal queue. 
 Blacklisting is useful when removing erroneous proposals that could be submitted with the same hash, i.e. proposal #2 in which the submitter used plain text to make a suggestion.
 
 Upon seeing their proposal removed, a submitter who is not properly introduced to the democracy system of Kusari might be tempted to re-submit the same proposal. That said, this is far from a fool-proof method of preventing invalid proposals from being submitted - a single changed character in a proposal's text will also change the hash of the proposal, rendering the per-hash blacklist invalid.
@@ -247,7 +247,7 @@ Upon seeing their proposal removed, a submitter who is not properly introduced t
 
 All stakeholders are free to signal their approval of any of the registered candidates.
 
-Council elections are handled by the same [Phragmén election process](https://arxiv.org/pdf/2004.12990.pdf) that selects validators from the available pool based on nominations. However, coin holders' votes for councillors are isolated from any of the nominations they may have on validators. Council terms last for one day on Kusari.
+Council elections are handled by the same <a href="https://arxiv.org/pdf/2004.12990.pdf" target="_blank">Phragmén election process</a> that selects validators from the available pool based on nominations. However, coin holders' votes for councillors are isolated from any of the nominations they may have on validators. Council terms last for one day on Kusari.
 
 At the end of each term, Phragmén election algorithm runs and the result will choose the new councillors based on the vote configurations of all voters. The election also chooses a set number of runners up (currently 19 on Kusari) that will remain in the queue with their votes intact.
 
@@ -296,7 +296,7 @@ Fast-tracked referenda are the only type of referenda that can be active alongsi
 
 In some circumstances, you may want to appeal to the on-chain council to enact a change on your behalf. One example of this circumstance is the case of lost or locked funds when the funds were lost due to a human interface error (such as inputting an address for another network). When these circumstances can be proven beyond a reasonable doubt to be an error, the council may consider a governance motion to correct it.
 
-The first step to appeal to the council is to get in contact with the councillors. There is no singular place where you are guaranteed to grab every councillor's ear with your message. However, there are a handful of good places to start where you can get the attention of some of them. Our [Discord Server](https://discord.gg/NadFhHSY) is one such place. After creating an account and joining our server, you can post a well-thought-through message here that lays down your case and provides justification for why you think the council should consider enacting a change to the protocol on your behalf.
+The first step to appeal to the council is to get in contact with the councillors. There is no singular place where you are guaranteed to grab every councillor's ear with your message. However, there are a handful of good places to start where you can get the attention of some of them. Our <a href="https://discord.gg/NadFhHSY" target="_blank">Discord Server</a> is one such place. After creating an account and joining our server, you can post a well-thought-through message here that lays down your case and provides justification for why you think the council should consider enacting a change to the protocol on your behalf.
 
 At some point you will likely need a place for a longer-form discussion. When you write a post on Discord make sure you present all the evidence for your circumstances and state clearly what kind of change you would suggest to the councillors to enact. Remember - the councillors do not need to make the change, it is your responsibility to make a strong case for why the change should be made.
 

@@ -1,18 +1,18 @@
 # <b>KUSARI ENDPOINTS</b>
 ---
 
-When interacting with the Kusari network via our [substrate explorer app](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/settings) or other UIs and programmatic methods, you'd ideally be running your own node ([text guide](../what-to-try/validator.md)). Granted, that's not something everyone wants to do, so convenience trumps ideals in most cases. To facilitate this convenience, Kusari has several public endpoints you can use for your DApps.
+When interacting with the Kusari network via our <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank"> substrate explorer app </a> or other UIs and programmatic methods, you'd ideally be running your own node (<a href="https://docs.kusari.network/validator-guides/validator/" target="_blank"> text guide </a>). Granted, that's not something everyone wants to do, so convenience trumps ideals in most cases. To facilitate this convenience, Kusari has several public endpoints you can use for your DApps.
 
 ## <b>Starkley Tech Archive Node</b>
 ---
-Starkley Tech, the company that develops the SwapDex Rust client, maintains an archive node at endpoint `https://rpc-testnet.swapdex.network/rpc`
+Starkley Tech, the company that develops the SwapDex Rust client, maintains an archive node at endpoint `https://rpc.kusari.network/`
 
 To connect to the Starkley Tech node, use the endpoint in your JavaScript DApps like so:
 ``` javascript
 const{ ApiPromise, WsProvider } = require('@polkadot/api')
 
 (async () => {
-    const provider = new WsProvider('wss.swapdex.starkleytech.com')
+    const provider = new WsProvider('wss://ws.kusari.network')
     const api = await ApiPromise.create({ provider })
     // ...
 ```

@@ -5,7 +5,7 @@ To start interacting with Kusari, you need a wallet or account that enables you 
 
 The following guide will show you how easy setting up a Kusari account is and what exact steps you need to take. 
 
-If you encounter any issues or problems, please feel free to reach out to us on [Discord](https://discord.gg/DAHehdnP).
+If you encounter any issues or problems, please feel free to reach out to us on <a href="https://discord.gg/DAHehdnP" target="_blank">Discord</a>.
 
 ---
 
@@ -26,7 +26,7 @@ The only ways to access your account are via your secret seed or your account's 
 In this guide, we recommend the **Polkadot{.js}** browser plug-in as the best method to create your Kusari account.
 
 !!! tip
-    [Polkadot{.js}](https://polkadot.js.org/extension/) Browser Extension RECOMMENDED FOR MOST USERS
+    <a href="https://polkadot.js.org/extension/" target="_blank">Polkadot{.js}</a> Browser Extension RECOMMENDED FOR MOST USERS
 
 The seed is your key to the account. Knowing the seed allows you to re-generate and control your account or anyone else who knows the seed.
 
@@ -46,8 +46,8 @@ The JSON file is encrypted with a password, which means you can import it into a
 
 Since Polkadot and Kusari share the same foundation, namely Substrate, the Polkadot{.js} browser extension is the recommended way to create your Kusari account.
 
-- [Polkadot{.js} Browser Extension for Chrome & Brave](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd)
-- [Polkadot{.js} Browser Extension for Firefox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension/)
+- <a href="https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd" target="_blank">Polkadot{.js} Browser Extension for Chrome & Brave</a>
+- <a href="https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension/" target="_blank">Polkadot{.js} Browser Extension for Firefox</a>
 
 The Polkadot{.js} browser extension provides a reasonable balance of security and usability. It's comparable to MetaMask for Ethereum. It provides a separate local mechanism to generate your address and interact with Kusari.
 

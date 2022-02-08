@@ -1,14 +1,14 @@
 # <b>TRANSFER BALANCES</b>
 ---
 
-Balance transfers are used to send KSI balances from one account to another account. To start transferring balances, we will begin by using our [Substrate Explorer App](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/explorer). 
+Balance transfers are used to send KSI balances from one account to another account. To start transferring balances, we will begin by using our <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Substrate Explorer App</a>. 
 
 !!! hint
     This guide assumes that you've already created an account and have some funds that are ready to be transferred.
 
 ## <b>Kusari Subtrate Explorer App</b>
 ---
-Let's begin by opening [Substrate Explorer App](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/explorer). There are two ways to make a balance transfer:
+Let's begin by opening <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Substrate Explorer App</a>. There are two ways to make a balance transfer:
 
 1. By using the "Transfer" tab in the "Accounts" dropdown
 2. Clicking the "send" button while in the "Accounts" page
@@ -35,7 +35,7 @@ After setting your inputs correctly, click the "Make Transfer" button and confir
 At an extrinsic level, there are two main ways to transfer funds from one account to another. These are `transfer` and `transfer_keep_alive`. 
 `transfer` will allow you to send KSI regardless of the consequence; `transfer_keep_alive` will not allow you to send an amount that would allow the sending account to be removed due to it going below the existential deposit.
 
-By default, [Substrate Explorer App](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/explorer) will use `transfer_keep_alive`, ensuring that the account you send from cannot drop below the existential deposit (0.001666 KSI). However, it may be that you do not want to keep this account alive (for example, because you are moving all of your funds to a different address). In this case, click on the "keep-alive" toggle at the bottom of the pop-up window.
+By default, <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Substrate Explorer App</a> will use `transfer_keep_alive`, ensuring that the account you send from cannot drop below the existential deposit (0.001666 KSI). However, it may be that you do not want to keep this account alive (for example, because you are moving all of your funds to a different address). In this case, click on the "keep-alive" toggle at the bottom of the pop-up window.
 The label should switch from "Transfer with account keep-alive checks"(`transfer_keep_alive` will be used) to "Normal transfer without keep-alive checks" (`transfer` extrinsic will be used). As a common use case for using normal transfers is to entirely clear out the account, a second toggle will appear if you have the keep-alive check turned off that will send all the tokens in the account, minus a transaction fee, to the destination address.
 
 Attempting to send less than the existential deposit to an account with 0 KSI will always fail, no matter if the keep-alive check is on or not. For instance, attempting to transfer 0.001 KSI to an account you just generated (and thus has no KSI) will fail, since 0.001 KSI is less than the existential deposit of 0.001666 KSI and the account cannot be initialized with such a low balance.
@@ -66,21 +66,21 @@ If you used this account to set up a validator and you did not purge your keys b
 
 You can check for locks by querying `system.account(AccountId)` under `Developer > Chain state`. Select your account, then click the "+" button next to the dropdowns, and check the relative `data`JSON object. If you see a non-zero value for anything other than `free`, you have locks on your account that need to get resolved.
 
-You can also check for locks by navigating to `Accounts > Accounts` in [Substrate Explorer App](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/explorer). Then, click the dropdown arrow of the relevant account under the 'balances' column. If it shows that some tokens are in a 'locked' state, you can see why by hovering over the information icon next to it.
+You can also check for locks by navigating to `Accounts > Accounts` in <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Substrate Explorer App</a>. Then, click the dropdown arrow of the relevant account under the 'balances' column. If it shows that some tokens are in a 'locked' state, you can see why by hovering over the information icon next to it.
 
 ### <b>Existing Recovery Info</b>
 
-Currently, Kusari does not use the [Recovery Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#recovery), so this is probably not the reason for your coins having existing references.
+Currently, Kusari does not use the <a href="https://substrate.dev/docs/en/knowledgebase/runtime/frame#recovery" target="_blank">Recovery Pallet</a>, so this is probably not the reason for your coins having existing references.
 
-On Kusari, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)` chain state. This can be found under `Developer > Chain state` in [Substrate Explorer App](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/explorer).
+On Kusari, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)` chain state. This can be found under `Developer > Chain state` in <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Substrate Explorer App</a>.
 
 ### <b>Existing Non-KSI Assets</b>
 
-Currently, Kusari does not use the [Assets Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#assets), so this is probably not the reason for your tokens having existing references.
+Currently, Kusari does not use the <a href="https://substrate.dev/docs/en/knowledgebase/runtime/frame#assets" target="_blank">Assets Pallet</a>, so this is probably not the reason for your tokens having existing references.
 
 ## <b>From the Accounts Page</b>
 ---
-Navigate to the "Accounts" page by selecting the "Accounts" tab from the "Accounts" dropdown located on the top navigational menu of [Substrate Explorer App](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/explorer).
+Navigate to the "Accounts" page by selecting the "Accounts" tab from the "Accounts" dropdown located on the top navigational menu of <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Substrate Explorer App</a>.
 
 You will see a list of accounts you have loaded. Click the "Send" button in the row for the account you will like to send funds from.
 

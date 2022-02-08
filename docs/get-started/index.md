@@ -7,7 +7,7 @@ It's time to get started on the Kusari network! Please check out our recommended
 ---
 For brand-new learners of Blockchain technology:
 
-- The [Blockchain Fundamentals MOOC course](https://www.youtube.com/playlist?list=PLxVihxZC42nF_MCN9PTvZMIifRjx9cZ2J) is a great introduction to start familiarizing yourself with blockchain concepts such as cryptography and networks, and how these play into things like decentralization and cryptocurrency.
+- The <a href="https://www.youtube.com/playlist?list=PLxVihxZC42nF_MCN9PTvZMIifRjx9cZ2J" target="_blank"> Blockchain Fundamentals MOOC cours </a> is a great introduction to start familiarizing yourself with blockchain concepts such as cryptography and networks, and how these play into things like decentralization and cryptocurrency.
 
 !!!hint
     This is recommended for users with backgrounds of all levels, and the course is free!
@@ -28,7 +28,7 @@ For brand-new learners of Kusari, check-out:
 ---
 For developers who want to leverage on Kusari's unique advantages, please visit:
 
-- [The developer guide](../dev-guides/index.md) 
+- <a href="https://docs.kusari.network/dev-guides/" target="_blank">The developer guide</a>
 
 <br></br>
 

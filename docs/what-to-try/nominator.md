@@ -13,9 +13,9 @@ The main difference between a **Validator** and a **Nominator** is the active pa
 !!! info
     In this guide, we use the terms "account" and "wallet" interchangeably.
 
-Nominators are recommended to set up two separate stash and controller accounts. Explanation and reasoning for generating distinct accounts for this purpose is elaborated in the [keys section](../deep-dives/substrate_keys.md) of the Wiki.
+Nominators are recommended to set up two separate stash and controller accounts. Explanation and reasoning for generating distinct accounts for this purpose is elaborated in the <a href="https://docs.kusari.network/deep-dives/substrate_keys/" target="_blank">keys section</a> of the Wiki.
 
-You can generate your stash and controller account via any of the recommended methods that are detailed on the [account generation page](./account-generation.md).
+You can generate your stash and controller account via any of the recommended methods that are detailed on the <a href="https://docs.kusari.network/what-to-try/account-generation/" target="_blank">account generation page</a>.
 
 !!! hint
     Payouts can go to any custom address. If you'd like to redirect payments to an account that is neither the controller nor the stash account, set one up. Note that it is extremely unsafe to set an exchange address as the recipient of the staking rewards.
@@ -24,7 +24,7 @@ You can generate your stash and controller account via any of the recommended me
 ---
 
 ### Step 1: Bond your coins
-On the [Kusari Substrate Explorer](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Fswapdex.starkleytech.com%2Fws#/explorer) UI navigate to the "Staking" tab (within the "Network" menu).
+On the <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Substrate Explorer</a> UI navigate to the "Staking" tab (within the "Network" menu).
 
 ![browser_extension](assets/nominator_01.png#center)
 
@@ -36,6 +36,11 @@ The "Staking Overview" subsection will show you all the active validators and th
 - (4) how much they charge in commission
 - (5) the era points they've earned in the current era
 - (6) and the last block number that they produced. 
+
+!!! attention
+    **What does oversubscribed mean?** <br>
+    Maximum number of Validators a Nominator is able to stake/delegate to is 16.
+    Validators can receive up to 256 nominations before they are oversubscribed. (76,800 nominations will receive rewards) Once oversubscribed, the amount of KSI nominated is deciding whether you'll receive rewards or not.
 
 ![browser_extension](assets/nominator_02.png#center)
 

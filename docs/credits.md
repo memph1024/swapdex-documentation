@@ -6,21 +6,21 @@ Many parts within the docs are closely oriented to existing documentations but s
 
 The entire SwapDex Team would like to thank and credit the following projects and by thus honoring their contribution to the blockchain universe:
 
-- [PolkaDot](https://polkadot.network/)
-- [Kusama](https://kusama.network/)
-- [Moonbeam](https://moonbeam.network/)
-- [Edgeware](https://edgewa.re/)
-- [Galital](https://galital.com/)
-- [Substrate](https://www.substrate.io/)
-- [Truffle](https://www.trufflesuite.com/)
-- [Parity Technology](https://www.parity.io/)
+- <a href="https://polkadot.network/" target="_blank">PolkaDot</a>
+- <a href="https://kusama.network/" target="_blank">Kusama</a>
+- <a href="https://moonbeam.network/" target="_blank">Moonbeam</a>
+- <a href="hhttps://edgewa.re/" target="_blank">Edgeware</a>
+- <a href="hhttps://galital.com/" target="_blank">Galital</a>
+- <a href="https://www.substrate.io/" target="_blank">Substrate</a>
+- <a href="https://www.trufflesuite.com/" target="_blank">Truffle</a>
+- <a href="https://www.parity.io/" target="_blank">Parity Technology</a>
 
 Special thanks goes to Edgeware and Truffle for their development guides.
 
 Much love and respect :heart:, 
 
-The SwapDex Team
+The Kusari/SwapDex Team
 
 <br></br>
 
-<p align=right> Written by The SwapDex Team </p>
+<p align=right> Written by The Kusari/SwapDex Team </p>

@@ -33,10 +33,10 @@ Now let's connect MetaMask to the EVM side of the Kusari Network.
 ### **2) Add Network Data**
 
 - Network Name: `Kusari`
-- New RPC URL: `https://rpc-testnet.swapdex.network/rpc`
-- Chain ID: `142`
+- New RPC URL: `https://rpc.kusari.network`
+- Chain ID: `71`
 - Currency Symbol: `KSI`
-- Explorer: `https://evm-explorer-testnet.swapdex.network/`
+- Explorer: `https://evm.kusari.network/`
 
 ### **3) Select the Kusari Network**
 

@@ -1,17 +1,19 @@
 :root {
-    --md-primary-fg-color:        #E83F81;
-    --md-primary-fg-color--light: #ECB7B7;
-    --md-primary-fg-color--dark:  #90030C;
+    --md-primary-fg-color:        #13111a;
+    --md-primary-fg-color--light: #13111a;
+    --md-primary-fg-color--dark:  #13111a;
+    --md-text-link-color: #b8860b;
   }
   img[src*='#center'] { 
     display: block;
     margin: auto;
 }
 
+
 .cards-container {
   display: table-row;
   vertical-align: inherit;
-  border-color: #90030C;
+  border-color: #b8860b;
   flex-flow: row wrap;
   max-width: 100%;
   min-width: 0;
@@ -38,7 +40,7 @@
 .md-typeset h5 {
   text-transform: uppercase;
   text-align: center !important;
-  color:        #E83F81;
+  color:        #b8860b;
 }
 
 @media only screen and (max-width: 600px) {
@@ -103,7 +105,7 @@ table.error-table td:nth-child(1) {
   background-color: rgb(235, 235, 235);
 }
 table.error-table thead {
-  background: #ec4880;
+  background: #b8860b;
   border-bottom: 2px solid #444444;
 }
 table.error-table thead th {

@@ -1,11 +1,15 @@
 # <b>CLAIMS</b>
 ---
 
-The Kusari network is SwapDex's experimental, community-focused research & development network. If you held the SDX ERC-20 token or SDX coins at the time of the genesis block of Kusari, you are entitled to claim an equivalent amount of KSI on the Kusari network.
+The Kusari network is SwapDex's experimental, community-focused research & development network. If you held the SDX ERC-20 token or SDX coins until **Friday, December 3rd 2021**, you are entitled to claim KSI on the Kusari network.
 
-You can claim KSI by visiting :
 !!! hint
-    **The deadline to be in the snapshot for claiming KSI was October, 24th 2021**
+    Watch our <a href="https://youtu.be/lPRF43-9IGU" target="_blank"> YouTube Walkthrough </a>
+
+You can claim KSI by visiting our <a href="https://app.kusari.network/" target="_blank"> Dashboard Claim Function </a>.
+
+!!! hint
+    **You can check if you are eligible to claim by investigating the <a href="https://ksi-snapshot.herokuapp.com/" target="_blank"> Snapshot </a>**
 
 <br></br>
 

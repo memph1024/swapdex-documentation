@@ -1,0 +1,2009 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../../../assets/logokusari.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.10">
+    
+    
+      
+        <title>Deploy with Truffle - Kusari Knowledge Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.d6be258b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Nunito";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deploy-with-truffle" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Kusari Knowledge Base" class="md-header__button md-logo" aria-label="Kusari Knowledge Base" data-md-component="logo">
+      
+  <img src="../../../../../assets/logokusari.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kusari Knowledge Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Deploy with Truffle
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../../../.." hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kusari-network/kusari-docs.git/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../credits/" class="md-tabs__link">
+      Credits
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../get-started/" class="md-tabs__link">
+        Get Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../what-to-try/account-generation/" class="md-tabs__link">
+        What to Try?
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../validator-guides/validator/" class="md-tabs__link">
+        Validator Guides
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../troubleshooting/01-substrate-error-codes/" class="md-tabs__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../" class="md-tabs__link md-tabs__link--active">
+        Developer Guides
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../deep-dives/evm-pallet/" class="md-tabs__link">
+        Deep Dives
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Kusari Knowledge Base" class="md-nav__button md-logo" aria-label="Kusari Knowledge Base" data-md-component="logo">
+      
+  <img src="../../../../../assets/logokusari.png" alt="logo">
+
+    </a>
+    Kusari Knowledge Base
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kusari-network/kusari-docs.git/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../..">Home</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../home/quick-start/" class="md-nav__link">
+        Quick Start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../home/FAQs/" class="md-nav__link">
+        FAQs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../../get-started/">Get Started</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Get Started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Get Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../get-started/faucet/" class="md-nav__link">
+        Faucet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../get-started/claims/" class="md-nav__link">
+        Claims
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../get-started/internal-transfer/" class="md-nav__link">
+        EVM <-> Substrate Transfers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../get-started/endpoints/" class="md-nav__link">
+        Endpoints
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../get-started/transfer-balances/" class="md-nav__link">
+        Transfer Balances
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          What to Try?
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="What to Try?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          What to Try?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../what-to-try/account-generation/" class="md-nav__link">
+        Create an Account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../what-to-try/nominator/" class="md-nav__link">
+        Become a Nominator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../what-to-try/identity/" class="md-nav__link">
+        Set an Identity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../what-to-try/democracy/" class="md-nav__link">
+        Explore the Governance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../what-to-try/treasury/" class="md-nav__link">
+        Use the Treasury
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Validator Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Validator Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Validator Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../validator-guides/validator/" class="md-nav__link">
+        Become a Validator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../validator-guides/account-generation/" class="md-nav__link">
+        Create an Account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../validator-guides/validator-payout-overview/" class="md-nav__link">
+        Validator Payout Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../validator-guides/secure-validator/" class="md-nav__link">
+        Secure your Validator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../validator-guides/stop-validating/" class="md-nav__link">
+        Stop Validating
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Troubleshooting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Troubleshooting" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Troubleshooting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../troubleshooting/01-substrate-error-codes/" class="md-nav__link">
+        Resolve Errors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../troubleshooting/02-Glossary/" class="md-nav__link">
+        Glossary
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../">Developer Guides</a>
+          
+            <label for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Developer Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../">Tutorials</a>
+          
+            <label for="__nav_7_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2_2" type="checkbox" id="__nav_7_2_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">EVM Tutorial</a>
+          
+            <label for="__nav_7_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="EVM Tutorial" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          EVM Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2_2_2" type="checkbox" id="__nav_7_2_2_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_2_2_2">
+          Tools and Resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tools and Resources" data-md-level="4">
+        <label class="md-nav__title" for="__nav_7_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tools and Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evm-tools-and-res/eth-libs/" class="md-nav__link">
+        Libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evm-tools-and-res/waffle/" class="md-nav__link">
+        Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evm-tools-and-res/evm-balances/" class="md-nav__link">
+        EVM Balances
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2_2_3" type="checkbox" id="__nav_7_2_2_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_2_2_3">
+          Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Guides" data-md-level="4">
+        <label class="md-nav__title" for="__nav_7_2_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-mm/" class="md-nav__link">
+        Connect to Kusari
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Deploy with Truffle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Deploy with Truffle
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-technical-requirements" class="md-nav__link">
+    Installing Technical Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-project" class="md-nav__link">
+    Creating a Project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploring-the-project" class="md-nav__link">
+    Exploring the Project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-the-solidity-test" class="md-nav__link">
+    Run the Solidity Test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-javascript-test" class="md-nav__link">
+    *Run the Javascript Test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compiling-the-smart-contract" class="md-nav__link">
+    Compiling the Smart Contract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-with-ganache" class="md-nav__link">
+    Migrating with Ganache
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrating with Ganache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launch-ganache" class="md-nav__link">
+    Launch Ganache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirgrate-to-ganache" class="md-nav__link">
+    Mirgrate to Ganache
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrate-to-kusari" class="md-nav__link">
+    Migrate to Kusari
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrate to Kusari">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migrate-your-contracts-to-kusari" class="md-nav__link">
+    Migrate your Contracts to Kusari
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-deployment-on-network-explorer" class="md-nav__link">
+    Check Deployment on Network Explorer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interact-with-the-contract" class="md-nav__link">
+    Interact with the Contract
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continue-learning" class="md-nav__link">
+    Continue Learning
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Deep Dives
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Deep Dives" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Deep Dives
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../deep-dives/evm-pallet/" class="md-nav__link">
+        EVM Pallet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../deep-dives/substrate_keys/" class="md-nav__link">
+        Keys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../deep-dives/Using-Web3js/" class="md-nav__link">
+        Using Web3.js
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../deep-dives/staking/" class="md-nav__link">
+        Staking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../deep-dives/bridges/" class="md-nav__link">
+        Bridges
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/kusari-network/kusari-docs.git/edit/master/docs/dev-guides/Tutorials/evm-tutorial/Tutorial/using-truffle.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="deploy-with-truffle"><b>Deploy with Truffle</b></h1>
+<hr />
+<p>In this section we will show you how to utilize the <a href="https://www.trufflesuite.com/truffle">Truffle Suite</a> to develop Smart Contracts for Kusari.
+Tuffle, in short, is a solidity suite that helps you to test your code. </p>
+<p>Since Kusari is fully Ethereum compatible you can use Ganache as the e</p>
+<p>Let's start with installing the technical requirements.</p>
+<h2 id="installing-technical-requirements"><strong>Installing Technical Requirements</strong></h2>
+<hr />
+<p>To use Truffle we need to install NodeJS v8.9.4 or later and we need a running eth-client.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since Kusari is fully Ethereum compatible you can use <strong>Ganache</strong> as the preferred eth-client</p>
+</div>
+<p>Please go ahead and install NodeJS and Ganache.</p>
+<ul>
+<li><a href="https://nodejs.org/en/">NodeJS</a></li>
+<li><a href="https://www.trufflesuite.com/ganache">Ganache</a></li>
+</ul>
+<p>After you installed NodeJS and Ganache, you can execute the following command in your Terminal to install Truffle</p>
+<div class="highlight"><pre><span></span><code>npm install -g truffle
+</code></pre></div>
+<h2 id="creating-a-project"><strong> Creating a Project</strong></h2>
+<hr />
+<p>In this guide we will utilize the MetaCoin Truffle Box, which is a Truffle project template. 
+The MetaCoin Box allows us to create an ERC-20 token on Kusari that can be transferred between accounts. </p>
+<ol>
+<li>Create a new folder for your Truffle project and navigate into it:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>mkdir MetaCoin
+cd MetaCoin
+</code></pre></div>
+<ol>
+<li>Download und unbox the MetaCoin Box</li>
+</ol>
+<div class="highlight"><pre><span></span><code>truffle unbox metacoin
+</code></pre></div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You can use the <code>truffe unbox &lt;box-name&gt;</code> command to download and unbox any <a href="https://www.trufflesuite.com/boxes">truffle box</a></p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If you want to start from scratch please use <code>truffle init</code></p>
+</div>
+<p>Once you unboxed MetaCoin, you will be greeted with a project structure like this:</p>
+<ul>
+<li><code>contracts/</code>: Directory for Solidity Contracts</li>
+<li><code>migrations/</code>: Directory for scriptable deployment files</li>
+<li><code>test/</code>: Directory for test files for testing your application and contracts</li>
+<li><code>truffle.js</code>: Truffle configuration file </li>
+</ul>
+<p><img alt="img" src="../assets/metacoin-structure.png#center" /></p>
+<h2 id="exploring-the-project"><strong>Exploring the Project</strong></h2>
+<hr />
+<ol>
+<li>Open the <code>contracts/MetaCoin.sol</code> file in a text editor. This is a smart contract (written in Solidity) that creates a MetaCoin token. Note that this also references another Solidity file <code>contracts/ConvertLib.sol</code> in the same directory.</li>
+<li>Open the <code>contracts/Migrations.sol</code> file. This is a separate Solidity file that manages and updates the status of your deployed smart contract. This file comes with every Truffle project, and is usually not edited.</li>
+<li>Open the <code>migrations/1_initial_migration.js</code> file. This file is the migration (deployment) script for the Migrations contract found in the <code>Migrations.sol</code> file.</li>
+<li>Open the <code>migrations/2_deploy_contracts.js</code> file. This file is the migration script for the MetaCoin contract. (Migration scripts are run in order, so the file beginning with 2 will be run after the file beginning with 1.)</li>
+<li>Open the <code>test/TestMetaCoin.sol</code> file. This is a test file written in Solidity which ensures that your contract is working as expected.</li>
+<li>Open the <code>test/metacoin.js</code> file. This is a test file written in JavaScript which performs a similar function to the Solidity test above.</li>
+<li>Open the <code>truffle-config.js</code> file. This is the Truffle configuration file, for setting network information and other project-related settings. The file is blank, but this is okay, as we'll be using a Truffle command that has some defaults built-in.</li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>We will adjust the <code>truffle-config.js</code> later to deploy the Token to Ganache and later to Kusari</p>
+</div>
+<h2 id="testing"><strong>Testing</strong></h2>
+<hr />
+<p>Testing your smart contracts is an important step in the development pipeline. To run a test of the MetaCoin contract open up a terminal and run the solidity test:</p>
+<h3 id="run-the-solidity-test"><strong>Run the Solidity Test</strong></h3>
+<div class="highlight"><pre><span></span><code>truffle test ./test/TestMetaCoin.sol
+</code></pre></div>
+<p>you will see the following output:</p>
+<div class="highlight"><pre><span></span><code>  TestMetaCoin
+    √ testInitialBalanceUsingDeployedContract (607ms)
+    √ testInitialBalanceWithNewMetaCoin (457ms)
+
+
+  2 passing (16s)
+</code></pre></div>
+<h3 id="run-the-javascript-test"><strong>*Run the Javascript Test</strong></h3>
+<div class="highlight"><pre><span></span><code>truffle test ./test/metacoin.js
+</code></pre></div>
+<p>You will see the following output:</p>
+<div class="highlight"><pre><span></span><code>  Contract: MetaCoin
+    √ should put 10000 MetaCoin in the first account (126ms)
+    √ should call a function that depends on a linked library (258ms)
+    √ should send coin correctly (976ms)
+
+
+  3 passing (1s)
+</code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>The solidity and javascript test were successfull!</p>
+</div>
+<h2 id="compiling-the-smart-contract"><strong>Compiling the Smart Contract</strong></h2>
+<hr />
+<p>After the successfull test we are ready to compile the smart contracts within the <code>contracts/</code> folder. </p>
+<div class="highlight"><pre><span></span><code>truffle compile
+</code></pre></div>
+<p>You will see the following output:</p>
+<div class="highlight"><pre><span></span><code>Compiling your contracts...
+===========================
+&gt; Compiling .\contracts\ConvertLib.sol
+&gt; Compiling .\contracts\MetaCoin.sol
+&gt; Compiling .\contracts\Migrations.sol
+&gt; Artifacts written to .\build\contracts
+&gt; Compiled successfully using:
+</code></pre></div>
+<h2 id="migrating-with-ganache"><strong>Migrating with Ganache</strong></h2>
+<hr />
+<p>To migrate or upload your smart contract to the Ganache Blockchain you need to tell truffle where it to deploy the contract. 
+We do this by adjusting the <code>truffle-config.js</code> file as follows:</p>
+<ul>
+<li>Open <code>truffle-config.js</code> in a text editor and replace the content with the following:</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">networks</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">development</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">host</span><span class="o">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+      <span class="nx">port</span><span class="o">:</span> <span class="mf">7545</span><span class="p">,</span>
+      <span class="nx">network_id</span><span class="o">:</span> <span class="s2">&quot;*&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+Save and close the file </p>
+<h3 id="launch-ganache"><strong>Launch Ganache</strong></h3>
+<p><img alt="img" src="../assets/ganache.png#center" /></p>
+<h3 id="mirgrate-to-ganache"><strong>Mirgrate to Ganache</strong></h3>
+<p>Now that we told truffle where to migrate the contracts we can migrate.</p>
+<div class="highlight"><pre><span></span><code>truffle migrate
+</code></pre></div>
+<p>You will see the following output:</p>
+<div class="highlight"><pre><span></span><code>Compiling your contracts...
+===========================
+&gt; Compiling .\contracts\ConvertLib.sol
+&gt; Compiling .\contracts\MetaCoin.sol
+&gt; Compiling .\contracts\Migrations.sol
+&gt; Artifacts written to C:\Users\petar\Documents\Kusari\EVM-Tutorial\build\contracts
+&gt; Compiled successfully using:
+   - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
+
+PS C:\Users\petar\Documents\Kusari\EVM-Tutorial&gt; truffle migrate
+
+Compiling your contracts...
+===========================
+&gt; Compiling .\contracts\ConvertLib.sol
+&gt; Compiling .\contracts\MetaCoin.sol
+&gt; Compiling .\contracts\Migrations.sol
+&gt; Artifacts written to C:\Users\petar\Documents\Kusari\EVM-Tutorial\build\contracts
+&gt; Compiled successfully using:
+   - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
+
+
+
+Starting migrations...
+======================
+&gt; Network name:    &#39;development&#39;
+&gt; Network id:      5777
+&gt; Block gas limit: 6721975 (0x6691b7)
+
+
+1_initial_migration.js
+======================
+
+   Deploying &#39;Migrations&#39;
+   ----------------------
+   &gt; transaction hash:    0x7f94b5d6852bae542f3c2d89e335a309243e54da0bbe96a3c1b863b40a4f547b
+   &gt; Blocks: 0            Seconds: 0
+   &gt; contract address:    0x475D507822741736A110e25698612C9Eb4ECc635
+   &gt; block number:        1
+   &gt; block timestamp:     1634129141
+   &gt; account:             0x456ad8e2CBF08FCde3C75D169ddF9C20e00F51F4
+   &gt; balance:             99.9967165
+   &gt; gas used:            164175 (0x2814f)
+   &gt; gas price:           20 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.0032835 ETH
+
+
+   &gt; Saving migration to chain.
+   &gt; Saving artifacts
+   -------------------------------------
+   &gt; Total cost:           0.0032835 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying &#39;ConvertLib&#39;
+   ----------------------
+   &gt; transaction hash:    0x0644f4e5186e058e18565b13db350ff8f0158c1f5a8f551741b55d11c76fea7d
+   &gt; Blocks: 0            Seconds: 0
+   &gt; contract address:    <mark class="critic">0x0Da4E500c4419860688284687efdF743337FE8ab</mark>
+   &gt; block number:        3
+   &gt; block timestamp:     1634129143
+   &gt; account:             0x456ad8e2CBF08FCde3C75D169ddF9C20e00F51F4
+   &gt; balance:             99.99396028
+   &gt; gas used:            95470 (0x174ee)
+   &gt; gas price:           20 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.0019094 ETH
+
+
+   Linking
+   -------
+   * Contract: MetaCoin &lt;--&gt; Library: ConvertLib (at address: 0x0Da4E500c4419860688284687efdF743337FE8ab)
+
+   Deploying &#39;MetaCoin&#39;
+   --------------------
+   &gt; transaction hash:    0xed1abbaf5d5cf4260c69cbec427b9a1b924302cf08b9e7d8e20920b5410bb927
+   &gt; Blocks: 0            Seconds: 0
+   &gt; contract address:    <mark class="critic">0x2E2EB10E302b2551C2788baBAe0d5981c18b4DDf</mark>
+   &gt; block number:        4
+   &gt; block timestamp:     1634129144
+   &gt; account:             0x456ad8e2CBF08FCde3C75D169ddF9C20e00F51F4
+   &gt; balance:             99.98822922
+   &gt; gas used:            286553 (0x45f59)
+   &gt; gas price:           20 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.00573106 ETH
+
+
+   &gt; Saving migration to chain.
+   &gt; Saving artifacts
+   -------------------------------------
+   &gt; Total cost:          0.00764046 ETH
+
+
+Summary
+=======
+&gt; Total deployments:   3
+&gt; Final cost:          0.01092396 ETH
+</code></pre></div>
+<p>This shows the transaction IDs and <mark class="critic">addresses of your deployed contracts</mark>. It also includes a cost summary and real-time status updates.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><strong>Hint:</strong> Your transaction IDs and contract addresses may be different from the above.</p>
+</div>
+<p>In Ganache, click the "Transactions" button to see that the transactions have been processed.</p>
+<p><img alt="img" src="../assets/ganache-tx.png#center" /></p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>You deployed a smart contract to the Ganache Blockchain!</p>
+</div>
+<h2 id="migrate-to-kusari"><strong>Migrate to Kusari</strong></h2>
+<hr />
+<p>To deploy the smart contracts to Kusari, we need to make some adjustments.
+First of all we need to install the truffle HDWallet package as follows:</p>
+<p><code>npm install @truffle/hdwallet-provider</code></p>
+<p>HD Wallet is basically an instance of your wallet e.g., MetaMask that has access to the Kusari network. 
+Since a contract deployment involves transactions, you need to have your private key or your seed phrase ready.</p>
+<p>Open the <code>truffle-config.js</code> file and replace its content with the following code:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">HDWalletProvider</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;@truffle/hdwallet-provider&quot;</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">privKey</span> <span class="o">=</span> <span class="s1">&#39;<mark class="critic">YOUR PRIVATE KEY GOES HERE</mark>&#39;</span><span class="p">;</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>  
+    <span class="nx">compilers</span><span class="o">:</span> <span class="p">{</span>    
+        <span class="nx">solc</span><span class="o">:</span> <span class="p">{</span>      
+            <span class="nx">version</span><span class="o">:</span> <span class="s2">&quot;^0.6.0&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">},</span>  
+    <span class="nx">networks</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">kusari</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">provider</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="ow">new</span> <span class="nx">HDWalletProvider</span><span class="p">({</span>
+                <span class="nx">privateKeys</span><span class="o">:</span> <span class="p">[</span> <span class="nx">privKey</span> <span class="p">],</span>
+                <span class="nx">providerOrUrl</span><span class="o">:</span> <span class="s2">&quot;https://rpc-testnet.swapdex.network/rpc&quot;</span><span class="p">,</span>
+            <span class="p">}),</span>
+            <span class="nx">network_id</span><span class="o">:</span> <span class="mf">142</span><span class="p">,</span>
+        <span class="p">},</span>  
+    <span class="p">}</span> 
+<span class="p">}</span>
+</code></pre></div>
+Save the file.
+You notice a few facts from here, our chainId is 142 and we are using solc version above ^0.6.0.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Make sure that the wallet which is attached to the private key you provided earlier is funded sufficiently to pay for the gas needed to deploy the smart contracts.</p>
+</div>
+<h3 id="migrate-your-contracts-to-kusari"><strong>Migrate your Contracts to Kusari</strong></h3>
+<p>To deploy the smart contracts within your project you need to execute the following command:</p>
+<div class="highlight"><pre><span></span><code>truffle --network development migrate
+</code></pre></div>
+<p>You should see the following output:</p>
+<div class="highlight"><pre><span></span><code>Compiling your contracts...
+===========================
+√ Fetching solc version list from solc-bin. Attempt #1
+√ Downloading compiler. Attempt #1.
+&gt; Compiling .\contracts\ConvertLib.sol
+&gt; Compiling .\contracts\MetaCoin.sol
+&gt; Compiling .\contracts\Migrations.sol
+√ Fetching solc version list from solc-bin. Attempt #1
+&gt; Artifacts written to C:\Users\petar\Documents\Kusari\EVM-Tutorial\build\contracts
+&gt; Compiled successfully using:
+   - solc: 0.6.12+commit.27d51765.Emscripten.clang
+
+
+
+Starting migrations...
+======================
+&gt; Network name:    &#39;kusari&#39;
+&gt; Network id:      142
+&gt; Block gas limit: 30000000 (0x1c9c380)
+
+
+1_initial_migration.js
+======================
+
+   Deploying &#39;Migrations&#39;
+   ----------------------
+   &gt; transaction hash:    0x69c148fd82661cafb34a7c3df6d4efa714ed9a4553104def2c26a95cde4e1d6f
+   &gt; Blocks: 1            Seconds: 4
+   &gt; contract address:    0x37b35EAab7C6a52Fb6cd23CcBadc18CF075F6dF6
+   &gt; block number:        113067
+   &gt; block timestamp:     1634138652
+   &gt; account:             0xd3e849B097f7cFe0fdD381e778012759a972d250
+   &gt; balance:             99.99204025
+   &gt; gas used:            159195 (0x26ddb)
+   &gt; gas price:           50 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.00795975 ETH
+
+
+   &gt; Saving migration to chain.
+   &gt; Saving artifacts
+   -------------------------------------
+   &gt; Total cost:          0.00795975 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying &#39;ConvertLib&#39;
+   ----------------------
+   &gt; transaction hash:    0xc5b4688c876ee566e2ae53b76dbbdbb820e3f71faf0360d0a9aabe32d2b9b8a5
+   &gt; Blocks: 0            Seconds: 4
+   &gt; contract address:    0xBd41c64fB0531ad8579984F521A23c9B27AC25C5
+   &gt; block number:        113069
+   &gt; block timestamp:     1634138664
+   &gt; account:             0xd3e849B097f7cFe0fdD381e778012759a972d250
+   &gt; balance:             99.98513905
+   &gt; gas used:            95686 (0x175c6)
+   &gt; gas price:           50 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.0047843 ETH
+
+
+   Linking
+   -------
+   * Contract: MetaCoin &lt;--&gt; Library: ConvertLib (at address: 0xBd41c64fB0531ad8579984F521A23c9B27AC25C5)
+
+   Deploying &#39;MetaCoin&#39;
+   --------------------
+   &gt; transaction hash:    0x9dacc10950ae2b6386f0c75a6d86fe88e337442a2adbb7cadceb5fd85a1e763f
+   &gt; Blocks: 1            Seconds: 4
+   &gt; contract address:    <mark class="critic">0x32C3681dB7b86852555475D9E91620Dfc51D3A73</mark>
+   &gt; block number:        113070
+   &gt; block timestamp:     1634138670
+   &gt; account:             0xd3e849B097f7cFe0fdD381e778012759a972d250
+   &gt; balance:             99.970821
+   &gt; gas used:            286361 (0x45e99)
+   &gt; gas price:           50 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.01431805 ETH
+
+
+   &gt; Saving migration to chain.
+   &gt; Saving artifacts
+   -------------------------------------
+   &gt; Total cost:          0.01910235 ETH
+
+
+Summary
+=======
+&gt; Total deployments:   3
+&gt; Final cost:          0.0270621 ETH
+</code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Congrats, you deployed your first smart contracts on the Kusari Network!</p>
+</div>
+<h3 id="check-deployment-on-network-explorer"><strong>Check Deployment on Network Explorer</strong></h3>
+<p>To verfiy the successfull deployment head over to the <a href="https://evm-explorer-testnet.swapdex.network/">EVM Testnet Explorer</a> and search for your <mark class="critic">Contract Address</mark>.</p>
+<p><img alt="img" src="../assets/contract-deployed-explorer.png" /></p>
+<h3 id="interact-with-the-contract"><strong>Interact with the Contract</strong></h3>
+<p>Since we didn't connect the logic of the smart contracts with a front end we need to interact with our contracts via the console.
+You can do this in the following ways:</p>
+<ol>
+<li>Invoke the truffle console:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>truffle console 
+</code></pre></div>
+<p>You will see the following prompt:</p>
+<div class="highlight"><pre><span></span><code>truffle(development)&gt;
+</code></pre></div>
+<ol>
+<li>Begin by establishing both the deployed MetaCoin contract instance and your kusari wallet</li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>It is normal to get an <code>undefined</code> as response from the console after you executed one command</p>
+</div>
+<div class="highlight"><pre><span></span><code>let instance = await MetaCoin.deployed()
+let accounts = await web3.eth.getAccounts()
+</code></pre></div>
+<ol>
+<li>Check the metacoin balance of the account that deployed the contract:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>let balance = await instance.getBalance(accounts[0])
+balance.toNumber()
+</code></pre></div>
+<ol>
+<li>See how much ether that balance is worth (and note that the contract defines a metacoin to be worth 2 ether):</li>
+</ol>
+<div class="highlight"><pre><span></span><code>let ether = await instance.getBalanceInEth(accounts[0])
+ether.toNumber()
+</code></pre></div>
+<ol>
+<li>Transfer some metacoin from one account to another:</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code>instance.sendCoin(<mark class="critic">TARGET ADDRESS</mark>, 500)
+</code></pre></div>
+You should see the following result:</p>
+<div class="highlight"><pre><span></span><code>{
+  tx: &#39;0x3a81b73b5f9b22ba739b2ba1072ac2b51efa2c5655c4d64f4147937bf5b627ae&#39;,
+  receipt: {
+    blockHash: &#39;0x848addd30c96393e5d1f3dddfd633f0d2ffba0b97b15d2a566eba76d7863f63c&#39;,
+    blockNumber: 113352,
+    contractAddress: null,
+    cumulativeGasUsed: 47314,
+    from: &#39;0xd3e849b097f7cfe0fdd381e778012759a972d250&#39;,
+    gasUsed: 47314,
+    logs: [ [Object] ],
+    logsBloom: &#39;0x00000000000000000000000000000000000000000000000000000008000000000000100001000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000010000000000000000000000000004000000000000004000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000202000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000&#39;,
+    status: true,
+    to: &#39;0x32c3681db7b86852555475d9e91620dfc51d3a73&#39;,
+    transactionHash: &#39;0x3a81b73b5f9b22ba739b2ba1072ac2b51efa2c5655c4d64f4147937bf5b627ae&#39;,
+    transactionIndex: 0,
+    rawLogs: [ [Object] ]
+  },
+  logs: [
+    {
+      address: &#39;0x32C3681dB7b86852555475D9E91620Dfc51D3A73&#39;,
+      blockHash: &#39;0x848addd30c96393e5d1f3dddfd633f0d2ffba0b97b15d2a566eba76d7863f63c&#39;,
+      blockNumber: 113352,
+      logIndex: 0,
+      removed: false,
+      transactionHash: &#39;0x3a81b73b5f9b22ba739b2ba1072ac2b51efa2c5655c4d64f4147937bf5b627ae&#39;,
+      transactionIndex: 0,
+      transactionLogIndex: &#39;0x0&#39;,
+      id: &#39;log_cdcbe184&#39;,
+      event: &#39;Transfer&#39;,
+      args: [Result]
+    }
+  ]
+}
+</code></pre></div>
+<ol>
+<li>Check the balance of the account that received the metacoin:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>let received = await instance.getBalance(<mark class="critic">TARGET ADDRESS</mark>)
+received.toNumber()
+</code></pre></div>
+<ol>
+<li>Check the balance of the account that sent the metacoin:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>let newBalance = await instance.getBalance(accounts[0])
+newBalance.toNumber()
+</code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Congrats, you succesfully depolyed 3 smart contracts to Kusari via Truffle and Meta Mask!</p>
+</div>
+<h2 id="continue-learning"><strong>Continue Learning</strong></h2>
+<hr />
+<ul>
+<li>Please check Truffle's fantastic docs, guides and tutorials <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /> : <a href="https://www.trufflesuite.com/docs">Truffle</a> </li>
+</ul>
+<p><br></br></p>
+<p align=right> Written by Masterdubs & Petar </p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2022 Kusari
+          </div>
+        
+        Made for
+        <a href="https://www.kusari.network/" target="_blank" rel="noopener">
+          Kusari
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.annotate", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.e3b2bf44.min.js"></script>
+      
+        <script src="../../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

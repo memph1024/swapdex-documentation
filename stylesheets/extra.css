@@ -1,0 +1,116 @@
+:root {
+    --md-primary-fg-color:        #13111a;
+    --md-primary-fg-color--light: #13111a;
+    --md-primary-fg-color--dark:  #13111a;
+    --md-text-link-color: #b8860b;
+  }
+  img[src*='#center'] { 
+    display: block;
+    margin: auto;
+}
+
+
+.cards-container {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: #b8860b;
+  flex-flow: row wrap;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.cards, .cards-container {
+  align-items: left;
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  width: 100%;
+  border: 1px solid #FFF;
+  margin: -5px;
+  text-align: center;
+}
+
+.cards-body {
+  margin-top: -30px;
+  margin-bottom: 30px;
+}
+
+.md-typeset h5 {
+  text-transform: uppercase;
+  text-align: center !important;
+  color:        #b8860b;
+}
+
+@media only screen and (max-width: 600px) {
+  .md-typeset h5 {
+      text-transform: uppercase;
+      font-size: 9px;
+      text-align: center;
+  }
+  .cards-body {
+    margin-top: -15px !important;
+  }
+  }
+
+div.admonition.warning {
+  font-size: .80rem;
+}
+
+div.admonition.hint {
+  font-size: .80rem;
+}
+
+div.admonition.example {
+  font-size: .80rem;
+}
+
+div.admonition.note {
+  font-size: .80rem;
+}
+
+div.admonition.anstract {
+  font-size: .80rem;
+}
+
+div.admonition.info {
+  font-size: .80rem;
+}
+
+div.admonition.tip {
+  font-size: .80rem;
+}
+
+div.admonition.success {
+  font-size: .80rem;
+}
+
+table.error-table{
+  font-family: "Nunito";
+  border: 1px solid #333333;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+table.error-table td, table.error-table th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 5px;
+}
+table.error-table tbody td {
+  font-size: 13px;
+}
+table.error-table td:nth-child(1) {
+  background-color: rgb(235, 235, 235);
+}
+table.error-table thead {
+  background: #b8860b;
+  border-bottom: 2px solid #444444;
+}
+table.error-table thead th {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 1px solid #444444;
+}

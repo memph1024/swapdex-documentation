@@ -1,7 +1,7 @@
 # <b>SET AN IDENTITY TO GAIN TRUST</b>
 ---
 
-Kusari provides a naming system that allows participants to add personal information to their on-chain account and subsequently ask for verification of this information by registrars.
+SwapDex provides a naming system that allows participants to add personal information to their on-chain account and subsequently ask for verification of this information by registrars.
 
 ## **Setting an Identity**
 ---
@@ -10,7 +10,7 @@ Users can set an identity by registering through default fields such as legal na
 
 Users must reserve funds in a bond to store their information on chain: 0.033333, and 0.008333 per each field beyond the legal name. These funds are locked, not spent - they are returned when the identity is cleared.
 
-The easierst way to create a on-chain identiy is to click the gear icon next to your account on the <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Substrate Explorer App</a> and select "Set on-chain identity".
+The easierst way to create a on-chain identiy is to click the gear icon next to your account on the <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/explorer" target="_blank">Substrate Explorer App</a> and select "Set on-chain identity".
 
 ![set-identiy](assets/set-identiy-01.png#center)
 
@@ -35,12 +35,12 @@ A seventh state, "fee paid", is for when a user has requested judgement and it i
 
 Registrars gain trust by performing proper due diligence and would presumably be replaced for issuing faulty judgements.
 
-To be judged after submitting your identity information, go to the "<a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/extrinsics" target="_blank">Extrinsics UI</a>" and select the `identity pallet`, then `requestJudgement`. For the `reg_index` put the index of the registrar you want to be judged by, and for the `max_fee` put the maximum you're willing to pay for these confirmations
+To be judged after submitting your identity information, go to the "<a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/extrinsics" target="_blank">Extrinsics UI</a>" and select the `identity pallet`, then `requestJudgement`. For the `reg_index` put the index of the registrar you want to be judged by, and for the `max_fee` put the maximum you're willing to pay for these confirmations
 
 ![identity-judgement](assets/identity-judgement-03.png)
 
 !!! hint
-    If you don't know which registrar to pick, first check the available registrars by going to "<a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/chainstate" target="_blank">Chain State UI</a>" and selecting identity.registrars() to get the full list.
+    If you don't know which registrar to pick, first check the available registrars by going to "<a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/chainstate" target="_blank">Chain State UI</a>" and selecting identity.registrars() to get the full list.
 
 ### **Requesting a Judgement**
 
@@ -59,7 +59,7 @@ Once the registrar has confirmed the identity, a green checkmark should appear n
 
 You may decide that you do not want to be judged by a registrar (for instance, because you realize you entered incorrect data or selected the wrong registrar). In this case, after submitting the request for judgement but before your identity has been judged, you can issue a call to cancel the judgement using an extrinsic.
 
-To do this, first, go to the "<a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/extrinsics" target="_blank">Extrinsics UI</a>" and select the `identity pallet`, then `cancelRequest`. Ensure that you are calling this from the correct account (the one for which you initially requested judgement). For the `reg_index`, put the index of the registrar from which you requested judgement.
+To do this, first, go to the "<a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/extrinsics" target="_blank">Extrinsics UI</a>" and select the `identity pallet`, then `cancelRequest`. Ensure that you are calling this from the correct account (the one for which you initially requested judgement). For the `reg_index`, put the index of the registrar from which you requested judgement.
 
 Submit the transaction, and the requested judgement will be cancelled.
 
@@ -67,7 +67,7 @@ Submit the transaction, and the requested judgement will be cancelled.
 ## **Registars**
 ---
 
-Registrars can set a fee for their services and limit their attestation to certain fields. For example, a registrar could charge 1 KSI to verify one's legal name, email, and GPG key. When a user requests judgement, they will pay this fee to the registrar who provides the judgement on those claims. Users set a maximum fee they are willing to pay and only registrars below this amount would provide judgement.
+Registrars can set a fee for their services and limit their attestation to certain fields. For example, a registrar could charge 1 SDX to verify one's legal name, email, and GPG key. When a user requests judgement, they will pay this fee to the registrar who provides the judgement on those claims. Users set a maximum fee they are willing to pay and only registrars below this amount would provide judgement.
 
 ### **Becoming a Registar**
 
@@ -79,7 +79,7 @@ Go to the Democracy tab, select "Submit preimage", and input the information for
 
 Copy the preimage hash. Submit the preimage by signing a transaction.
 
-Next, select "Submit Proposal" and enter the previously copied preimage hash. The locked balance field needs to be at least 100 KSI. You can find out the minimum by querying the chain state under Chain State -> Constants -> democracy -> minimumDeposit.
+Next, select "Submit Proposal" and enter the previously copied preimage hash. The locked balance field needs to be at least 100 SDX. You can find out the minimum by querying the chain state under `Chain State` -> `Constants` -> `democracy` -> `minimumDeposit`.
 
 ## **Clearing and Killing an Identity**
 ---
@@ -89,8 +89,8 @@ Next, select "Submit Proposal" and enter the previously copied preimage hash. Th
 To clear an identity:
 
 1. Navigate to the Accounts UI.
-2. Click the three dots corresponding to the account you want to clear and select 'Set on-chain identity'.
-3. Select 'Clear Identity', and sign and submit the transaction.
+2. Click the three dots corresponding to the account you want to clear and select `Set on-chain identity`.
+3. Select `Clear Identity`, and sign and submit the transaction.
 
 **Killing**: The Council can kill an identity that it deems erroneous. This results in a slash of the deposit.
 

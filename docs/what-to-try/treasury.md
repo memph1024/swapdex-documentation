@@ -3,7 +3,7 @@
 
 The Treasury is a pot of funds collected through transaction fees, slashing, staking inefficiencies, etc. The funds held in the Treasury can be spent by making a spending proposal that, if approved by the Council, will enter a waiting period before distribution. This waiting period is known as the budget period, and its duration is subject to governance, with the current default set to 6 days. The Treasury attempts to spend as many proposals in the queue as it can without running out of funds.
 
-If the Treasury ends a budget period without spending all of its funds, it suffers a burn of a percentage of its funds -- thereby causing deflationary pressure. This percentage is currently 0.2% on Kusari, with the amount currently going to Society rather than being burned.
+If the Treasury ends a budget period without spending all of its funds, it suffers a burn of a percentage of its funds -- thereby causing deflationary pressure. This percentage is currently 0.2% on SwapDex, with the amount currently going to Society rather than being burned.
 
 When a stakeholder wishes to propose a spend from the Treasury, they must reserve a deposit of at least 5% of the proposed spend (see below for variations). This deposit will be slashed if the proposal is rejected, and returned if it is accepted.
 
@@ -24,11 +24,11 @@ The Treasury is funded from different sources:
 
 - **Slashing**: When a validator is slashed for any reason, the slashed amount is sent to the Treasury with a reward going to the entity that reported the validator (another validator). The reward is taken from the slash amount and varies per offence and number of reporters.
 - **Transaction fees**: A portion of each block's transaction fees goes to the Treasury, with the remainder going to the block author.
-- **Staking inefficiency**: Inflation is designed to be 20% in the first year, and the ideal staking ratio is set at 50%, meaning half of all KSI should be locked in staking. - Any deviation from this ratio will cause a proportional amount of the inflation to go to the Treasury. In other words, if 50% of all KSI are staked, then 100% of the inflation goes to the validators as reward. If the staking rate is greater than or less than 50%, then the validators will receive less, with the remainder going to the Treasury.
+- **Staking inefficiency**: Inflation is designed to be 20% in the first year, and the ideal staking ratio is set at 50%, meaning half of all SDX should be locked in staking. - Any deviation from this ratio will cause a proportional amount of the inflation to go to the Treasury. In other words, if 50% of all SDX are staked, then 100% of the inflation goes to the validators as reward. If the staking rate is greater than or less than 50%, then the validators will receive less, with the remainder going to the Treasury.
 
 ## **Creating a Treasury Proposal**
 ---
-The proposer has to deposit 5% of the requested amount or 0.067 KSI (whichever is higher) as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded otherwise. These values are subject to governance so they may change in the future.
+The proposer has to deposit 5% of the requested amount or 0.067 SDX (whichever is higher) as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded otherwise. These values are subject to governance so they may change in the future.
 
 Please note that there is no way for a user to revoke a treasury proposal after it has been submitted. The Council will either accept or reject the proposal, and if the proposal is rejected, the bonded funds are burned.
 
@@ -40,7 +40,7 @@ Spreading the word about the proposal's explanation is ultimately up to the prop
 
 ### **Creating the Proposal**
 
-One way to create the proposal is to use the <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Substrate Explorer App</a>. From the website, use the Governance tab and select the Treasury, then click on submit proposal and enter the desired amount and recipient.
+One way to create the proposal is to use the <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/explorer" target="_blank">Substrate Explorer App</a>. From the website, use the Governance tab and select the Treasury, then click on submit proposal and enter the desired amount and recipient.
 
 ![treasury-proposal](assets/treasury-proposal-01.png#center)
 
@@ -69,7 +69,7 @@ To better understand the process a tip goes through until it is paid out, let's 
 
 ### **Example**
 
-Bob has done something great for Kusari. Alice has noticed this and decides to report Bob as deserving a tip from the Treasury. The Council is composed of three members Charlie, Dave, and Eve.
+Bob has done something great for SwapDex. Alice has noticed this and decides to report Bob as deserving a tip from the Treasury. The Council is composed of three members Charlie, Dave, and Eve.
 
 Alice begins the process by issuing the `report_awesome` extrinsic. This extrinsic requires two arguments, a reason and the address to tip. Alice submits Bob's address with the reason being a UTF-8 encoded URL to a post on Discord that explains her reasoning for why Bob deserves the tip.
 
@@ -79,13 +79,13 @@ For her trouble, Alice is able to claim the eventual finder's fee if the tip is 
 
 Since the tipper group is the same as the Council, the Council must now collectively (but also independently) decide on the value of the tip that Bob deserves.
 
-Charlie, Dave, and Eve all review the report and make tips according to their personal valuation of the benefit Bob has provided to Kusari.
+Charlie, Dave, and Eve all review the report and make tips according to their personal valuation of the benefit Bob has provided to SwapDex.
 
-Charlie tips 1 KSI. Dave tips 3 KSI. Eve tips 10 KSI.
+Charlie tips 1 SDX. Dave tips 3 SDX. Eve tips 10 SDX.
 
 The tip could have been closed out with only two of the three tippers. Once more than half of the tippers group have issued tip valuations, the countdown to close the tip will begin. In this case, the third tipper issued their tip before the end of the closing period, so all three were able to make their tip valuations known.
 
-Now the actual tip that will be paid out to Bob is the median of these tips, so Bob will be paid out 3 KSI from the Treasury.
+Now the actual tip that will be paid out to Bob is the median of these tips, so Bob will be paid out 3 SDX from the Treasury.
 
 In order for Bob to be paid his tip, some account must call the close_tip extrinsic at the end of the closing period for the tip. This extrinsic may be called by anyone.
 
@@ -93,7 +93,7 @@ In order for Bob to be paid his tip, some account must call the close_tip extrin
 ---
 There are practical limits to Council Members curation capabilities when it comes to treasury proposals: Council members likely do not have the expertise to make a proper assessment of the activities described in all proposals. Even if individual Councillors have that expertise, it is highly unlikely that a majority of members are capable in such diverse topics.
 
-Bounties Spending proposals aim to delegate the curation activity of spending proposals to experts called Curators: They can be defined as addresses with agency over a portion of the Treasury with the goal of fixing a bug or vulnerability, developing a strategy, or monitoring a set of tasks related to a specific topic: all for the benefit of the Kusari ecosystem.
+Bounties Spending proposals aim to delegate the curation activity of spending proposals to experts called Curators: They can be defined as addresses with agency over a portion of the Treasury with the goal of fixing a bug or vulnerability, developing a strategy, or monitoring a set of tasks related to a specific topic: all for the benefit of the SwapDex ecosystem.
 
 A proposer can submit a bounty proposal for the Council to pass, with a curator to be defined later, whose background and expertise is such that they are capable of determining when the task is complete. Curators are selected by the Council after the bounty proposal passes, and need to add an upfront payment to take the position. This deposit can be used to punish them if they act maliciously. However, if they are successful in their task of getting someone to complete the bounty work, they will receive their deposit back and part of the bounty reward.
 
@@ -105,7 +105,7 @@ After the Council has activated a bounty, it delegates the work that requires ex
 
 To minimize storage on chain in the same way as any proposal, bounties don't contain contextual information. When a user submits a bounty spending proposal, they will probably need to find an off-chain way to explain the proposal (any of the available community forums serve this purpose). We will provide a template that can help as a checklist of all needed information for the Council to make an informed decision.
 
-The bounty has a predetermined duration of 90 days with the possibility of being extended by the curator. Aiming to maintain flexibility on the tasks’ curation, the curator will be able to create sub-bounties for more granularity and allocation in the next iteration of the mechanism.
+The bounty has a predetermined duration of 90 days with the possibility of being extended by the curator. Aiming to maintain flexibility on the task’s curation, the curator will be able to create sub-bounties for more granularity and allocation in the next iteration of the mechanism.
 
 
 ![bounty-process](assets/bounty-process.jpg#center)
@@ -113,9 +113,9 @@ The bounty has a predetermined duration of 90 days with the possibility of being
 
 ### **Creating a Bounty Proposal**
 
-Anyone can create a Bounty proposal using <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Substrate Explorer App</a>: Users are able to submit a proposal on the dedicated Bounty section under Governance. The development of a robust user interface to view and manage bounties in the <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Substrate Explorer App</a> is still under development and it will serve Council members, Curators and Beneficiaries of the bounties, as well as all users observing the on-chain treasury governance. For now, the help of a Councillor is needed to open a bounty proposal as a motion to be voted.
+Anyone can create a Bounty proposal using <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/explorer" target="_blank">Substrate Explorer App</a>: Users are able to submit a proposal on the dedicated Bounty section under Governance. The development of a robust user interface to view and manage bounties in the <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/explorer" target="_blank">Substrate Explorer App</a> is still under development and it will serve Council members, Curators and Beneficiaries of the bounties, as well as all users observing the on-chain treasury governance. For now, the help of a Councillor is needed to open a bounty proposal as a motion to be voted.
 
-To submit a bounty, please visit <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Substrate Explorer App</a> and click on the governance tab in the options bar on the top of the site. After, click on 'Bounties' and find the button '+ Add Bounty' on the upper-right side of the interface. Complete the bounty title, the requested allocation (including curator's fee) and confirm the call.
+To submit a bounty, please visit <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/explorer" target="_blank">Substrate Explorer App</a> and click on the `governance tab` in the options bar on the top of the site. After, click on `Bounties` and find the button `+ Add Bounty` on the upper-right side of the interface. Complete the bounty title, the requested allocation (including curator's fee) and confirm the call.
 
 After this, a Council member will need to assist you to pass the bounty proposal for vote as a motion. You can contact the Council by joining our Discord server and publishing a short description of your bounty, with a link to one of the forums for contextual information.
 
@@ -135,7 +135,7 @@ The majority of the Council can decide the outcome of a treasury spend proposal.
 
 For one, the Treasury has deflationary pressure due to the burn that is suffered every spend period. The burn aims to incentivize the complete spend of all treasury funds at every burn period, so ideally the treasury pot doesn't have time to accumulate mass amounts of wealth. However, it is the case that the burn on the Treasury could be so little that it does not matter.
 
-However, it is the case on Kusari that the Council is composed of mainly well-known members of the community. Remember, the Council is voted in by the KSI holders, so they must do some campaigning or otherwise be recognized to earn votes. In the scenario of an attack, the Council members would lose their social credibility. Furthermore, members of the Council are usually externally motivated by the proper operation of the chain. This external motivation is either because they run businesses that depend on the chain, or they have direct financial gain (through their holdings) of the token value remaining steady.
+However, it is the case on SwapDex that the Council is composed of mainly well-known members of the community. Remember, the Council is voted in by the SDX holders, so they must do some campaigning or otherwise be recognized to earn votes. In the scenario of an attack, the Council members would lose their social credibility. Furthermore, members of the Council are usually externally motivated by the proper operation of the chain. This external motivation is either because they run businesses that depend on the chain, or they have direct financial gain (through their holdings) of the token value remaining steady.
 
 Concretely, there are a couple on-chain methods that resist this kind of attack. One, the Council majority may not be the token majority of the chain. This means that the token majority could vote to replace the Council if they attempted this attack - or even reverse the treasury spend. They would do this through a normal referendum. Two, there are time delays to treasury spends. They are only enacted every spend period. This means that there will be some time to observe this attack is taking place. The time delay then allows chain participants time to respond. The response may take the form of governance measures or - in the most extreme cases a liquidation of their holdings and a migration to a minority fork. However, the possibility of this scenario is quite low.
 

@@ -1,10 +1,10 @@
 # <b>EXPLORING DEMOCRACY</b>
 ---
 
-Kusari uses a sophisticated governance mechanism to evolve gracefully over time at the ultimate behest of its assembled stakeholders. 
+SwapDex uses a sophisticated governance mechanism to evolve gracefully over time at the ultimate behest of its assembled stakeholders. 
 The stated goal is to ensure that the majority of the stake can always command the network. 
 
-To do this, we brrowed and adjusted various mechanisms from Polkadot, Kusama and Substrate, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. <a href="https://guide.kusama.network/docs/learn-wasm" target="_blank">WebAssembly</a>) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting. Stake-weighted referenda must agree upon all changes to the protocol.
+To do this, we borrowed and adjusted various mechanisms from Polkadot, Kusama and Substrate, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. <a href="https://guide.kusama.network/docs/learn-wasm" target="_blank">WebAssembly</a>) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting. Stake-weighted referenda must agree upon all changes to the protocol.
 
 ## <b>Mechanism</b>
 ---
@@ -27,7 +27,7 @@ Referenda can be started in one of several ways:
 - Emergency proposals submitted by the Technical Committee and approved by the Council.
 
 All referenda have an enactment delay associated with them. This is the period between the referendum ending and, assuming the proposal was approved, the changes being enacted.
-For the first two ways that a referendum is launched, this is a fixed time. For Kusari, it is eight days. For the third type, it can be set as desired.
+For the first two ways that a referendum is launched, this is a fixed time. For SwapDex, it is eight days. For the third type, it can be set as desired.
 
 Emergency proposals deal with significant problems with the network that need to be "fast-tracked". These will have a shorter enactment time.
 
@@ -41,7 +41,7 @@ If someone agrees with the proposal, they may deposit the same amount of coins t
 The proposal with the highest bonded support will be selected to be a referendum in the next voting cycle.
 
 !!! note
-    Note that this may be different from the absolute number of seconds; for instance, three accounts bonding 20 KSI each would "outweigh" ten accounts bonding a single KSI each. The bonded coins will be released once the proposal is tabled (that is, brought to a vote).
+    Note that this may be different from the absolute number of seconds; for instance, three accounts bonding 20 SDX each would "outweigh" ten accounts bonding a single SDX each. The bonded coins will be released once the proposal is tabled (that is, brought to a vote).
 
 There can be a maximum of 100 public proposals in the proposal queue.
 
@@ -78,14 +78,14 @@ You can read more about this at Voluntary Locking.
 ```
 Example:
 
-Grandad: Votes `No` with 10 TDSX for a 128 week lock period  => 10 * 6 = 60 Votes
+Grandad: Votes `No` with 10 SDX for a 128 week lock period  => 10 * 6 = 60 Votes
 
-Lucious: Votes `Yes` with 20 KSI for a 4 week lock period => 20 * 1 = 20 Votes
+Lucious: Votes `Yes` with 20 SDX for a 4 week lock period => 20 * 1 = 20 Votes
 
-Petar: Votes `Yes` with 15 KSI for a 8 week lock period => 15 * 2 = 30 Votes
+Petar: Votes `Yes` with 15 SDX for a 8 week lock period => 15 * 2 = 30 Votes
 ```
 
-Even though combined both Lucious and Petar vote with more TDSX than Grandad, the lock period for both of them is less than Grandad's, leading to their voting power counting as less.
+Even though combined both Lucious and Petar vote with more SDX than Grandad, the lock period for both of them is less than Grandad's, leading to their voting power counting as less.
 
 ### **Tallying**
 
@@ -108,7 +108,7 @@ against - the number of nay votes
 
 turnout - the total number of voting coins (does not include conviction)
 
-electorate - the total number of KSI coins issued in the network
+electorate - the total number of SDX coins issued in the network
 ```
 
 ### **Super-Majority Approve**
@@ -136,14 +136,14 @@ To know more about where these above formulas come from, please read the <a href
 Example:
 
 Assume:
-- We only have 1.500 KSI coins in total.
+- We only have 1.500 SDX coins in total.
 - Public proposal
 
-John  - 500 KSI
-Peter - 100 KSI
-Lilly - 150 KSI
-JJ    - 150 KSI
-Ken   - 600 KSI
+John  - 500 SDX
+Peter - 100 SDX
+Lilly - 150 SDX
+JJ    - 150 SDX
+Ken   - 600 SDX
 
 John: Votes `Yes` for a 4 week lock period  => 500 * 1 = 500 Votes
 
@@ -162,11 +162,11 @@ electorate = 1500
 ![example-vote-02](assets/example-vote-02.svg#center)
 
 Since the above example is a public referendum, `Super-Majority Approve` would be used to calculate the result.
-`Super-Majority Approve` requires more **aye** votes to pass the referendum when turnout is low, therefore, based on the above result, the referendum will be rejected. In addition, only the winning voter's coinss are locked. If the voters on the losing side of the referendum believe that the outcome will have negative effects, their coins are transferrable so they will not be locked into the decision. Moreover, winning proposals are autonomously enacted only after some enactment period.
+`Super-Majority Approve` requires more **aye** votes to pass the referendum when turnout is low, therefore, based on the above result, the referendum will be rejected. In addition, only the winning voter's coins are locked. If the voters on the losing side of the referendum believe that the outcome will have negative effects, their coins are transferrable so they will not be locked into the decision. Moreover, winning proposals are autonomously enacted only after some enactment period.
 
 ### **Voluntary Locking**
 
-Kusari utilizes an idea called Voluntary Locking that allows coin holders to increase their voting power by declaring how long they are willing to lock up their coins, hence, the number of votes for each coin holder will be calculated by the following formula:
+SwapDex utilizes an idea called Voluntary Locking that allows coin holders to increase their voting power by declaring how long they are willing to lock up their coins, hence, the number of votes for each coin holder will be calculated by the following formula:
 
 ```
 votes = coins * conviction_multiplier
@@ -184,7 +184,7 @@ The conviction multiplier increases the vote multiplier by one every time the nu
 |       16       |         5       |
 |       32       |         6       |
 
-The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in total), and one lock period equals 8 days on Kusari. Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction by 5.5, for instance.
+The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in total), and one lock period equals 8 days on SwapDex. Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction by 5.5, for instance.
 
 While a coin is locked, you can still use it for voting and staking; you are only prohibited from transferring these coins to another account.
 
@@ -192,7 +192,7 @@ Votes are still "counted" at the same time (at the end of the voting period), no
 
 ### **Adaptive Quorum Biasing**
 
-Kusari uses Polkadot's concept called "Adaptive Quorum Biasing", which functions as a lever that the council can use to alter the effective super-majority required to make it easier or more difficult for a proposal to pass in the case that there is no clear majority of voting power backing it or against it.
+SwapDex uses Polkadot's concept called "Adaptive Quorum Biasing", which functions as a lever that the council can use to alter the effective super-majority required to make it easier or more difficult for a proposal to pass in the case that there is no clear majority of voting power backing it or against it.
 
 ![example-vote-02](assets/adaptive-quorum-biasing.png#center)
 
@@ -216,9 +216,9 @@ All three tallying mechanisms - majority carries, super-majority approve, and su
 !!! hint
     Video explainer on Council
 
-To represent passive stakeholders, Kusari uses the idea of a "council". 
+To represent passive stakeholders, SwapDex uses the idea of a "council". 
 The council is an on-chain entity comprising several actors, each represented as an on-chain account. 
-On Kusari, the council will consist of 19 seats.
+On SwapDex, the council will consist of 19 seats.
 
 Along with controlling the treasury, the council is called upon primarily for three tasks of governance: proposing sensible referenda, cancelling uncontroversially dangerous or malicious referenda, and electing the technical committee.
 
@@ -232,14 +232,14 @@ A proposal can be canceled if the technical committee unanimously agrees to do s
 
 Additionally, a two-thirds majority of the council can cancel a referendum. This may function as a last-resort if there is an issue found late in a referendum's proposal such as a bug in the code of the runtime that the proposal would institute.
 
-If the cancellation is controversial enough that the council cannot get a two-thirds majority, then it will be left to the stakeholders en masse to determine the fate of the proposal.#
+If the cancellation is controversial enough that the council cannot get a two-thirds majority, then it will be left to the stakeholders en masse to determine the fate of the proposal.
 
 ### **Blacklisting**
 
 A proposal can be blacklisted by <a href="https://substrate.dev/rustdocs/latest/pallet_sudo/index.html" target="_blank">Sudo Pallet</a>. A blacklisted proposal and its related referendum (if any) is immediately canceled. Additionally, a blacklisted proposal's hash cannot re-appear in the proposal queue. 
 Blacklisting is useful when removing erroneous proposals that could be submitted with the same hash, i.e. proposal #2 in which the submitter used plain text to make a suggestion.
 
-Upon seeing their proposal removed, a submitter who is not properly introduced to the democracy system of Kusari might be tempted to re-submit the same proposal. That said, this is far from a fool-proof method of preventing invalid proposals from being submitted - a single changed character in a proposal's text will also change the hash of the proposal, rendering the per-hash blacklist invalid.
+Upon seeing their proposal removed, a submitter who is not properly introduced to the democracy system of SwapDex might be tempted to re-submit the same proposal. That said, this is far from a fool-proof method of preventing invalid proposals from being submitted - a single changed character in a proposal's text will also change the hash of the proposal, rendering the per-hash blacklist invalid.
 
 ### **How to become a council member?**
 
@@ -247,7 +247,7 @@ Upon seeing their proposal removed, a submitter who is not properly introduced t
 
 All stakeholders are free to signal their approval of any of the registered candidates.
 
-Council elections are handled by the same <a href="https://arxiv.org/pdf/2004.12990.pdf" target="_blank">Phragmén election process</a> that selects validators from the available pool based on nominations. However, coin holders' votes for councillors are isolated from any of the nominations they may have on validators. Council terms last for one day on Kusari.
+Council elections are handled by the same <a href="https://arxiv.org/pdf/2004.12990.pdf" target="_blank">Phragmén election process</a> that selects validators from the available pool based on nominations. However, coin holders' votes for councillors are isolated from any of the nominations they may have on validators. Council terms last for one day on SwapDex.
 
 At the end of each term, Phragmén election algorithm runs and the result will choose the new councillors based on the vote configurations of all voters. The election also chooses a set number of runners up (currently 19 on Kusari) that will remain in the queue with their votes intact.
 
@@ -284,7 +284,7 @@ For the top-N (say 4 in this example) runners-up, they can remain and their vote
 ## **Technical Committee**
 ---
 
-The Technical Committee is one of the three chambers of Kusari governance (along with the Council and the Referendum chamber). The Technical Committee is composed of the teams that have successfully implemented or specified either a SwapDex/Kusari runtime. Teams are added or removed from the Technical Committee via a simple majority vote of the Council.
+The Technical Committee is one of the three chambers of SwapDex governance (along with the Council and the Referendum chamber). The Technical Committee is composed of the teams that have successfully implemented or specified either a SwapDex/Kusari runtime. Teams are added or removed from the Technical Committee via a simple majority vote of the Council.
 
 The Technical Committee can, along with the Council, produce emergency referenda, which are fast-tracked for voting and implementation. These are used for emergency bug fixes or rapid implementation of new but battle-tested features into the runtime.
 

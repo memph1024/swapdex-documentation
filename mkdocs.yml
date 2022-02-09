@@ -1,6 +1,6 @@
-site_name: Kusari Knowledge Base
-copyright: Copyright &copy; 2022 Kusari
-repo_url: https://github.com/kusari-network/kusari-docs.git
+site_name: SwapDex Knowledge Base
+copyright: Copyright &copy; 2022 SwapDex
+repo_url: https://github.com/Swapdex-Protocol/swapdex-documentation
 
 markdown_extensions:
   - admonition
@@ -35,8 +35,8 @@ theme:
     
   name: material
   custom_dir: overrides
-  logo: assets/logokusari.png
-  favicon: assets/logokusari.png
+  logo: assets/swapdex-logo-circlewhite.png
+  favicon: assets/swapdex-icon.png
   language: en
   
 plugins:

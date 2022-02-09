@@ -1,13 +1,13 @@
 
 # <b>WELCOME TO</b>
 
-![kusari](assets/kusari-logo-tagline-dark.png)
+![kusari](assets/swapdex-dark-500x66.png)
 
 ---
 !!! Warning
     Work in progress content can change and it's not definitive :building_construction:.
 
-**SwapDex's Canary Network**
+**SwapDex's Main Network**
 
 **KUSARI** [KSI] meaning "Chain", will be a canary network for our main chain and will hold real economic value in the future, similar to our leading network SwapDEX.
 

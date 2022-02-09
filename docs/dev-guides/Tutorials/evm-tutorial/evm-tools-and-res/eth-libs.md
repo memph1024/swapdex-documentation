@@ -29,9 +29,9 @@ For the full user documentation, and API reference for web3.js, click [here](htt
 ## **Ethers.js Library**
 ---
 
-The ethers.js library provides tools to interact with Ethereum Nodes with JavaScript, similar to web3.js. Kusari has an Ethereum-like API available that is fully compatible with Ethereum-style JSON RPC invocations. Therefore, developers can leverage this compatibility and use the ethers.js library to interact with a Kusari node as if they were doing so on Ethereum.
+The ethers.js library provides tools to interact with Ethereum Nodes with JavaScript, similar to web3.js. SwapDex has an Ethereum-like API available that is fully compatible with Ethereum-style JSON RPC invocations. Therefore, developers can leverage this compatibility and use the ethers.js library to interact with a SwapDex node as if they were doing so on Ethereum.
 
-### **Setup Ethers.js with Kusari**
+### **Setup Ethers.js with SwapDex**
 
 To get started with the ethers.js library, install it using the following command:
 
@@ -59,24 +59,25 @@ wallet = new ethers.Wallet(privKey, provider);
 
 Different methods are available inside provider and wallet. Depending on which network you want to connect to, you can set the RPC_URL, ChainID, NETWORK_NAME to the following values:
 
-**Kusari Development Node**
+**SwapDex Development Node**
 
 - RRC URL: `http://localhost:9933`
 - ChainID: `142`
 - Network Name: `dev`
 
-**Kusari Testnet**
+**SwapDex Testnet**
+
 - RPC URL: `https://rpc-testnet.swapdex.network/rpc`
 - ChainID: `142`
-- Network Name: `Kusari`
+- Network Name: `SwapDex`
 
 ## **Web3.py Library**
 ---
 
 Web3.py is a set of libraries that allow developers to interact with Ethereum nodes using HTTP, IPC, or WebSocket protocols with Python. 
-Kusari has an Ethereum-like API available that is fully compatible with Ethereum-style JSON RPC invocations. Therefore, developers can leverage this compatibility and use the web3.py library to interact with a Kusari node as if they were doing so on Ethereum.
+SwapDex has an Ethereum-like API available that is fully compatible with Ethereum-style JSON RPC invocations. Therefore, developers can leverage this compatibility and use the web3.py library to interact with a SwapDex node as if they were doing so on Ethereum.
 
-### **Setup Web3.py with Kusari**
+### **Setup Web3.py with SwapDex**
 
 To get started with the web3.py library, install it using the following command:
 

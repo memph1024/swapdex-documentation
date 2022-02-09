@@ -19,7 +19,7 @@ The EVM pallet satisfies step 1 by cutting the source Substrate address into an 
 
 **Step 2**
 
-To maintain the balances of the cut-down EVM addresses, the Kusari utilizes the Substrate balances pallet. The balances pallet converts a corresponding 20-byte address into an substrate address (32-byte).
+To maintain the balances of the cut-down EVM addresses, the SwapDex utilizes the Substrate balances pallet. The balances pallet converts a corresponding 20-byte address into an substrate address (32-byte).
 
 Note that these reconverted 32-byte addresses have no inherent relationship to the original truncated Substrate address.
 
@@ -67,7 +67,7 @@ This can be performed by calling `evm::withdraw(truncate(account), value).signAn
 
 An EVM address can be given a balance at genesis, or by sending balance directly to the "substrate-ethereum address equivalent" as you would normally do between accounts. 
 
-Kusari handles Ethereum balances as if they were running on the Ethereum blcokchain. That includes that gas is subtracted from the balance (you can access the quantity of gas used from the transaction receipt returned by the EVM module through web3 or truffle), and transfers work as expected.
+SwapDex handles Ethereum balances as if they were running on the Ethereum blockchain. That includes that gas is subtracted from the balance (you can access the quantity of gas used from the transaction receipt returned by the EVM module through web3 or truffle), and transfers work as expected.
 
 The balance of the 20-byte Ethereum address and the 32-byte EVM address should be identical, when compared: `web3.eth.getBalance(ethAddress)` should equal `system::balances(prefixAndHash(ethAddress)).freeBalance`, where `ethAddress` is the 20-byte Ethereum address, and `prefixAndHash` applies the evm: prefix and takes the hash, as explained above.
 

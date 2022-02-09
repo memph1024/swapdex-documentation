@@ -1,7 +1,7 @@
 # <b>GET STARTED</b>
 ---
 
-It's time to get started on the Kusari network! Please check out our recommended list for getting started.
+It's time to get started on the SwapDex network! Please check out our recommended list for getting started.
 
 ## **Brand new to blockchain?**
 ---
@@ -12,23 +12,23 @@ For brand-new learners of Blockchain technology:
 !!!hint
     This is recommended for users with backgrounds of all levels, and the course is free!
 
-## **Brand new to Kusari?**
+## **Brand new to SwapDex?**
 ---
-For brand-new learners of Kusari, check-out:
+For brand-new learners of SwapDex, check-out:
 
-- Reading the Kusari Overview page
+- Reading the SwapDex Overview page
 - Reading our articles on Medium
-- Creating a Kusari Account
-- Using Kusari endpoints
-- Claiming Kusari KSI coins
-- Running a Validator on Kusari
-- Staking as a Nominator on Kusari
+- Creating a SwapDex Account
+- Using SwapDex endpoints
+- Claiming SwapDex SDX coins
+- Running a Validator on SwapDex
+- Staking as a Nominator on SwapDex
 
-## <b>Developing on Kusari?</b>
+## <b>Developing on SwapDex?</b>
 ---
-For developers who want to leverage on Kusari's unique advantages, please visit:
+For developers who want to leverage on SwapDex's unique advantages, please visit:
 
-- <a href="https://docs.kusari.network/dev-guides/" target="_blank">The developer guide</a>
+- <a href="https://docs.swapdex.network/dev-guides/" target="_blank">The developer guide</a>
 
 <br></br>
 

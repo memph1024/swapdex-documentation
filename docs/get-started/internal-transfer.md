@@ -3,7 +3,7 @@
 Cheers Friends, 
 
 This guide will teach you how to transfer your funds from our "substrate" side to our Ethereum-Virtual-Machine (EVM).
-Remember, the EVM side of our chain allows you to interact with many eth-based smart contracts and projects that eventually will move to Kusari.
+Remember, the EVM side of our chain allows you to interact with many eth-based smart contracts and projects that eventually will move to SwapDex.
 Moreover, our cross-chain bridges will be attached to our EVM module, so for you to utilize cross-chain trades, you must use the EVM.
 
 That said, let me tell you how we tackle this.
@@ -12,7 +12,7 @@ Second, I will elaborate a bit more on the concept so that the interested lads c
 
 ## <b> PART 1 - WALKTHROUGH </b>
 !!! Hint
-    You can access the TRANSFER function here: <a href="https://app.kusari.network/#/transfers" target="_blank"> Visit Dashboard </a> <br>
+    You can access the TRANSFER function here: <a href="https://app.swapdex.network/#/transfers" target="_blank"> Visit Dashboard </a> <br>
     You can watch me walk you through the process in this video: <a href="https://youtu.be/oZM_EoZgCAo" target="_blank"> Visit YouTube </a> 
 
 The transfer is done in four (4) steps:
@@ -70,8 +70,8 @@ In this step, you need to select the amount you want to transfer and confirm by 
 
 !!! hint
     Open the substrate or EVM explorer to be prepared to check that the transfer went through successfully. <br>
-    <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank"> Substrate Explorer </a> <br>
-    <a href="https://evm.kusari.network/blocks" target="_blank"> EVM Explorer </a>
+    <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/explorer" target="_blank"> Substrate Explorer </a> <br>
+    <a href="https://evm.swapdex.network/blocks" target="_blank"> EVM Explorer </a>
 
 ### <b> STEP 04 - Confirmation </b>
 
@@ -96,15 +96,15 @@ Confirm the transfer by hitting the "Sign and Send" button.
 
 
 !!! Success
-    Congrats, you successfully swapped KSI from the substrate to the EVM side.
+    Congrats, you successfully swapped SDX from the substrate to the EVM side.
     Feel free to reverse the swap and use the transfer function to your needs. 
 
 
 ## <b> PART 2 - WHAT HAPPENS IN THE BACKGROUND </b>
 ---
 
-Many may ask themselves whether kusari is a single chain when it has both an ethereum and substrate side at the same time?
-Well, to make a long story short... Kusari is one single chain BUT it runs an ethereum simulation in parallel.
+Many may ask themselves whether SwapDex is a single chain when it has both an ethereum and substrate side at the same time?
+Well, to make a long story short... SwapDex is one single chain BUT it runs an ethereum simulation in parallel.
 
 How does this work?
 
@@ -113,11 +113,11 @@ To answer this question, we need to look at the node architecture. Nodes are the
 ![img](assets/node-architecture.png#center)
 
 I want to direct your focus to the SUBSTRATE RUNTIME module of the Substrate Node. 
-The Runtime hosts all the code that makes Kusari unique, and it's composed of code pallets. 
+The Runtime hosts all the code that makes SwapDex unique, and it's composed of code pallets. 
 As you can see, the democracy function of our chain is also a code pallet and allows our community to govern the chain. Likewise, the staking pallet enables our community to run validators and stake as nominators. Like those pallets, the EVM is another pallet that allows our community to interact with eth-based smart contracts and cross-chain bridges.
 
 By performing the transfer described in step 01, we are transferring coins from the SUBSTRATE RUNTIME ENVIRONMENT into the EVM pallet and vice versa, that's it :D.
-As briefly touched on earlier, the EVM side opens up many new opportunities for you to utilize your KSI coins.
+As briefly touched on earlier, the EVM side opens up many new opportunities for you to utilize your SDX coins.
 
 ![img](assets/node-architecture-01.png#center)
 

@@ -1,6 +1,6 @@
-site_name: Kusari Knowledge Base
-copyright: Copyright &copy; 2022 Kusari
-repo_url: https://github.com/kusari-network/kusari-docs.git
+site_name: SwapDex Knowledge Base
+copyright: Copyright &copy; 2022 SwapDex
+repo_url: https://github.com/Swapdex-Protocol/swapdex-documentation
 
 markdown_extensions:
   - admonition
@@ -35,8 +35,8 @@ theme:
     
   name: material
   custom_dir: overrides
-  logo: assets/logokusari.png
-  favicon: assets/logokusari.png
+  logo: assets/swapdex-logo-circlewhite.png
+  favicon: assets/swapdex-icon.png
   language: en
   
 plugins:
@@ -99,7 +99,7 @@ nav:
                   - 'Tools': 'dev-guides/Tutorials/evm-tutorial/evm-tools-and-res/waffle.md'
                   - 'EVM Balances': 'dev-guides/Tutorials/evm-tutorial/evm-tools-and-res/evm-balances.md'
               - 'Guides':
-                  - 'Connect to Kusari': 'dev-guides/Tutorials/evm-tutorial/Tutorial/using-mm.md'
+                  - 'Connect to SwapDEX': 'dev-guides/Tutorials/evm-tutorial/Tutorial/using-mm.md'
                   - 'Deploy with Truffle': 'dev-guides/Tutorials/evm-tutorial/Tutorial/using-truffle.md'
   - 'Deep Dives':
       - 'EVM Pallet': 'deep-dives/evm-pallet.md'

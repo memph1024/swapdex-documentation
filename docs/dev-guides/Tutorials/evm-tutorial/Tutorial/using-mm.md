@@ -1,7 +1,7 @@
-# <b>Connect to the Kusari Network via MetaMask</b>
+# <b>Connect to the SwapDex Network via MetaMask</b>
 ---
 
-In this section we will show you step by step how to connect to the Kusari network via the Meta Mask browser extension.
+In this section we will show you step by step how to connect to the SwapDex network via the Meta Mask browser extension.
 
 
 ## **Install MetaMask**
@@ -16,14 +16,14 @@ Please create a new wallet and make sure to secure your private key and your see
 !!! warning
     The private key gives direct access to your funds, so make sure to store these in a secure place.
 
-## **Connect to the Kusari Network**
+## **Connect to the SwapDex Network**
 ---
 
-Now let's connect MetaMask to the EVM side of the Kusari Network.
+Now let's connect MetaMask to the EVM side of the SwapDex Network.
 
 1. Add a new network
 2. Enter the network data
-3. Select the Kusari Network
+3. Select the SwapDex Network
 
 ### **1) Add a new Network**
 
@@ -32,19 +32,19 @@ Now let's connect MetaMask to the EVM side of the Kusari Network.
 
 ### **2) Add Network Data**
 
-- Network Name: `Kusari`
-- New RPC URL: `https://rpc.kusari.network`
-- Chain ID: `71`
-- Currency Symbol: `KSI`
-- Explorer: `https://evm.kusari.network/`
+- Network Name: `SwapDEX Chain`
+- New RPC URL: `https://rpc.swapdex.network`
+- Chain ID: `70`
+- Currency Symbol: `SDX`
+- Explorer: `https://evm.swapdex.network/`
 
-### **3) Select the Kusari Network**
+### **3) Select the SwapDex Network**
 
-![img](assets/select-kusari.png#center)
+![img](assets/select-swapdex.png#center)
 
 
 !!! success
-    Congrats, you connected your MetaMask account to the Kusari Network!
+    Congrats, you connected your MetaMask account to the SwapDex Network!
 
 <br></br>
 

@@ -36,11 +36,11 @@ Validator 3 Stake (v3):  8 coins
 Validator 4 Stake (v4):  7 coins
 
 PAYOUT END OF THE ERA
-Payout (p): 8 KSI
+Payout (p): 8 SDX
 
 PAYOUT CALCULATION
 Payout for each validator (v1 to v4):
-Payout = p / v = 8 / 4 = 2 KSI per validator in the active set
+Payout = p / v = 8 / 4 = 2 SDX per validator in the active set
 ```
 
 Note that this is different than most other Proof-of-Stake systems such as Cosmos. As long as a validator is in the validator set, it will receive the same block reward as every other validator. Validator v1, who had 18 coins staked, received the same reward (2 coins) in this era as v4, with only seven tokens staked.
@@ -51,9 +51,9 @@ Note that this is different than most other Proof-of-Stake systems such as Cosmo
 
 A single entity can run multiple validators. Running multiple validators may provide a better risk/reward ratio. Assuming you have enough KSI/SDX, or enough stake nominates your validator to ensure that your validators remain in the validator set, running multiple validators will result in a higher return than running a single validator.
 
-For the following example, assume you have 18 KSI to stake. For simplicity's sake, we will ignore nominators. As in the example above, running a single validator would net you 2 KSI in this era.
+For the following example, assume you have 18 SDX to stake. For simplicity's sake, we will ignore nominators. As in the example above, running a single validator would net you 2 SDX in this era.
 
-Note that while KSI is used as an example, this same formula would apply to SDX when running a validator on SwapDex
+Note that while SDX is used as an example, this same formula would apply to KSI when running a validator on Kusari
 
 ```
 Validator Set Size (v): 4
@@ -65,10 +65,10 @@ Validator 3 Stake (v3):  8 coins
 Validator 4 Stake (v4):  7 coins
 
 PAYOUT END OF THE ERA
-Payout (p): 8 KSI
+Payout (p): 8 SDX
 
 PAYOUT CALCULATION
-Your Payout = p / v = 8 / 4 = 2 KSI 
+Your Payout = p / v = 8 / 4 = 2 SDX 
 ```
 
 Running two validators, and splitting the stake equally, would result in the original validator `v4` being kicked out of the validator set, as only the top v validators (as measured by stake) are selected to be in the validator set. More important, it would also double the reward that you get from each era.
@@ -83,9 +83,9 @@ Validator 3 Stake (v3): 9 coins
 Validator 4 Stake (v4): 8 coins
 
 PAYOUT END OF ERA
-Payout (p): 8 KSI
+Payout (p): 8 SDX
 
-Your payout = (p / v) * 2 = (8 / 4) * 2 = 4 KSI
+Your payout = (p / v) * 2 = (8 / 4) * 2 = 4 SDX
 ```
 With enough stake, you could run more than two validators. However, each validator must have enough stake behind it to be in the validator set.
 
@@ -100,9 +100,9 @@ Running multiple validators does not absolve you of the consequences of misbehav
 
 Nominators have the incentive to nominate the lowest-staked validator, as this will result in the lowest risk and highest reward. This is because while their vulnerability to slashing remains the same (since it is percentage-based), their rewards are higher since they will be a higher proportion of the total stake allocated to that validator.
 
-To clarify this, let us imagine two validators, PETAR and GRANDAD. Assume both are in the active set, have commission set to 0%, and are well-behaved. The only difference is that GRANDAD has 90 KSI nominating it and PETAR only has 10. If you nominate GRANDAD, it now has 90 + 10 = 100 KSI, and you will get 10% of the staking rewards for the next era. 
+To clarify this, let us imagine two validators, PETAR and GRANDAD. Assume both are in the active set, have commission set to 0%, and are well-behaved. The only difference is that GRANDAD has 90 SDX nominating it and PETAR only has 10. If you nominate GRANDAD, it now has 90 + 10 = 100 SDX, and you will get 10% of the staking rewards for the next era. 
 
-If you nominate PETAR, it now has 10 + 10 = 20 KSI nominating it, and you will get 50% of the staking rewards for the next era. In actuality, it would be pretty rare to see such a significant difference between the stake of validators, but the same principle holds even for more minor differences. If there is a 10% slash of either validator, you will lose 1 KSI in each case.
+If you nominate PETAR, it now has 10 + 10 = 20 SDX nominating it, and you will get 50% of the staking rewards for the next era. In actuality, it would be pretty rare to see such a significant difference between the stake of validators, but the same principle holds even for more minor differences. If there is a 10% slash of either validator, you will lose 1 SDX in each case.
 
 ---
 
@@ -112,73 +112,73 @@ Nominated stake allows you to "vote" for validators and share in the rewards (an
 !!! Note
     Validators set their preference as a percentage of the block reward, not an absolute number of KSI/SDX. The block rewards are based on the total amount at stake, with the reward peaking when the amount staked is at 50% of the total supply. The commission is set as the amount taken by the validator; that is, 0% commission means that the validator does not receive any proportion of the rewards besides that owed to it from self-stake, and 100% commission means that the validator operator gets all rewards and gives none to its nominators.
 
-The following examples show the results of several different validator payment schemes and the split between nominator and validator stake. We will assume a single nominator for each validator. However, there can be numerous nominators for each validator. Rewards are still distributed proportionally - for example, if the total rewards to be given to nominators is 2 KSI, and there are four nominators with equal stake bonded, each will receive 0.5 KSI. Note also that a single nominator may stake different validators.
+The following examples show the results of several different validator payment schemes and the split between nominator and validator stake. We will assume a single nominator for each validator. However, there can be numerous nominators for each validator. Rewards are still distributed proportionally - for example, if the total rewards to be given to nominators is 2 SDX, and there are four nominators with equal stake bonded, each will receive 0.5 SDX. Note also that a single nominator may stake different validators.
 
-Each validator in the example has selected a different validator payment (a percentage of the reward set aside directly for the validator). The validator's payment percentage (in KSI, although the same calculations work for SDX) is listed in brackets ([]) next to each validator. Since the validator payment is public knowledge, having a low or non-existent validator payment may attract more stake from nominators, since they know they will receive a larger reward.
+Each validator in the example has selected a different validator payment (a percentage of the reward set aside directly for the validator). The validator's payment percentage (in SDX, although the same calculations work for KSI) is listed in brackets ([]) next to each validator. Since the validator payment is public knowledge, having a low or non-existent validator payment may attract more stake from nominators, since they know they will receive a larger reward.
 
 ```
 Validator Set Size (v): 4
 
 ACTIVE SET (One Nominator per Validator)
-Validator 1 Stake (v1) [20% commission]: 18 KSI (9 KSI self-stake, 9 KSI nominator-stake)
-Validator 2 Stake (v2) [40% commission]:  9 KSI (3 KSI self-stake, 6 KSI nominator-stake)
-Validator 3 Stake (v3) [10% commission]:  8 KSI (4 KSI self-stake, 4 KSI nominator-stake)
-Validator 4 Stake (v4) [0% commission]:   6 KSI (1 KSI self-stake, 5 KSI nominator-stake)
+Validator 1 Stake (v1) [20% commission]: 18 SDX (9 SDX self-stake, 9 SDX nominator-stake)
+Validator 2 Stake (v2) [40% commission]:  9 SDX (3 SDX self-stake, 6 SDX nominator-stake)
+Validator 3 Stake (v3) [10% commission]:  8 SDX (4 SDX self-stake, 4 SDX nominator-stake)
+Validator 4 Stake (v4) [0% commission]:   6 SDX (1 SDX self-stake, 5 SDX nominator-stake)
 
 TOTAL PAYOUT END OF ERA
 Payout (p): 8 DOT
 
 PAYOUT PER VALIDATOR
 Payout for each validator (v1 - v4):
-p / v = 8 / 4 = 2 KSI
+p / v = 8 / 4 = 2 SDX
 
 ---------------------------------------------------------------------------------------------------
 
 REWARD CALCULATION - VALIDATOR 01
 v1:
-(0.2 * 2) = 0.4 KSI             -> validator payment
-(2 - 0.4) = 1.6 KSI             -> shared between all stake
-(9 / 18) * 1.6 = 0.8 KSI        -> validator self-stake share
-(9 / 18) * 1.6 = 0.8 KSI        -> nominator stake share
+(0.2 * 2) = 0.4 SDX             -> validator payment
+(2 - 0.4) = 1.6 SDX             -> shared between all stake
+(9 / 18) * 1.6 = 0.8 SDX        -> validator self-stake share
+(9 / 18) * 1.6 = 0.8 SDX        -> nominator stake share
 
-v1 validator total reward: 0.4 + 0.8 = 1.2 KSI
-v1 nominator reward: 0.8 KSI
+v1 validator total reward: 0.4 + 0.8 = 1.2 SDX
+v1 nominator reward: 0.8 SDX
 
 ---------------------------------------------------------------------------------------------------
 
 REWARD CALCULATION - VALIDATOR 02
 v2:
-(0.4 * 2) = 0.8 KSI              -> validator payment
-(2 - 0.8) = 1.2 KSI              -> shared between all stake
-(3 / 9) * 1.2 = 0.4 KSI          -> validator self-stake share
-(6 / 9) * 1.2 = 0.8 KSI          -> nominator stake share
+(0.4 * 2) = 0.8 SDX              -> validator payment
+(2 - 0.8) = 1.2 SDX              -> shared between all stake
+(3 / 9) * 1.2 = 0.4 SDX          -> validator self-stake share
+(6 / 9) * 1.2 = 0.8 SDX          -> nominator stake share
 
-v2 validator total reward: 0.8 + 0.4 = 1.2 KSI
-v2 nominator reward: 0.8 KSI
+v2 validator total reward: 0.8 + 0.4 = 1.2 SDX
+v2 nominator reward: 0.8 SDX
 
 ---------------------------------------------------------------------------------------------------
 
 REWARD CALCULATION - VALIDATOR 03
 v3:
-(0.1 * 2) = 0.2 KSI              -> validator payment
-(2 - 0.2) = 1.8 KSI              -> shared between all stake
-(4 / 8) * 1.8 = 0.9 KSI          -> validator self-stake share
-(4 / 8) * 1.8 = 0.9 KSI          -> nominator stake share
+(0.1 * 2) = 0.2 SDX              -> validator payment
+(2 - 0.2) = 1.8 SDX              -> shared between all stake
+(4 / 8) * 1.8 = 0.9 SDX          -> validator self-stake share
+(4 / 8) * 1.8 = 0.9 SDX          -> nominator stake share
 
-v3 validator total reward: 0.2 + 0.9 KSI = 1.1 KSI
-v3 nominator reward: 0.9 KSI
+v3 validator total reward: 0.2 + 0.9 SDX = 1.1 SDX
+v3 nominator reward: 0.9 SDX
 
 ---------------------------------------------------------------------------------------------------
 
 REWARD CALCULATION - VALIDATOR 03
 v4:
-(0 * 2) = 0 KSI                  -> validator payment
-(2 - 0) = 2.0 KSI                -> shared between all stake
-(1 / 6) * 2 = 0.33 KSI           -> validator self-stake share
-(5 / 6) * 2 = 1.67 KSI           -> nominator stake share
+(0 * 2) = 0 SDX                  -> validator payment
+(2 - 0) = 2.0 SDX                -> shared between all stake
+(1 / 6) * 2 = 0.33 SDX           -> validator self-stake share
+(5 / 6) * 2 = 1.67 SDX           -> nominator stake share
 
-v4 validator total reward: 0 + 0.33 KSI = 0.33 KSI
-v4 nominator reward: 1.67 KSI
+v4 validator total reward: 0 + 0.33 SDX = 0.33 SDX
+v4 nominator reward: 1.67 SDX
 ```
 
 <br></br>

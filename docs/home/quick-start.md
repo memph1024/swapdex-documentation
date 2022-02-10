@@ -1,41 +1,41 @@
 # <b> QUICK START</b>
 
-Kusari is build using the substrate framework. In addition Kusari utlilizes an Ethereum-Virtual-Machine (EVM) pallet to enable a seamless interface to all EVM-based blockchains.
-Hence you can connect to Kusari on both sides, the Substrate and EVM side. Here is how:
+SwapDex is build using the substrate framework. In addition SwapDex utlilizes an Ethereum-Virtual-Machine (EVM) pallet to enable a seamless interface to all EVM-based blockchains.
+Hence you can connect to SwapDex on both sides, the Substrate and EVM side. Here is how:
 
 ---
-## <b>Connect to Kusari Substrate</b>
+## <b>Connect to SwapDex Substrate</b>
 
-Just follow this link: <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/accounts" target="_blank"> Kusari Substrate DApp. </a><br>
+Just follow this link: <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/accounts" target="_blank"> SwapDex Substrate DApp. </a><br>
 In case you are new to substrate you can watch his video: <a href="https://www.youtube.com/watch?v=qM36ndMLn5o" target="_blank"> SDX KSI Wallets </a>
 
 !!! hint
-    The Kusari Substrate DApp offers many functionalities like a fully functional block explorer, the ability to stake and validate and to participate in the on-chain governance.
+    The SwapDex Substrate DApp offers many functionalities like a fully functional block explorer, the ability to stake and validate and to participate in the on-chain governance.
 
 ---
-## <b>Connect to Kusari EVM</b>
+## <b>Connect to SwapDex EVM</b>
 
-To connect to Kusari's EVM we recommend to use <a href="https://metamask.io/" target="_blank"> MetaMask. </a> <br>
+To connect to SwapDex's EVM we recommend to use <a href="https://metamask.io/" target="_blank"> MetaMask. </a> <br>
 Go to `Settings -> Network -> Add new Network` and enter the following network details:
 
-- Network :  Kusari
-- RPC URL : https://rpc.kusari.network/
-- Chain ID : 71
-- Currency Symbol : KSI
-- Block Explorer: https://evm.kusari.network/
+- Network :  SwapDex
+- RPC URL : https://rpc.swapdex.network/
+- Chain ID : 70
+- Currency Symbol : SDX
+- Block Explorer: https://evm.swapdex.network/
 
 ---
-## <b>Kusari Dashboard</b>
+## <b>SwapDex Dashboard</b>
 
-Once connected with Kusari's Substrate and EVM side, you are all set to utilize the <a href="https://app.kusari.network/#/" target="_blank">Kusari Dashboard</a> <br>
-The Kusari Dashboard is the one-stop-shop to utilize Kusari's unique features. Keep in mind that the dashboard will grow and expand to continue to provide utiliy.<br>
+Once connected with SwapDex's Substrate and EVM side, you are all set to utilize the <a href="https://app.swapdex.network/#/" target="_blank">SwapDex Dashboard</a> <br>
+The SwapDex Dashboard is the one-stop-shop to utilize SwapDex's unique features. Keep in mind that the dashboard will grow and expand to continue to provide utiliy.<br>
 
-- <a href="https://app.kusari.network/#/" target="_blank">Kusari Dashboard</a>
+- <a href="https://app.swapdex.network/#/" target="_blank">SwapDex Dashboard</a>
 
 Functionalities you can already access are:
 
-- Claim: To claim your KSI coins - :point_right: <a href="https://youtu.be/lPRF43-9IGU" target="_blank">YouTube Walkthrough</a>
-- Transfer: To bridge your KSI from the Substrate to the EVM side and vice versa - :point_right: <a href="https://youtu.be/oZM_EoZgCAo" target="_blank">YouTube Walkthrough</a>
+- Claim: To claim your SDX coins - :point_right: <a href="https://youtu.be/lPRF43-9IGU" target="_blank">YouTube Walkthrough</a>
+- Transfer: To bridge your SDX from the Substrate to the EVM side and vice versa - :point_right: <a href="https://youtu.be/oZM_EoZgCAo" target="_blank">YouTube Walkthrough</a>
 
 ---
 ## <b>Join the SwapDex / Kusari Community</b>

@@ -1,10 +1,8 @@
 # <b>Deploy with Truffle</b>
 ---
 
-In this section we will show you how to utilize the [Truffle Suite](https://www.trufflesuite.com/truffle) to develop Smart Contracts for Kusari.
+In this section we will show you how to utilize the [Truffle Suite](https://www.trufflesuite.com/truffle) to develop Smart Contracts for SwapDex.
 Tuffle, in short, is a solidity suite that helps you to test your code. 
-
-Since Kusari is fully Ethereum compatible you can use Ganache as the e
 
 Let's start with installing the technical requirements.
 
@@ -14,7 +12,7 @@ Let's start with installing the technical requirements.
 To use Truffle we need to install NodeJS v8.9.4 or later and we need a running eth-client.
 
 !!! Note
-    Since Kusari is fully Ethereum compatible you can use **Ganache** as the preferred eth-client
+    Since SwapDex is fully Ethereum compatible you can use **Ganache** as the preferred eth-client
 
  Please go ahead and install NodeJS and Ganache.
 
@@ -31,7 +29,7 @@ npm install -g truffle
 ---
 
 In this guide we will utilize the MetaCoin Truffle Box, which is a Truffle project template. 
-The MetaCoin Box allows us to create an ERC-20 token on Kusari that can be transferred between accounts. 
+The MetaCoin Box allows us to create an ERC-20 token on SwapDex that can be transferred between accounts. 
 
 1. Create a new folder for your Truffle project and navigate into it:
 
@@ -73,7 +71,7 @@ Once you unboxed MetaCoin, you will be greeted with a project structure like thi
 7. Open the `truffle-config.js` file. This is the Truffle configuration file, for setting network information and other project-related settings. The file is blank, but this is okay, as we'll be using a Truffle command that has some defaults built-in.
 
 !!! hint
-    We will adjust the `truffle-config.js` later to deploy the Token to Ganache and later to Kusari
+    We will adjust the `truffle-config.js` later to deploy the Token to Ganache and later to SwapDex
 
 ## **Testing**
 ---
@@ -181,18 +179,18 @@ Compiling your contracts...
 > Compiling .\contracts\ConvertLib.sol
 > Compiling .\contracts\MetaCoin.sol
 > Compiling .\contracts\Migrations.sol
-> Artifacts written to C:\Users\petar\Documents\Kusari\EVM-Tutorial\build\contracts
+> Artifacts written to C:\Users\petar\Documents\SwapDex\EVM-Tutorial\build\contracts
 > Compiled successfully using:
    - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
 
-PS C:\Users\petar\Documents\Kusari\EVM-Tutorial> truffle migrate
+PS C:\Users\petar\Documents\SwapDex\EVM-Tutorial> truffle migrate
 
 Compiling your contracts...
 ===========================
 > Compiling .\contracts\ConvertLib.sol
 > Compiling .\contracts\MetaCoin.sol
 > Compiling .\contracts\Migrations.sol
-> Artifacts written to C:\Users\petar\Documents\Kusari\EVM-Tutorial\build\contracts
+> Artifacts written to C:\Users\petar\Documents\SwapDex\EVM-Tutorial\build\contracts
 > Compiled successfully using:
    - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
 
@@ -290,15 +288,15 @@ In Ganache, click the "Transactions" button to see that the transactions have be
 !!! success
     You deployed a smart contract to the Ganache Blockchain!
 
-## **Migrate to Kusari**
+## **Migrate to SwapDex**
 ---
 
-To deploy the smart contracts to Kusari, we need to make some adjustments.
+To deploy the smart contracts to SwapDex, we need to make some adjustments.
 First of all we need to install the truffle HDWallet package as follows:
 
 `npm install @truffle/hdwallet-provider`
 
-HD Wallet is basically an instance of your wallet e.g., MetaMask that has access to the Kusari network. 
+HD Wallet is basically an instance of your wallet e.g., MetaMask that has access to the SwapDex network. 
 Since a contract deployment involves transactions, you need to have your private key or your seed phrase ready.
 
 Open the `truffle-config.js` file and replace its content with the following code:
@@ -314,10 +312,10 @@ module.exports = {
         }
     },  
     networks: {
-        kusari: {
+        swapdex: {
             provider: () => new HDWalletProvider({
                 privateKeys: [ privKey ],
-                providerOrUrl: "https://rpc-testnet.swapdex.network/rpc",
+                providerOrUrl: "https://rpc.swapdex.network",
             }),
             network_id: 142,
         },  
@@ -330,7 +328,7 @@ You notice a few facts from here, our chainId is 142 and we are using solc versi
 !!! Hint
     Make sure that the wallet which is attached to the private key you provided earlier is funded sufficiently to pay for the gas needed to deploy the smart contracts.
 
-### **Migrate your Contracts to Kusari**
+### **Migrate your Contracts to SwapDex**
 
 To deploy the smart contracts within your project you need to execute the following command:
 
@@ -349,7 +347,7 @@ Compiling your contracts...
 > Compiling .\contracts\MetaCoin.sol
 > Compiling .\contracts\Migrations.sol
 √ Fetching solc version list from solc-bin. Attempt #1
-> Artifacts written to C:\Users\petar\Documents\Kusari\EVM-Tutorial\build\contracts
+> Artifacts written to C:\Users\petar\Documents\SwapDex\EVM-Tutorial\build\contracts
 > Compiled successfully using:
    - solc: 0.6.12+commit.27d51765.Emscripten.clang
 
@@ -357,8 +355,8 @@ Compiling your contracts...
 
 Starting migrations...
 ======================
-> Network name:    'kusari'
-> Network id:      142
+> Network name:    'swapdex'
+> Network id:      70
 > Block gas limit: 30000000 (0x1c9c380)
 
 
@@ -436,7 +434,7 @@ Summary
 ```
 
 !!! Success
-    Congrats, you deployed your first smart contracts on the Kusari Network!
+    Congrats, you deployed your first smart contracts on the SwapDex Network!
 
 ### **Check Deployment on Network Explorer**
 
@@ -461,7 +459,7 @@ You will see the following prompt:
 truffle(development)>
 ```
 
-2. Begin by establishing both the deployed MetaCoin contract instance and your kusari wallet
+2. Begin by establishing both the deployed MetaCoin contract instance and your SwapDex wallet
 
 !!! hint
     It is normal to get an `undefined` as response from the console after you executed one command
@@ -542,7 +540,7 @@ let newBalance = await instance.getBalance(accounts[0])
 newBalance.toNumber()
 ```
 !!! Success
-    Congrats, you succesfully depolyed 3 smart contracts to Kusari via Truffle and Meta Mask!
+    Congrats, you succesfully depolyed 3 smart contracts to SwapDex via Truffle and Meta Mask!
 
 ## **Continue Learning**
 ---

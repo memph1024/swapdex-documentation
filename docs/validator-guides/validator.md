@@ -1,14 +1,14 @@
 # <b>HOW TO SETUP A VALIDATOR</b>
 ---
 
-The following guide will teach you how to set up a Kusari test validator. The process of becoming a validator requires two steps. The first step is to set up a network node. The second step is to assign your node to your account and apply for validator candidacy.
+The following guide will teach you how to set up a SwapDex test validator. The process of becoming a validator requires two steps. The first step is to set up a network node. The second step is to assign your node to your account and apply for validator candidacy.
 
-Network validators are the foundation of a decentralized proof-of-stake network because they are responsible for concluding on a consensus by creating new and validating already produced blocks. That said, network validators are the prime target for adversaries that aim to sabotage the network. The Kusari has many layers to protect the network from attacks. The first layer is the security of each validator itself. Another layer is the slashing mechanism that detects validator nodes that display abnormal or dangerous behavior and punishes them with slashes. A slash will, in all cases, lead to the loss of funds. 
+Network validators are the foundation of a decentralized proof-of-stake network because they are responsible for concluding on a consensus by creating new and validating already produced blocks. That said, network validators are the prime target for adversaries that aim to sabotage the network. The SwapDex has many layers to protect the network from attacks. The first layer is the security of each validator itself. Another layer is the slashing mechanism that detects validator nodes that display abnormal or dangerous behavior and punishes them with slashes. A slash will, in all cases, lead to the loss of funds. 
 
 !!! warning
     Hence the warning: Running a validator on a live network is a lot of responsibility! You will be accountable for your stake and the stake of your current nominators. If you make a mistake and get slashed, your money and your reputation will be at risk. However, running a validator can also be very rewarding, knowing that you contribute to the security of a decentralized network while growing your stash.
 
-## Setp 1 - Setup a Network Node
+## Step 1 - Setup a Network Node
 ---
 ## Requirements
 
@@ -17,7 +17,7 @@ You can operate a network node on a local computer, a professional server-rig in
 !!! tip
     The most common way for a beginner to run a validator is on a VPS running Linux. You may choose whatever VPS providers that you prefer. 
 
-We benchmarked the transactions weights on the Kusari network on standard hardware. We recommend that validators run at least the standard hardware to ensure they can process all blocks in time. The following are not minimum requirements, but if you decide to run with less than this, beware that you might have a performance issue.
+We benchmarked the transactions weights on the SwapDex network on standard hardware. We recommend that validators run at least the standard hardware to ensure they can process all blocks in time. The following are not minimum requirements, but if you decide to run with less than this, beware that you might have a performance issue.
 
 ### Lower-end Hardware :
 
@@ -28,10 +28,10 @@ We benchmarked the transactions weights on the Kusari network on standard hardwa
 - 16GB ram, 300 GB Storage, 6 CPU, <strong>stable server uplink connection with fixed IP</strong>
 
 !!! info
-    Anything between the lower-end and ideal hardware should be sufficient to run a validator on the Kusari test network. 
+    Anything between the lower-end and ideal hardware should be sufficient to run a validator on the SwapDex test network. 
 
 
-## Using Ubuntu 21.04: 
+## Using Ubuntu 21.10: 
 ---
 ### Update your Ubuntu
 ```
@@ -61,17 +61,17 @@ sudo ntpq -p
     Skipping this can result in the validator node missing block authorship opportunities. If the clock is out of sync (even by a small amount), the blocks produced by your validator may not get accepted by the network. 
 
 
-## Installing the Kusari network Binary
+## Installing the SwapDex network Binary
 ---
 ### Install and enable Chrony
-We learned in the previous step that the new versions of Ubunutu ship with the NTP client by default. However, Chrony is another time sync tool that delivers better and more stable performance. Therefore, we recommend installing and enabling Chrony on top of the NTP client to ensure synchronized clocks and uninterrupted validator operations.
+We learned in the previous step that the new versions of Ubuntu ship with the NTP client by default. However, Chrony is another time sync tool that delivers better and more stable performance. Therefore, we recommend installing and enabling Chrony on top of the NTP client to ensure synchronized clocks and uninterrupted validator operations.
 ```
 sudo apt install chrony
 sudo systemctl enable chrony
 ```
 
 ### Fundamental Security Measures
-Security is of utmost importance if you consider operating a successfull validator on a live network. We will show you how to create a fundamental layer of protection by installing a firewall and a fail2ban service.
+Security is of utmost importance if you consider operating a successful validator on a live network. We will show you how to create a fundamental layer of protection by installing a firewall and a fail2ban service.
 
 **Configure a Firewall**
 
@@ -96,12 +96,12 @@ sudo apt install -y fail2ban && sudo systemctl enable fail2ban && sudo service f
 !!! success
     Congratulations! You implemented a fundamental layer of protection.
  
-### Install Kusari Validator binaries
-The following command will fetch / download the Kusari validator binaries and copy them to a specific folder.
-Check your ubuntu version and choose the correct file for it. <a href="https://download.starkleytech.com/kusari" target="_blank"> check your ubuntu version and choose the correct file for it </a>
+### Install SwapDex Validator binaries
+The following command will fetch / download the SwapDex validator binaries and copy them to a specific folder.
+Check your ubuntu version and choose the correct file for it. <a href="https://download.starkleytech.com/swapdex" target="_blank"> check your ubuntu version and choose the correct file for it </a>
 
 ```
-wget https://download.starkleytech.com/kusari/{==FILE_NAME_FROM_ABOVE==} -O swapdex && sudo chmod +x ./swapdex && sudo mv ./swapdex /usr/bin/swapdex
+wget https://download.starkleytech.com/swapdex/{==FILE_NAME_FROM_ABOVE==} -O swapdex && sudo chmod +x ./swapdex && sudo mv ./swapdex /usr/bin/swapdex
 ```
 !!! Warning
     Make sure that the link matches exactly and never use another source to download the binaries!
@@ -110,18 +110,18 @@ wget https://download.starkleytech.com/kusari/{==FILE_NAME_FROM_ABOVE==} -O swap
 For security reasons we recommend to run a validator as non-root user.
 For that we create a dedicated user account which will be used to run the validator.
 ```
-sudo adduser kusari
+sudo adduser swapdex
 ```
 !!! info
     when adding the new account you will be asked to provide a password and some additional information.
     Only the password is mandatory, the other parameters can be left blank.
 
-### Create the Kusari Validator Service File
+### Create the SwapDex Validator Service File
 In the next step, we will use <a href="https://help.ubuntu.com/community/Nano" target="_blank"> Nano </a>, a simple terminal-based text editor, to create a file that contains service instructions.
-The following command creates a file named `kusari.service` at the following location: `lib/systemd/system/`
+The following command creates a file named `swapdex.service` at the following location: `lib/systemd/system/`
 
 ```
-sudo nano /lib/systemd/system/kusari.service
+sudo nano /lib/systemd/system/swapdex.service
 ```
 
 !!! warning
@@ -132,12 +132,12 @@ sudo nano /lib/systemd/system/kusari.service
 **Content of the swapdex.service file**:
 ``` linenums="1"
 [Unit]
-Description=Kusari Validator
+Description=SwapDex Validator
 After=network-online.target
 
 [Service]
-ExecStart=/usr/bin/swapdex --port "30333" --name "{==A Node Name==}" --validator --chain kusari 
-User=kusari
+ExecStart=/usr/bin/swapdex --port "30333" --name "{==A Node Name==}" --validator --chain swapdex 
+User=swapdex
 Restart=always
 ExecStartPre=/bin/sleep 5
 RestartSec=30s
@@ -154,7 +154,7 @@ Hit "ctrl+x", then press "y" to confirm the saving of the file and then hit "Ent
 
 then start the service
 ```
-sudo systemctl enable kusari && sudo service kusari start 
+sudo systemctl enable swapdex && sudo service swapdex start 
 ```
 
 !!! Success
@@ -162,17 +162,17 @@ sudo systemctl enable kusari && sudo service kusari start
     For more information on systemd you can watch this quick <a href="https://youtu.be/N1vgvhiyq0E" target="_blank"> YouTube Tutorial </a>.
 
 ### Check if validator is started
-To ensure that the Kusari Validator process works please execute the following command:
+To ensure that the SwapDex Validator process works please execute the following command:
 ```
-ps aux | grep kusari
+ps aux | grep swapdex
 ```
 You should see a similar output:
 ```
-kusari  8108 9.9 21.0 1117976 419772 ?   Ssl May17 601:17 /usr/bin/swapdex --port 30333 --name "A Node Name" --validator --chain kusari
+swapdex  8108 9.9 21.0 1117976 419772 ?   Ssl May17 601:17 /usr/bin/swapdex --port 30333 --name "A Node Name" --validator --chain swapdex
 ```
 Furthermore, you can monitor your validator's logs by executing the following command:
 ```
-journalctl -u kusari.service --follow
+journalctl -u swapdex.service --follow
 ```
 To exit the 'follow' mode you need to hit ++ctrl+c++
 
@@ -188,13 +188,13 @@ Check if your node is appearing in the telemetry UI : <a href="https://telemetry
     If you want to find your node here you must have changed the name parameter in the previous step (`--name "A Node Name"`)
 
 !!! success
-    Congrats! If you checked and found your node on the telemetry page, you successfully set up your server to become a Kusari Validator!
+    Congrats! If you checked and found your node on the telemetry page, you successfully set up your server to become a SwapDex Validator!
 
 
 ## Part 2 - Assign the node to an account
 ---
 The second part of this guide will complete the validator setup by connecting your server with your Substrate account.
-Make sure you have some KSI in your substrate wallet. In case you need KSI please see the <a href="https://docs.kusari.network/get-started/claims/" target="_blank"> claim </a> section or watch our <a href="https://youtu.be/lPRF43-9IGU" target="_blank"> YoutTube Walkthrough </a>. 
+Make sure you have some SDX in your substrate wallet. In case you need SDX please see the <a href="https://docs.swapdex.network/get-started/claims/" target="_blank"> claim </a> section or watch our <a href="https://youtu.be/lPRF43-9IGU" target="_blank"> YoutTube Walkthrough </a>. 
 
 ### What are stash and controller accounts?
 
@@ -264,11 +264,11 @@ Copy the session key. It will look like this:
 0x13660593581b2e728ee32122636f8996c6fd9c22f33beaa05e2797899c5458b0c888149bf3c0b5ca7fb7296e69fefd85e4e3d5b76848db890207575e49031f37d846e78babf8051c123b498ffe6f12e712f97f6b2f3b54345ffe51145a16bb22187d415c2101b9883668ce93c46f7ba556b394c59781854737b6c941747c0964
 ``` 
 
-### Apply on Kusari Explorer
+### Apply on SwapDex Explorer
 ---
 
-- Visit the substrate <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/accounts" target="_blank">explorer</a>
-- Go to the Network Tab -> Staking -> Account Actions (<a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/staking/actions" target="_blank">Link</a>)
+- Visit the substrate <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/accounts" target="_blank">explorer</a>
+- Go to the `Network Tab` -> `Staking` -> `Account Actions` (<a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/staking/actions" target="_blank">Link</a>)
 ![img](assets/validator_01.png)
 
 - Hit the `+ Validator` Button
@@ -277,9 +277,9 @@ Copy the session key. It will look like this:
 - Fill in the form
 ![img](assets/validator_03.png)
 
-- **Stash account** - Select your Stash account. In this example, we will bond 1000 TSDX, where the minimum bonding amount is 1. Make sure that your Stash account contains at least this much. You can, of course, stake more than this.
-- **Controller account** - Select the Controller account created earlier. This account will also need a small amount of TSDX in order to start and stop validating.
-- **Value bonded** - How much TSDX from the Stash account you want to bond/stake. Note that you do not need to bond all of the TSDX in that account. Also note that you can always bond more TSDX later. However, withdrawing any bonded amount requires the duration of the unbonding period.
+- **Stash account** - Select your Stash account. In this example, we will bond 1000 SDX, where the minimum bonding amount is 1. Make sure that your Stash account contains at least this much. You can, of course, stake more than this.
+- **Controller account** - Select the Controller account created earlier. This account will also need a small amount of SDX in order to start and stop validating.
+- **Value bonded** - How much SDX from the Stash account you want to bond/stake. Note that you do not need to bond all of the SDX in that account. Also note that you can always bond more SDX later. However, withdrawing any bonded amount requires the duration of the unbonding period.
 - **Payment destination** - The account where the rewards from validating are sent. Payouts can go to any custom address. If you'd like to redirect payments to an account that is neither the controller nor the stash account, set one up. Note that it is extremely unsafe to set an exchange address as the recipient of the staking rewards.
 ---
 

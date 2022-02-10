@@ -14,7 +14,7 @@ A typical technique that promises high availability is to the setup multiple rep
 
 The good news is that 100% uptime of your validator is not needed, as it has some buffer within eras to go offline for a bit of while and upgrade. For this reason, we advise that you only attempt a high availability setup if you're confident you know exactly what you're doing.
 
-Many expert validators on other substrate based networkd have made mistakes in the past due to bad handling of their session keys.
+Many expert validators on other substrate based networks have made mistakes in the past due to bad handling of their session keys.
 
 Remember, even if your validator goes offline for some time, the offline slash is much more forgiving than the equivocation slash.
 

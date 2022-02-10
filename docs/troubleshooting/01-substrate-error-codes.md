@@ -16,7 +16,7 @@ A typical failed transactions looks something like this:
 
 The image displays only the error name as defined in the code, not its error message. Despite this error being rather self-explanatory, let's find its details.
 
-In the <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank">Explorer Tab</a>, find the block in which this failure occurred. Then, expand the `system.ExtrinsicFailed` frame:
+In the <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/explorer" target="_blank">Explorer Tab</a>, find the block in which this failure occurred. Then, expand the `system.ExtrinsicFailed` frame:
 
 ![img](assets/failed-tx-error-detail.jpg#center)
 

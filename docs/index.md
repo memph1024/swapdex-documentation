@@ -1,13 +1,13 @@
 
 # <b>WELCOME TO</b>
 
-![kusari](assets/kusari-logo-tagline-dark.png)
+![kusari](assets/swapdex-dark-500x66.png)
 
 ---
 !!! Warning
     Work in progress content can change and it's not definitive :building_construction:.
 
-**SwapDex's Canary Network**
+**SwapDex's Main Network**
 
 **KUSARI** [KSI] meaning "Chain", will be a canary network for our main chain and will hold real economic value in the future, similar to our leading network SwapDEX.
 
@@ -26,7 +26,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
     <tr>
         <td>
             <a href="https://kusari-network.github.io/kusari-docs/what-to-try/account-generation/" target="_blank">
-                <img src="assets/kusari-docs-creating-an-account.png" alt="Drawing" width="300" height="150">
+                <img src="assets/swapdex-docs-creating-an-account.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Creating an Account</h5>
                     </div>
@@ -34,7 +34,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
         </td>
         <td>
             <a href="https://kusari-network.github.io/kusari-docs/get-started/transfer-balances/" target="_blank">
-                <img src="assets/kusari-docs-balance-transfers.png" alt="Drawing" width="300" height="150">
+                <img src="assets/swapdex-docs-balance-transfers.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Balance Transfers</h5>
                     </div>
@@ -42,7 +42,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
         </td>
         <td>
             <a href="https://kusari-network.github.io/kusari-docs/deep-dives/staking/" target="_blank">
-                <img class="guide-image" src="assets/kusari-docs-staking.png" alt="Drawing" width="300" height="150">
+                <img class="guide-image" src="assets/swapdex-docs-staking.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Staking</h5>
                     </div>
@@ -56,7 +56,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
     <tr>
         <td>
             <a href="https://kusari-network.github.io/kusari-docs/dev-guides/" target="_blank">
-                <img src="assets/kusari-docs-dapps.png" alt="Drawing" width="300" height="150">
+                <img src="assets/swapdex-docs-dapps.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>DApps</h5>
                     </div>
@@ -64,7 +64,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
         </td>
         <td>
             <a href="https://kusari-network.github.io/kusari-docs/deep-dives/bridges/" target="_blank">
-                <img src="assets/kusari-docs-bridge.png" alt="Drawing" width="300" height="150">
+                <img src="assets/swapdex-docs-bridge.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Bridges</h5>
                     </div>
@@ -72,7 +72,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
         </td>
         <td>
             <a href="https://kusari-network.github.io/kusari-docs/what-to-try/democracy/" target="_blank">
-                <img class="guide-image" src="assets/kusari-docs-vote-for-councilors.png" alt="Drawing" width="300" height="150">
+                <img class="guide-image" src="assets/swapdex-docs-vote-for-councilors.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Vote for Councilors</h5>
                     </div>
@@ -86,7 +86,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
     <tr>
         <td>
             <a href="https://kusari-network.github.io/kusari-docs/what-to-try/democracy/" target="_blank">
-                <img src="assets/kusari-docs-proposal.png" alt="Drawing" width="300" height="150">
+                <img src="assets/swapdex-docs-proposal.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Make a Proposal</h5>
                     </div>
@@ -94,7 +94,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
         </td>
         <td>
             <a href="https://kusari-network.github.io/kusari-docs/what-to-try/democracy/" target="_blank">
-                <img src="assets/kusari-docs-council-candidacy.png" alt="Drawing" width="300" height="150">
+                <img src="assets/swapdex-docs-council-candidacy.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Council Candidacy</h5>
                     </div>
@@ -102,7 +102,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
         </td>
         <td>
             <a href="https://kusari-network.github.io/kusari-docs/what-to-try/treasury/" target="_blank">
-                <img class="guide-image" src="assets/kusari-docs-treasury.png" alt="Drawing" width="300" height="150">
+                <img class="guide-image" src="assets/swapdex-docs-treasury.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Treasury</h5>
                     </div>
@@ -116,7 +116,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
     <tr>
         <td>
             <a href="https://kusari-network.github.io/kusari-docs/what-to-try/identity/" target="_blank">
-                <img src="assets/kusari-docs-set-an-identity.png" alt="Drawing" width="300" height="150">
+                <img src="assets/swapdex-docs-set-an-identity.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Set an Identity</h5>
                     </div>
@@ -124,7 +124,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
         </td>
         <td>
             <a href="https://kusari-network.github.io/kusari-docs/what-to-try/nominator/" target="_blank">
-                <img src="assets/kusari-docs-become-a-nominator.png" alt="Drawing" width="300" height="150">
+                <img src="assets/swapdex-docs-become-a-nominator.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Become a Nominator</h5>
                     </div>
@@ -132,7 +132,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
         </td>
         <td>
             <a href="https://docs.kusari.network/validator-guides/validator/" target="_blank">
-                <img class="guide-image" src="assets/kusari-docs-become-a-validator.png" alt="Drawing" width="300" height="150">
+                <img class="guide-image" src="assets/swapdex-docs-become-a-validator.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Become a Validator</h5>
                     </div>

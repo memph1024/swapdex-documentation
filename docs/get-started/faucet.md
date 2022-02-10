@@ -1,7 +1,7 @@
 # <b> HOW TO GET KUSARI COINS?</b>
 ---
 
-If you are interested in obtaining KSI for building or research, you can apply through the <a href="https://docs.kusari.network/what-to-try/treasury/" target="_blank"> Treasury </a> or receive a tip for doing something cool in the community.
+If you are interested in obtaining SDX for building or research, you can apply through the <a href="https://docs.swapdex.network/what-to-try/treasury/" target="_blank"> Treasury </a> or receive a tip for doing something cool in the community.
 
 Please reach out to us on:
 

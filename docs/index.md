@@ -73,7 +73,7 @@ Furthermore, SwapDEX Chain has a decentralized <a href="https://docs.swapdex.net
 
 To interact with other blockchains that want to benefit from fast transaction times, low transaction fees and cross-chain capability, SwapDEX establishes bridges that offer a two-way compatibility, meaning that transactions can be made between different blockchains.
 
-## Why should you use SwapDEX Chain?
+## **Why should you use SwapDEX Chain?**
 
 Whether you're a blockchain <a href="https://docs.swapdex.network/dev-guides/" target="_blank">developer</a> or if you're interested in taking part of SwapDEX's community, SwapDEX offers a platform for everyone. This wiki offers a place for developers and hodlers to utilize tools and for brand-new learners to dive into educational material.
 

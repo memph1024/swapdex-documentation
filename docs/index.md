@@ -83,7 +83,7 @@ Whether you're a blockchain <a href="https://docs.swapdex.network/dev-guides/" t
 <link rel="stylesheets" type="text/css" href="extra.css">
     <tr>
         <td>
-            <a href="https://kusari-network.github.io/kusari-docs/what-to-try/account-generation/" target="_blank">
+            <a href="https://swapdex-protocol.github.io/swapdex-documentation/what-to-try/account-generation/" target="_blank">
                 <img src="assets/swapdex-docs-creating-an-account.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Creating an Account</h5>
@@ -91,7 +91,7 @@ Whether you're a blockchain <a href="https://docs.swapdex.network/dev-guides/" t
             </a>
         </td>
         <td>
-            <a href="https://kusari-network.github.io/kusari-docs/get-started/transfer-balances/" target="_blank">
+            <a href="https://swapdex-protocol.github.io/swapdex-documentation/get-started/transfer-balances/" target="_blank">
                 <img src="assets/swapdex-docs-balance-transfers.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Balance Transfers</h5>
@@ -99,7 +99,7 @@ Whether you're a blockchain <a href="https://docs.swapdex.network/dev-guides/" t
             </a>
         </td>
         <td>
-            <a href="https://kusari-network.github.io/kusari-docs/deep-dives/staking/" target="_blank">
+            <a href="https://swapdex-protocol.github.io/swapdex-documentation/deep-dives/staking/" target="_blank">
                 <img class="guide-image" src="assets/swapdex-docs-staking.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Staking</h5>
@@ -113,7 +113,7 @@ Whether you're a blockchain <a href="https://docs.swapdex.network/dev-guides/" t
 <link rel="stylesheets" type="text/css" href="extra.css">
     <tr>
         <td>
-            <a href="https://kusari-network.github.io/kusari-docs/dev-guides/" target="_blank">
+            <a href="https://swapdex-protocol.github.io/swapdex-documentation/dev-guides/" target="_blank">
                 <img src="assets/swapdex-docs-dapps.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>DApps</h5>
@@ -121,7 +121,7 @@ Whether you're a blockchain <a href="https://docs.swapdex.network/dev-guides/" t
             </a>
         </td>
         <td>
-            <a href="https://kusari-network.github.io/kusari-docs/deep-dives/bridges/" target="_blank">
+            <a href="https://swapdex-protocol.github.io/swapdex-documentation/deep-dives/bridges/" target="_blank">
                 <img src="assets/swapdex-docs-bridge.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Bridges</h5>
@@ -129,7 +129,7 @@ Whether you're a blockchain <a href="https://docs.swapdex.network/dev-guides/" t
             </a>
         </td>
         <td>
-            <a href="https://kusari-network.github.io/kusari-docs/what-to-try/democracy/" target="_blank">
+            <a href="https://swapdex-protocol.github.io/swapdex-documentation/what-to-try/democracy/" target="_blank">
                 <img class="guide-image" src="assets/swapdex-docs-vote-for-councilors.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Vote for Councilors</h5>
@@ -143,7 +143,7 @@ Whether you're a blockchain <a href="https://docs.swapdex.network/dev-guides/" t
 <link rel="stylesheets" type="text/css" href="extra.css">
     <tr>
         <td>
-            <a href="https://kusari-network.github.io/kusari-docs/what-to-try/democracy/" target="_blank">
+            <a href="https://swapdex-protocol.github.io/swapdex-documentation/what-to-try/democracy/" target="_blank">
                 <img src="assets/swapdex-docs-proposal.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Make a Proposal</h5>
@@ -151,7 +151,7 @@ Whether you're a blockchain <a href="https://docs.swapdex.network/dev-guides/" t
             </a>
         </td>
         <td>
-            <a href="https://kusari-network.github.io/kusari-docs/what-to-try/democracy/" target="_blank">
+            <a href="https://swapdex-protocol.github.io/swapdex-documentation/what-to-try/democracy/" target="_blank">
                 <img src="assets/swapdex-docs-council-candidacy.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Council Candidacy</h5>
@@ -159,7 +159,7 @@ Whether you're a blockchain <a href="https://docs.swapdex.network/dev-guides/" t
             </a>
         </td>
         <td>
-            <a href="https://kusari-network.github.io/kusari-docs/what-to-try/treasury/" target="_blank">
+            <a href="https://swapdex-protocol.github.io/swapdex-documentation/what-to-try/treasury/" target="_blank">
                 <img class="guide-image" src="assets/swapdex-docs-treasury.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Treasury</h5>
@@ -173,7 +173,7 @@ Whether you're a blockchain <a href="https://docs.swapdex.network/dev-guides/" t
 <link rel="stylesheets" type="text/css" href="extra.css">
     <tr>
         <td>
-            <a href="https://kusari-network.github.io/kusari-docs/what-to-try/identity/" target="_blank">
+            <a href="https://swapdex-protocol.github.io/swapdex-documentation/what-to-try/identity/" target="_blank">
                 <img src="assets/swapdex-docs-set-an-identity.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Set an Identity</h5>
@@ -181,7 +181,7 @@ Whether you're a blockchain <a href="https://docs.swapdex.network/dev-guides/" t
             </a>
         </td>
         <td>
-            <a href="https://kusari-network.github.io/kusari-docs/what-to-try/nominator/" target="_blank">
+            <a href="https://swapdex-protocol.github.io/swapdex-documentation/what-to-try/nominator/" target="_blank">
                 <img src="assets/swapdex-docs-become-a-nominator.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Become a Nominator</h5>
@@ -189,7 +189,7 @@ Whether you're a blockchain <a href="https://docs.swapdex.network/dev-guides/" t
             </a>
         </td>
         <td>
-            <a href="https://docs.kusari.network/validator-guides/validator/" target="_blank">
+            <a href="https://swapdex-protocol.github.io/swapdex-documentation/validator-guides/validator/" target="_blank">
                 <img class="guide-image" src="assets/swapdex-docs-become-a-validator.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Become a Validator</h5>

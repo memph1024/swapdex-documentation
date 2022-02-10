@@ -31,7 +31,7 @@ We benchmarked the transactions weights on the SwapDex network on standard hardw
     Anything between the lower-end and ideal hardware should be sufficient to run a validator on the SwapDex test network. 
 
 
-## Using Ubuntu 21.04: 
+## Using Ubuntu 21.10: 
 ---
 ### Update your Ubuntu
 ```

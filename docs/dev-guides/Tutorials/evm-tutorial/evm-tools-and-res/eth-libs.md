@@ -62,13 +62,13 @@ Different methods are available inside provider and wallet. Depending on which n
 **SwapDex Development Node**
 
 - RRC URL: `http://localhost:9933`
-- ChainID: `142`
+- ChainID: `70`
 - Network Name: `dev`
 
 **SwapDex Testnet**
 
-- RPC URL: `https://rpc-testnet.swapdex.network/rpc`
-- ChainID: `142`
+- RPC URL: `https://rpc.swapdex.network`
+- ChainID: `70`
 - Network Name: `SwapDex`
 
 ## **Web3.py Library**

@@ -20,7 +20,7 @@ Go to `Settings -> Network -> Add new Network` and enter the following network d
 
 - Network :  SwapDex
 - RPC URL : https://rpc.swapdex.network/
-- Chain ID : ??
+- Chain ID : 70
 - Currency Symbol : SDX
 - Block Explorer: https://evm.swapdex.network/
 

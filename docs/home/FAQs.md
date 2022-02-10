@@ -81,7 +81,7 @@ As the sale of tokens is a nascent practice, the treatment of SDX by regulatory 
 ### **How can I add SWAPDEX to MetaMask?**
 
 KUSARI RPC URL : `https://rpc.swapdex.network/` <br>
-Chain ID : `??` <br>
+Chain ID : `70` <br>
 Currency Symbol : `SDX` <br>
 Explorer: `https://evm.swapdex.network/` <br>
 

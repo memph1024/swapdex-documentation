@@ -32,9 +32,9 @@ Now let's connect MetaMask to the EVM side of the SwapDex Network.
 
 ### **2) Add Network Data**
 
-- Network Name: `SwapDex`
+- Network Name: `SwapDEX Chain`
 - New RPC URL: `https://rpc.swapdex.network`
-- Chain ID: `??`
+- Chain ID: `70`
 - Currency Symbol: `SDX`
 - Explorer: `https://evm.swapdex.network/`
 

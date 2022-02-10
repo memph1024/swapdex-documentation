@@ -1,7 +1,7 @@
 # <b>Waffle Tool</b>
 ---
 
- [Waffle](https://www.getwaffle.io/) is a popular development framework for testing Solidity smart contracts. Since Edgeware is Ethereum compatible, with a few lines of extra configuration, you can use SwapDex as you usually would with Ethereum to develop on SwapDex.
+ [Waffle](https://www.getwaffle.io/) is a popular development framework for testing Solidity smart contracts. Since SwapDex is Ethereum compatible, with a few lines of extra configuration, you can use SwapDex as you usually would with Ethereum to develop on SwapDex.
 
  **Configure Waffle to Connect to SwapDex**
 
@@ -18,7 +18,7 @@
  ```javascript
  describe ('Test Contract', () => { 
      // Use custom provider to connect to SwapDex or Edgeware development node const 
-     SwapDexProvider = new ethers.providers.JsonRpcProvider(('https://rpc-testnet.swapdex.network/rpc') 
+     SwapDexProvider = new ethers.providers.JsonRpcProvider(('https://rpc.swapdex.network') 
      const devProvider = new ethers.providers.JsonRpcProvider('http://localhost:9933/'); })
  ```
 

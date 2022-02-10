@@ -2,7 +2,7 @@
 ---
 ![eth-logo](assets/eth-logo.png#center)
 
-SwapDex has a pallet that allows developers to write EVM smart-contracts. This means that you can use SwapDex as you would with Ethereum. SwapDex is fully compatible with Ethereum's Web3 API and EVM. Here, we'll walk through a few subtle differences between SwapDex and Ethereum. Namely, SwapDex has a Proof of Stake-based consensus mechanism. This shouldn't affect you if you're building a DeFi or NFT based application. See our related documentation on proof-of-stake. In the following sections we detail SwapDex<>EVM Compatibility.
+SwapDex has a pallet that allows developers to write EVM smart-contracts. This means that you can use SwapDex as you would with Ethereum. SwapDex is fully compatible with Ethereum's Web3 API and EVM. Here, we'll walk through a few subtle differences between SwapDex and Ethereum. Namely, SwapDex has a Nominated Proof of Stake (NPOS) consensus mechanism. This shouldn't affect you if you're building a DeFi or NFT based application. See our related documentation on proof-of-stake. In the following sections we detail SwapDex<>EVM Compatibility.
 
 ---
 
@@ -17,7 +17,7 @@ If you're moving some portion of your smart contracts, state, or considering por
 
 You can view our tutorials to get a better feel for building Ethereum smart contracts on SwapDex, and how to directly offload or migrate your Ethereum application onto SwapDex.
 
-As previously mentioned, SwapDex is proof of stake, this does mean that smart contracts that rely on components of Ethereum's API that touch on Proof of Work--difficulty, uncles, hash-rate won't work as expected on SwapDex. For those values, we have constant values set at the runtime level. Existing Ethereum contracts that rely on Proof of Work internals (e.g., mining pool contracts) will almost certainly not work as expected on SwapDex.
+As previously mentioned, SwapDex is Nominated Proof of Stake (NPOS). This does mean that smart contracts that rely on components of Ethereum's API that touch on Proof of Work--difficulty, uncles, hash-rate won't work as expected on SwapDex. For those values, we have constant values set at the runtime level. Existing Ethereum contracts that rely on Proof of Work internals (e.g., mining pool contracts) will almost certainly not work as expected on SwapDex.
 
 ---
 

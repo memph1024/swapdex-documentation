@@ -315,7 +315,7 @@ module.exports = {
         swapdex: {
             provider: () => new HDWalletProvider({
                 privateKeys: [ privKey ],
-                providerOrUrl: "https://rpc-testnet.swapdex.network/rpc",
+                providerOrUrl: "https://rpc.swapdex.network",
             }),
             network_id: 142,
         },  
@@ -356,7 +356,7 @@ Compiling your contracts...
 Starting migrations...
 ======================
 > Network name:    'swapdex'
-> Network id:      142
+> Network id:      70
 > Block gas limit: 30000000 (0x1c9c380)
 
 

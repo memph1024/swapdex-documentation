@@ -40,7 +40,7 @@ Now let's connect MetaMask to the EVM side of the SwapDex Network.
 
 ### **3) Select the SwapDex Network**
 
-![img](assets/select-kusari.png#center)
+![img](assets/select-swapdex.png#center)
 
 
 !!! success

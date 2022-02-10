@@ -99,7 +99,7 @@ nav:
                   - 'Tools': 'dev-guides/Tutorials/evm-tutorial/evm-tools-and-res/waffle.md'
                   - 'EVM Balances': 'dev-guides/Tutorials/evm-tutorial/evm-tools-and-res/evm-balances.md'
               - 'Guides':
-                  - 'Connect to Kusari': 'dev-guides/Tutorials/evm-tutorial/Tutorial/using-mm.md'
+                  - 'Connect to SwapDEX': 'dev-guides/Tutorials/evm-tutorial/Tutorial/using-mm.md'
                   - 'Deploy with Truffle': 'dev-guides/Tutorials/evm-tutorial/Tutorial/using-truffle.md'
   - 'Deep Dives':
       - 'EVM Pallet': 'deep-dives/evm-pallet.md'

@@ -1,0 +1,1 @@
+{"rule":"A_RB_NN","sentence":"^\\QBoth network have an advanced suite of governance tools and, using the Substrate framework that allows the autonomously deployment of\\E$"}

@@ -2,9 +2,9 @@
 ---
 
 This documentation is standing on the shoulders of many brilliant minds within the blockchain universe.
-Many parts within the docs are closely oriented to existing documentations but slightly tailored to the specifications of Kusari and SwapDex. 
+Many parts within the docs are closely oriented to existing documentations but slightly tailored to the specifications of Kusari and SwapDEX. 
 
-The entire SwapDex Team would like to thank and credit the following projects and by thus honoring their contribution to the blockchain universe:
+The entire SwapDEX Team would like to thank and credit the following projects and by thus honoring their contribution to the blockchain universe:
 
 - <a href="https://polkadot.network/" target="_blank">PolkaDot</a>
 - <a href="https://kusama.network/" target="_blank">Kusama</a>
@@ -19,8 +19,8 @@ Special thanks goes to Edgeware and Truffle for their development guides.
 
 Much love and respect :heart:, 
 
-The Kusari/SwapDex Team
+The Kusari/SwapDEX Team
 
 <br></br>
 
-<p align=right> Written by The Kusari/SwapDex Team </p>
+<p align=right> Written by The Kusari/SwapDEX Team </p>

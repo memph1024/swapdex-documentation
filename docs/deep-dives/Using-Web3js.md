@@ -1,1 +1,1 @@
-# <b>Using Web3.js with SwapDex</b>
+# <b>Using Web3.js with SwapDEX</b>

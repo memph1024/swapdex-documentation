@@ -11,7 +11,7 @@ An authority is a generic term for the role in a blockchain that can participate
 ---
 
 ## **BABE**
-Blind Assignment of Block Extension (BABE) is Kusari/SwapDex's block production mechanism.
+Blind Assignment of Block Extension (BABE) is Kusari/SwapDEX's block production mechanism.
 
 ---
 
@@ -36,7 +36,7 @@ A process by which coins/tokens can be "frozen" in exchange for some other benef
 ---
 
 ## **Bounty**
-A mechanism which works in some sense as the reverse of a Treasury Proposal, allowing the Kusari/SwapDex Council to indicate that there is a need to do some task for the Kusari/SwapDex network and allowing users to receive KSI/SDX in return for working on that task.
+A mechanism which works in some sense as the reverse of a Treasury Proposal, allowing the Kusari/SwapDEX Council to indicate that there is a need to do some task for the Kusari/SwapDEX network and allowing users to receive KSI/SDX in return for working on that task.
 
 ---
 
@@ -61,7 +61,7 @@ The queue for proposals originating from individual accounts (i.e. not the Counc
 ---
 
 ## **Consensus**
-The process of a group of entities to agree on a particular data value (such as the ordering and makeup of blocks on a blockchain). There are a variety of algorithms used for determining consensus. The consensus algorithm used by Kusari/SwapDex is BABE and GRANDPA.
+The process of a group of entities to agree on a particular data value (such as the ordering and makeup of blocks on a blockchain). There are a variety of algorithms used for determining consensus. The consensus algorithm used by Kusari/SwapDEX is BABE and GRANDPA.
 
 ---
 
@@ -91,7 +91,7 @@ Providing conflicting information to the network. BABE equivocation entails crea
 ---
 
 ## **External Queue**
-The queue for proposals originating with the Kusari/SwapDex Council which are waiting to become referenda. Compare the Community queue.
+The queue for proposals originating with the Kusari/SwapDEX Council which are waiting to become referenda. Compare the Community queue.
 
 ---
 
@@ -101,7 +101,7 @@ State changes that come from the outside world, i.e. they are not part of the sy
 ---
 
 ## **Finality**
-The property of a block that cannot be reverted. Generally, created blocks are not final until some point in the future - perhaps never, in the case of "probabilistic finality". The Kusari and SwapDex Chain uses a deterministic finality gadget known as GRANDPA.
+The property of a block that cannot be reverted. Generally, created blocks are not final until some point in the future - perhaps never, in the case of "probabilistic finality". The Kusari and SwapDEX Chain uses a deterministic finality gadget known as GRANDPA.
 
 ---
 
@@ -121,7 +121,7 @@ The origin of a blockchain, also known as block 0. It can also be used to refere
 ---
 
 ## **Governance**
-The process of determining what changes to the network are permissible, such as modifications to code or movement of funds. The governance system in Kusari/SwapDex is on-chain and revolves around stakeholder voting.
+The process of determining what changes to the network are permissible, such as modifications to code or movement of funds. The governance system in Kusari/SwapDEX is on-chain and revolves around stakeholder voting.
 
 ---
 
@@ -131,7 +131,7 @@ An on-chain entity that consists of several on-chain accounts (starting at 6, ev
 ---
 
 ## **GRANDPA Finality Gadget**
-GHOST-based Recursive ANcestor Deriving Prefix Agreement. It is the finality gadget for Kusari and SwapDex, which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of GRANDPA, see [this Medium post.](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
+GHOST-based Recursive ANcestor Deriving Prefix Agreement. It is the finality gadget for Kusari and SwapDEX, which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of GRANDPA, see [this Medium post.](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
 
 ---
 
@@ -171,7 +171,7 @@ The abbreviation for Kusari network coins.
 ---
 
 ## **Kusari**
-The "canary network" for SwapDex. It consists of an early-release, unaudited version of the SwapDex software. It is not a testnet - after the transition to NPoS, the network is entirely in the hands of the community (i.e., Kusari coin holders).
+The "canary network" for SwapDEX. It consists of an early-release, unaudited version of the SwapDEX software. It is not a testnet - after the transition to NPoS, the network is entirely in the hands of the community (i.e., Kusari coin holders).
 
 ---
 
@@ -206,7 +206,7 @@ A tool that gives you information about a node, such as the latest blocks sealed
 ---
 
 ## **Nominated Proof of Stake (NPoS)**
-A Proof-of-Stake system where nominators back validators with their own stake as a show of faith in the good behavior of the validator. Nominated Proof-of-Stake differs from the more generic concept Delegated Proof-of-Stake in that nominators are subject to loss of stake if they nominate a bad validator; delegators are not subject to loss of stake based on the behavior of the validator. Note that some other blockchain technologies may use the term Delegated Proof-of-Stake, even if delegators can be slashed. Kusari/SwapDex uses the Phragmén method to allocate stake to nominees.
+A Proof-of-Stake system where nominators back validators with their own stake as a show of faith in the good behavior of the validator. Nominated Proof-of-Stake differs from the more generic concept Delegated Proof-of-Stake in that nominators are subject to loss of stake if they nominate a bad validator; delegators are not subject to loss of stake based on the behavior of the validator. Note that some other blockchain technologies may use the term Delegated Proof-of-Stake, even if delegators can be slashed. Kusari/SwapDEX uses the Phragmén method to allocate stake to nominees.
 
 ---
 
@@ -236,7 +236,7 @@ The initiator of an extrinsic. A simple origin would be the account that is send
 ---
 
 ## **Oversubscribed**
-If more than the maximum number of nominators nominate the same validator, it is "oversubscribed", and only the top staked nominators (ranked by the amount of stake, up to the maximum number of nominators) are paid rewards. Other nominators will receive no rewards for that era. The current maximum number of nominators is 256 on Kusari and SwapDex, but it can be modified via governance.
+If more than the maximum number of nominators nominate the same validator, it is "oversubscribed", and only the top staked nominators (ranked by the amount of stake, up to the maximum number of nominators) are paid rewards. Other nominators will receive no rewards for that era. The current maximum number of nominators is 256 on Kusari and SwapDEX, but it can be modified via governance.
 
 ---
 
@@ -261,7 +261,7 @@ A method of selecting participants in a consensus system, typically the longest 
 ---
 
 ## **Proposal**
-A potential function call to be voted on in a referendum. Proposals modify the behavior of the Kusari/SwapDex network, from minor parameter tuning up to replacing the runtime code.
+A potential function call to be voted on in a referendum. Proposals modify the behavior of the Kusari/SwapDEX network, from minor parameter tuning up to replacing the runtime code.
 
 ---
 
@@ -271,7 +271,7 @@ A system of rules that allows two or more entities of a communications system to
 ---
 
 ## **Random Seed**
-A random seed is a pseudo-random number available on-chain. It is used in various places of the Kusari/SwapDex protocol, most prominently in BABE the block production mechanism.
+A random seed is a pseudo-random number available on-chain. It is used in various places of the Kusari/SwapDEX protocol, most prominently in BABE the block production mechanism.
 
 ---
 
@@ -306,7 +306,7 @@ While an ambiguous concept, [blockchain] scalability can be understood as the ab
 ---
 
 ## **SDX**
-The native coin for SwapDex. SDX serves three purposes: network governance (allowing them to vote on-chain upgrades and other exceptional events), general operation (rewarding good actors and punishing bad actors), and bonding.
+The native coin for SwapDEX. SDX serves three purposes: network governance (allowing them to vote on-chain upgrades and other exceptional events), general operation (rewarding good actors and punishing bad actors), and bonding.
 
 ---
 
@@ -341,7 +341,7 @@ A backward compatible change to client code causes upgraded clients to start min
 ---
 
 ## **Staking**
-The act of bonding coins (for Kusari, KSI and for SwapDex, SDX) by putting them up as "collateral" for a chance to produce a valid block (and thus obtain a block reward). Validators and nominators stake their KSI/SDX in order to secure the network.
+The act of bonding coins (for Kusari, KSI and for SwapDEX, SDX) by putting them up as "collateral" for a chance to produce a valid block (and thus obtain a block reward). Validators and nominators stake their KSI/SDX in order to secure the network.
 
 ---
 
@@ -351,12 +351,12 @@ A function that describes how the state of a blockchain can be transformed. For 
 ---
 
 ## **Substrate**
-A modular framework for building blockchains. Kusari and SwapDex are built using Substrate. Chains built with Substrate will be easy to connect as parachains.
+A modular framework for building blockchains. Kusari and SwapDEX are built using Substrate. Chains built with Substrate will be easy to connect as parachains.
 
 ---
 
 ## **Tabling**
-In Kusari/SwapDex governance, bringing a proposal to a vote via referendum. Note that this is the British meaning of "tabling", which is different from the US version, which means "to postpone" a measure.
+In Kusari/SwapDEX governance, bringing a proposal to a vote via referendum. Note that this is the British meaning of "tabling", which is different from the US version, which means "to postpone" a measure.
 
 ---
 
@@ -401,7 +401,7 @@ The nominator has nominated this validator, but the validator was not elected in
 ---
 
 ## **Wallet**
-A program that allows one to store private keys and sign transactions for Kusari/SwapDex or other blockchain networks.
+A program that allows one to store private keys and sign transactions for Kusari/SwapDEX or other blockchain networks.
 
 ---
 

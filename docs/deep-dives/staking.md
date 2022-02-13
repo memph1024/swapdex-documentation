@@ -1,7 +1,7 @@
 # **STAKING**
 ---
 
-This guide will introduce you to the concept of staking on the SwapDex and Kusari networks.
+This guide will introduce you to the concept of staking on the SwapDEX and Kusari networks.
 SDX and KSI are utilizing a {=Proof-of-Stake=} consensus mechanism to agree on processes like block authoring and finality. 
 As the name implies, **staking** plays an essential role on both networks.  
 
@@ -11,7 +11,7 @@ But staking, in general, means that you bind your SDX or KSI holdings for a spec
 This guide will mainly focus on helping you decide to become a nominator or a validator and give you some examples of the rewards you could expect.
 
 !!! hint "Validator"
-    The staking system on SwapDex and Kusari is designed to pay out rewards equally to all validators, regardless of their stake. That means the amount of staked coins on a validator does not influence its ability to author or validate more blocks. However, there is a probabilistic component to reward calculation (discussed below), so rewards may not be exactly equal for all validators in a given era.
+    The staking system on SwapDEX and Kusari is designed to pay out rewards equally to all validators, regardless of their stake. That means the amount of staked coins on a validator does not influence its ability to author or validate more blocks. However, there is a probabilistic component to reward calculation (discussed below), so rewards may not be exactly equal for all validators in a given era.
 
 !!! hint "Nominator"
     The rewards for nominators are paid out pro-rata after the validator reward is deducted. That means your share of the total nominator rewards per validator will increase with the number of coins you staked on that specific validator. This system should motivate nominators to stake on lower-staked validators and thus should create a balanced-staked validator set.
@@ -280,7 +280,7 @@ In this paragraph, we assume that Misconduct is conducted unintentionally and wa
 
 ### **How to mitigate the risk of being slashed on unintentional Misconduct?**
 
-- Always download the source files and binaries from the official SwapDex server
+- Always download the source files and binaries from the official SwapDEX server
 - Verify the hash of the downloaded binaries
 - Use the "secure validator" server setup on the w3f rep or adhere to its principles
 - Basic security advice applies, use a firewall, manage user access, use SSH certificate access etc.

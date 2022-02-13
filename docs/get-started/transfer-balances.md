@@ -6,7 +6,7 @@ Balance transfers are used to send SDX balances from one account to another acco
 !!! hint
     This guide assumes that you've already created an account and have some funds that are ready to be transferred.
 
-## <b>SwapDex Subtrate Explorer App</b>
+## <b>SwapDEX Subtrate Explorer App</b>
 ---
 Let's begin by opening <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/explorer" target="_blank">Substrate Explorer App</a>. There are two ways to make a balance transfer:
 
@@ -70,13 +70,13 @@ You can also check for locks by navigating to `Accounts > Accounts` in <a href="
 
 ### <b>Existing Recovery Info</b>
 
-Currently, SwapDex does not use the <a href="https://substrate.dev/docs/en/knowledgebase/runtime/frame#recovery" target="_blank">Recovery Pallet</a>, so this is probably not the reason for your coins having existing references.
+Currently, SwapDEX does not use the <a href="https://substrate.dev/docs/en/knowledgebase/runtime/frame#recovery" target="_blank">Recovery Pallet</a>, so this is probably not the reason for your coins having existing references.
 
-On SwapDex, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)` chain state. This can be found under `Developer > Chain state` in <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/explorer" target="_blank">Substrate Explorer App</a>.
+On SwapDEX, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)` chain state. This can be found under `Developer > Chain state` in <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/explorer" target="_blank">Substrate Explorer App</a>.
 
 ### <b>Existing Non-SDX Assets</b>
 
-Currently, SwapDex does not use the <a href="https://substrate.dev/docs/en/knowledgebase/runtime/frame#assets" target="_blank">Assets Pallet</a>, so this is probably not the reason for your tokens having existing references.
+Currently, SwapDEX does not use the <a href="https://substrate.dev/docs/en/knowledgebase/runtime/frame#assets" target="_blank">Assets Pallet</a>, so this is probably not the reason for your tokens having existing references.
 
 ## <b>From the Accounts Page</b>
 ---

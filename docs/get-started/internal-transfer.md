@@ -3,7 +3,7 @@
 Cheers Friends, 
 
 This guide will teach you how to transfer your funds from our "substrate" side to our Ethereum-Virtual-Machine (EVM).
-Remember, the EVM side of our chain allows you to interact with many eth-based smart contracts and projects that eventually will move to SwapDex.
+Remember, the EVM side of our chain allows you to interact with many eth-based smart contracts and projects that eventually will move to SwapDEX.
 Moreover, our cross-chain bridges will be attached to our EVM module, so for you to utilize cross-chain trades, you must use the EVM.
 
 That said, let me tell you how we tackle this.
@@ -36,7 +36,7 @@ The transfer is done in four (4) steps:
 ![img](assets/Internal-transfer-step-011.png#center)
 
 !!! Hint 
-    Click on "Connect SwapDex Account" to connect your substrate wallet to the DApp. 
+    Click on "Connect SwapDEX Account" to connect your substrate wallet to the DApp. 
     This substrate address needs to hold the funds you wish to transfer.
     If you use the polkadot.js browser extension to manage your addresses, the DApp will offer you a dropdown menu.
 
@@ -103,8 +103,8 @@ Confirm the transfer by hitting the "Sign and Send" button.
 ## <b> PART 2 - WHAT HAPPENS IN THE BACKGROUND </b>
 ---
 
-Many may ask themselves whether SwapDex is a single chain when it has both an ethereum and substrate side at the same time?
-Well, to make a long story short... SwapDex is one single chain BUT it runs an ethereum simulation in parallel.
+Many may ask themselves whether SwapDEX is a single chain when it has both an ethereum and substrate side at the same time?
+Well, to make a long story short... SwapDEX is one single chain BUT it runs an ethereum simulation in parallel.
 
 How does this work?
 
@@ -113,7 +113,7 @@ To answer this question, we need to look at the node architecture. Nodes are the
 ![img](assets/node-architecture.png#center)
 
 I want to direct your focus to the SUBSTRATE RUNTIME module of the Substrate Node. 
-The Runtime hosts all the code that makes SwapDex unique, and it's composed of code pallets. 
+The Runtime hosts all the code that makes SwapDEX unique, and it's composed of code pallets. 
 As you can see, the democracy function of our chain is also a code pallet and allows our community to govern the chain. Likewise, the staking pallet enables our community to run validators and stake as nominators. Like those pallets, the EVM is another pallet that allows our community to interact with eth-based smart contracts and cross-chain bridges.
 
 By performing the transfer described in step 01, we are transferring coins from the SUBSTRATE RUNTIME ENVIRONMENT into the EVM pallet and vice versa, that's it :D.

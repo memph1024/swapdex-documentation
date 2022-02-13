@@ -1,9 +1,9 @@
 # <b>HOW TO SETUP A VALIDATOR</b>
 ---
 
-The following guide will teach you how to set up a SwapDex test validator. The process of becoming a validator requires two steps. The first step is to set up a network node. The second step is to assign your node to your account and apply for validator candidacy.
+The following guide will teach you how to set up a SwapDEX test validator. The process of becoming a validator requires two steps. The first step is to set up a network node. The second step is to assign your node to your account and apply for validator candidacy.
 
-Network validators are the foundation of a decentralized proof-of-stake network because they are responsible for concluding on a consensus by creating new and validating already produced blocks. That said, network validators are the prime target for adversaries that aim to sabotage the network. The SwapDex has many layers to protect the network from attacks. The first layer is the security of each validator itself. Another layer is the slashing mechanism that detects validator nodes that display abnormal or dangerous behavior and punishes them with slashes. A slash will, in all cases, lead to the loss of funds. 
+Network validators are the foundation of a decentralized proof-of-stake network because they are responsible for concluding on a consensus by creating new and validating already produced blocks. That said, network validators are the prime target for adversaries that aim to sabotage the network. The SwapDEX has many layers to protect the network from attacks. The first layer is the security of each validator itself. Another layer is the slashing mechanism that detects validator nodes that display abnormal or dangerous behavior and punishes them with slashes. A slash will, in all cases, lead to the loss of funds. 
 
 !!! warning
     Hence the warning: Running a validator on a live network is a lot of responsibility! You will be accountable for your stake and the stake of your current nominators. If you make a mistake and get slashed, your money and your reputation will be at risk. However, running a validator can also be very rewarding, knowing that you contribute to the security of a decentralized network while growing your stash.
@@ -17,7 +17,7 @@ You can operate a network node on a local computer, a professional server-rig in
 !!! tip
     The most common way for a beginner to run a validator is on a VPS running Linux. You may choose whatever VPS providers that you prefer. 
 
-We benchmarked the transactions weights on the SwapDex network on standard hardware. We recommend that validators run at least the standard hardware to ensure they can process all blocks in time. The following are not minimum requirements, but if you decide to run with less than this, beware that you might have a performance issue.
+We benchmarked the transactions weights on the SwapDEX network on standard hardware. We recommend that validators run at least the standard hardware to ensure they can process all blocks in time. The following are not minimum requirements, but if you decide to run with less than this, beware that you might have a performance issue.
 
 ### Lower-end Hardware :
 
@@ -28,7 +28,7 @@ We benchmarked the transactions weights on the SwapDex network on standard hardw
 - 16GB ram, 300 GB Storage, 6 CPU, <strong>stable server uplink connection with fixed IP</strong>
 
 !!! info
-    Anything between the lower-end and ideal hardware should be sufficient to run a validator on the SwapDex test network. 
+    Anything between the lower-end and ideal hardware should be sufficient to run a validator on the SwapDEX test network. 
 
 
 ## Using Ubuntu 21.10: 
@@ -61,7 +61,7 @@ sudo ntpq -p
     Skipping this can result in the validator node missing block authorship opportunities. If the clock is out of sync (even by a small amount), the blocks produced by your validator may not get accepted by the network. 
 
 
-## Installing the SwapDex network Binary
+## Installing the SwapDEX network Binary
 ---
 ### Install and enable Chrony
 We learned in the previous step that the new versions of Ubuntu ship with the NTP client by default. However, Chrony is another time sync tool that delivers better and more stable performance. Therefore, we recommend installing and enabling Chrony on top of the NTP client to ensure synchronized clocks and uninterrupted validator operations.
@@ -96,8 +96,8 @@ sudo apt install -y fail2ban && sudo systemctl enable fail2ban && sudo service f
 !!! success
     Congratulations! You implemented a fundamental layer of protection.
  
-### Install SwapDex Validator binaries
-The following command will fetch / download the SwapDex validator binaries and copy them to a specific folder.
+### Install SwapDEX Validator binaries
+The following command will fetch / download the SwapDEX validator binaries and copy them to a specific folder.
 Check your ubuntu version and choose the correct file for it. <a href="https://download.starkleytech.com/swapdex" target="_blank"> check your ubuntu version and choose the correct file for it </a>
 
 ```
@@ -116,7 +116,7 @@ sudo adduser swapdex
     when adding the new account you will be asked to provide a password and some additional information.
     Only the password is mandatory, the other parameters can be left blank.
 
-### Create the SwapDex Validator Service File
+### Create the SwapDEX Validator Service File
 In the next step, we will use <a href="https://help.ubuntu.com/community/Nano" target="_blank"> Nano </a>, a simple terminal-based text editor, to create a file that contains service instructions.
 The following command creates a file named `swapdex.service` at the following location: `lib/systemd/system/`
 
@@ -132,7 +132,7 @@ sudo nano /lib/systemd/system/swapdex.service
 **Content of the swapdex.service file**:
 ``` linenums="1"
 [Unit]
-Description=SwapDex Validator
+Description=SwapDEX Validator
 After=network-online.target
 
 [Service]
@@ -162,7 +162,7 @@ sudo systemctl enable swapdex && sudo service swapdex start
     For more information on systemd you can watch this quick <a href="https://youtu.be/N1vgvhiyq0E" target="_blank"> YouTube Tutorial </a>.
 
 ### Check if validator is started
-To ensure that the SwapDex Validator process works please execute the following command:
+To ensure that the SwapDEX Validator process works please execute the following command:
 ```
 ps aux | grep swapdex
 ```
@@ -188,7 +188,7 @@ Check if your node is appearing in the telemetry UI : <a href="https://telemetry
     If you want to find your node here you must have changed the name parameter in the previous step (`--name "A Node Name"`)
 
 !!! success
-    Congrats! If you checked and found your node on the telemetry page, you successfully set up your server to become a SwapDex Validator!
+    Congrats! If you checked and found your node on the telemetry page, you successfully set up your server to become a SwapDEX Validator!
 
 
 ## Part 2 - Assign the node to an account
@@ -264,7 +264,7 @@ Copy the session key. It will look like this:
 0x13660593581b2e728ee32122636f8996c6fd9c22f33beaa05e2797899c5458b0c888149bf3c0b5ca7fb7296e69fefd85e4e3d5b76848db890207575e49031f37d846e78babf8051c123b498ffe6f12e712f97f6b2f3b54345ffe51145a16bb22187d415c2101b9883668ce93c46f7ba556b394c59781854737b6c941747c0964
 ``` 
 
-### Apply on SwapDex Explorer
+### Apply on SwapDEX Explorer
 ---
 
 - Visit the substrate <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/accounts" target="_blank">explorer</a>

@@ -1,7 +1,7 @@
 # <b>GET STARTED</b>
 ---
 
-It's time to get started on the SwapDex network! Please check out our recommended list for getting started.
+It's time to get started on the SwapDEX network! Please check out our recommended list for getting started.
 
 ## **Brand new to blockchain?**
 ---
@@ -12,21 +12,21 @@ For brand-new learners of Blockchain technology:
 !!!hint
     This is recommended for users with backgrounds of all levels, and the course is free!
 
-## **Brand new to SwapDex?**
+## **Brand new to SwapDEX?**
 ---
-For brand-new learners of SwapDex, check-out:
+For brand-new learners of SwapDEX, check-out:
 
-- Reading the SwapDex Overview page
+- Reading the SwapDEX Overview page
 - Reading our articles on Medium
-- Creating a SwapDex Account
-- Using SwapDex endpoints
-- Claiming SwapDex SDX coins
-- Running a Validator on SwapDex
-- Staking as a Nominator on SwapDex
+- Creating a SwapDEX Account
+- Using SwapDEX endpoints
+- Claiming SwapDEX SDX coins
+- Running a Validator on SwapDEX
+- Staking as a Nominator on SwapDEX
 
-## <b>Developing on SwapDex?</b>
+## <b>Developing on SwapDEX?</b>
 ---
-For developers who want to leverage on SwapDex's unique advantages, please visit:
+For developers who want to leverage on SwapDEX's unique advantages, please visit:
 
 - <a href="https://docs.swapdex.network/dev-guides/" target="_blank">The developer guide</a>
 

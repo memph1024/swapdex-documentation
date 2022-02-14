@@ -4,7 +4,7 @@ The EVM module allows unmodified EVM code to be executed in a Substrate-based bl
 
 ## **EVM Engine**
 ---
-The EVM module uses `[SputnikVM](https://github.com/rust-blockchain/evm)(opens new window)`as the underlying EVM engine.
+The EVM module uses <a href="https://github.com/rust-blockchain/evm" target="_blank">SputnikVM</a> as the underlying EVM engine.
 
 ## **Execution lifecycle**
 ---

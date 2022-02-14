@@ -1,7 +1,7 @@
 # <b>CLAIMS</b>
 ---
 
-If you held the SDX ERC-20 token or SDX coins until **Friday, February 4th 2022**, you are entitled to claim SDX on the SwapDex network.
+If you held the SDX ERC-20 token or SDX coins until **Friday, February 4th 2022**, you are entitled to claim SDX on the SwapDEX network.
 
 !!! hint
     Watch our <a href="https://youtu.be/lPRF43-9IGU" target="_blank"> YouTube Walkthrough </a>

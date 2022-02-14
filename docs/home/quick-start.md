@@ -1,36 +1,36 @@
 # <b> QUICK START</b>
 
-SwapDex is build using the substrate framework. In addition SwapDex utlilizes an Ethereum-Virtual-Machine (EVM) pallet to enable a seamless interface to all EVM-based blockchains.
-Hence you can connect to SwapDex on both sides, the Substrate and EVM side. Here is how:
+SwapDEX is build using the substrate framework. In addition SwapDEX utlilizes an Ethereum-Virtual-Machine (EVM) pallet to enable a seamless interface to all EVM-based blockchains.
+Hence you can connect to SwapDEX on both sides, the Substrate and EVM side. Here is how:
 
 ---
-## <b>Connect to SwapDex Substrate</b>
+## <b>Connect to SwapDEX Substrate</b>
 
-Just follow this link: <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/accounts" target="_blank"> SwapDex Substrate DApp. </a><br>
+Just follow this link: <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/accounts" target="_blank"> SwapDEX Substrate DApp. </a><br>
 In case you are new to substrate you can watch his video: <a href="https://www.youtube.com/watch?v=qM36ndMLn5o" target="_blank"> SDX KSI Wallets </a>
 
 !!! hint
-    The SwapDex Substrate DApp offers many functionalities like a fully functional block explorer, the ability to stake and validate and to participate in the on-chain governance.
+    The SwapDEX Substrate DApp offers many functionalities like a fully functional block explorer, the ability to stake and validate and to participate in the on-chain governance.
 
 ---
-## <b>Connect to SwapDex EVM</b>
+## <b>Connect to SwapDEX EVM</b>
 
-To connect to SwapDex's EVM we recommend to use <a href="https://metamask.io/" target="_blank"> MetaMask. </a> <br>
+To connect to SwapDEX's EVM we recommend to use <a href="https://metamask.io/" target="_blank"> MetaMask. </a> <br>
 Go to `Settings -> Network -> Add new Network` and enter the following network details:
 
-- Network :  SwapDex
+- Network :  SwapDEX
 - RPC URL : https://rpc.swapdex.network/
 - Chain ID : 70
 - Currency Symbol : SDX
 - Block Explorer: https://evm.swapdex.network/
 
 ---
-## <b>SwapDex Dashboard</b>
+## <b>SwapDEX Dashboard</b>
 
-Once connected with SwapDex's Substrate and EVM side, you are all set to utilize the <a href="https://app.swapdex.network/#/" target="_blank">SwapDex Dashboard</a> <br>
-The SwapDex Dashboard is the one-stop-shop to utilize SwapDex's unique features. Keep in mind that the dashboard will grow and expand to continue to provide utiliy.<br>
+Once connected with SwapDEX's Substrate and EVM side, you are all set to utilize the <a href="https://app.swapdex.network/#/" target="_blank">SwapDEX Dashboard</a> <br>
+The SwapDEX Dashboard is the one-stop-shop to utilize SwapDEX's unique features. Keep in mind that the dashboard will grow and expand to continue to provide utiliy.<br>
 
-- <a href="https://app.swapdex.network/#/" target="_blank">SwapDex Dashboard</a>
+- <a href="https://app.swapdex.network/#/" target="_blank">SwapDEX Dashboard</a>
 
 Functionalities you can already access are:
 
@@ -38,7 +38,7 @@ Functionalities you can already access are:
 - Transfer: To bridge your SDX from the Substrate to the EVM side and vice versa - :point_right: <a href="https://youtu.be/oZM_EoZgCAo" target="_blank">YouTube Walkthrough</a>
 
 ---
-## <b>Join the SwapDex / Kusari Community</b>
+## <b>Join the SwapDEX / Kusari Community</b>
 
 Connect with an outstanding and helpful community whenever you feel the need to ask questions, discuss topics or simply hang out with like-minded DeFi enthusiasts. <br>
 

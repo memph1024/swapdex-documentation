@@ -1,7 +1,7 @@
 # <b>Deploy with Truffle</b>
 ---
 
-In this section we will show you how to utilize the [Truffle Suite](https://www.trufflesuite.com/truffle) to develop Smart Contracts for SwapDex.
+In this section we will show you how to utilize the [Truffle Suite](https://www.trufflesuite.com/truffle) to develop Smart Contracts for SwapDEX.
 Tuffle, in short, is a solidity suite that helps you to test your code. 
 
 Let's start with installing the technical requirements.
@@ -12,7 +12,7 @@ Let's start with installing the technical requirements.
 To use Truffle we need to install NodeJS v8.9.4 or later and we need a running eth-client.
 
 !!! Note
-    Since SwapDex is fully Ethereum compatible you can use **Ganache** as the preferred eth-client
+    Since SwapDEX is fully Ethereum compatible you can use **Ganache** as the preferred eth-client
 
  Please go ahead and install NodeJS and Ganache.
 
@@ -29,7 +29,7 @@ npm install -g truffle
 ---
 
 In this guide we will utilize the MetaCoin Truffle Box, which is a Truffle project template. 
-The MetaCoin Box allows us to create an ERC-20 token on SwapDex that can be transferred between accounts. 
+The MetaCoin Box allows us to create an ERC-20 token on SwapDEX that can be transferred between accounts. 
 
 1. Create a new folder for your Truffle project and navigate into it:
 
@@ -71,7 +71,7 @@ Once you unboxed MetaCoin, you will be greeted with a project structure like thi
 7. Open the `truffle-config.js` file. This is the Truffle configuration file, for setting network information and other project-related settings. The file is blank, but this is okay, as we'll be using a Truffle command that has some defaults built-in.
 
 !!! hint
-    We will adjust the `truffle-config.js` later to deploy the Token to Ganache and later to SwapDex
+    We will adjust the `truffle-config.js` later to deploy the Token to Ganache and later to SwapDEX
 
 ## **Testing**
 ---
@@ -288,15 +288,15 @@ In Ganache, click the "Transactions" button to see that the transactions have be
 !!! success
     You deployed a smart contract to the Ganache Blockchain!
 
-## **Migrate to SwapDex**
+## **Migrate to SwapDEX**
 ---
 
-To deploy the smart contracts to SwapDex, we need to make some adjustments.
+To deploy the smart contracts to SwapDEX, we need to make some adjustments.
 First of all we need to install the truffle HDWallet package as follows:
 
 `npm install @truffle/hdwallet-provider`
 
-HD Wallet is basically an instance of your wallet e.g., MetaMask that has access to the SwapDex network. 
+HD Wallet is basically an instance of your wallet e.g., MetaMask that has access to the SwapDEX network. 
 Since a contract deployment involves transactions, you need to have your private key or your seed phrase ready.
 
 Open the `truffle-config.js` file and replace its content with the following code:
@@ -328,7 +328,7 @@ You notice a few facts from here, our chainId is 142 and we are using solc versi
 !!! Hint
     Make sure that the wallet which is attached to the private key you provided earlier is funded sufficiently to pay for the gas needed to deploy the smart contracts.
 
-### **Migrate your Contracts to SwapDex**
+### **Migrate your Contracts to SwapDEX**
 
 To deploy the smart contracts within your project you need to execute the following command:
 
@@ -434,7 +434,7 @@ Summary
 ```
 
 !!! Success
-    Congrats, you deployed your first smart contracts on the SwapDex Network!
+    Congrats, you deployed your first smart contracts on the SwapDEX Network!
 
 ### **Check Deployment on Network Explorer**
 
@@ -459,7 +459,7 @@ You will see the following prompt:
 truffle(development)>
 ```
 
-2. Begin by establishing both the deployed MetaCoin contract instance and your SwapDex wallet
+2. Begin by establishing both the deployed MetaCoin contract instance and your SwapDEX wallet
 
 !!! hint
     It is normal to get an `undefined` as response from the console after you executed one command
@@ -540,7 +540,7 @@ let newBalance = await instance.getBalance(accounts[0])
 newBalance.toNumber()
 ```
 !!! Success
-    Congrats, you succesfully depolyed 3 smart contracts to SwapDex via Truffle and Meta Mask!
+    Congrats, you succesfully depolyed 3 smart contracts to SwapDEX via Truffle and Meta Mask!
 
 ## **Continue Learning**
 ---

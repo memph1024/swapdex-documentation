@@ -243,7 +243,7 @@ th {
 
 ## **Error Table**
 
-The below table is a reference to the errors that exists in Kusari and SwapDex. It is generated from the runtime's metadata.
+The below table is a reference to the errors that exists in Kusari and SwapDEX. It is generated from the runtime's metadata.
 
 <style>
 

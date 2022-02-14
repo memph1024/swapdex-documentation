@@ -52,15 +52,15 @@ Session keys should be generated and kept within your client. When you generate 
 ---
 
 ## **Conclusions**
-- Validators should only run the Kusari/SwapDex binary, and they should not listen on any port other than the configured p2p port.
+- Validators should only run the Kusari/SwapDEX binary, and they should not listen on any port other than the configured p2p port.
 
 - Validators should run on bare-metal machines, as opposed to VMs. This will prevent some of the availability issues with cloud providers, along with potential attacks from other VMs on the same hardware. The provisioning of the validator machine should be automated and defined in code. This code should be kept in private version control, reviewed, audited, and tested.
 
 - Session keys should be generated and provided in a secure way.
 
-- Kusari/SwapDex should be started at boot and restarted if stopped for any reason.
+- Kusari/SwapDEX should be started at boot and restarted if stopped for any reason.
 
-- Kusari/SwapDex should run as a non-root user.
+- Kusari/SwapDEX should run as a non-root user.
 
 ---
 

@@ -182,7 +182,7 @@ sudo reboot -h now
 ```
 
 
-Check if your node is appearing in the telemetry UI : <a href="https://telemetry.polkadot.io/#list/0x4959f8d87d40d9ef516459ff177111bb03d875e5a7ed69282f6b689a707b69f5" target="_blank"> Telemetry UI </a>
+Check if your node is appearing in the telemetry UI : <a href="https://telemetry.polkadot.io/#list/0x15bac4f0a9aad3f46c5fc067fdb59b3ff29738dcd491fe5e37b4b76121163471" target="_blank"> Telemetry UI </a>
 
 !!! info
     If you want to find your node here you must have changed the name parameter in the previous step (`--name "A Node Name"`)

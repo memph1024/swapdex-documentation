@@ -1,7 +1,7 @@
 # <b>HOW TO SETUP A VALIDATOR</b>
 ---
 
-The following guide will teach you how to set up a SwapDEX test validator. The process of becoming a validator requires two steps. The first step is to set up a network node. The second step is to assign your node to your account and apply for validator candidacy.
+The following guide will teach you how to set up a SwapDEX validator. The process of becoming a validator requires two steps. The first step is to set up a network node. The second step is to assign your node to your account and apply for validator candidacy.
 
 Network validators are the foundation of a decentralized proof-of-stake network because they are responsible for concluding on a consensus by creating new and validating already produced blocks. That said, network validators are the prime target for adversaries that aim to sabotage the network. The SwapDEX has many layers to protect the network from attacks. The first layer is the security of each validator itself. Another layer is the slashing mechanism that detects validator nodes that display abnormal or dangerous behavior and punishes them with slashes. A slash will, in all cases, lead to the loss of funds. 
 
@@ -298,7 +298,7 @@ You can also determine if you would like to receive nominations with the "allows
 
 - Hit bond & validate
 
-- Visit the **<a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/staking/waiting" target="_blank">Waiting Tab</a>** to see your validator waiting until the era finishes
+- Visit the **<a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/staking/waiting" target="_blank">Waiting Tab</a>** to see your validator waiting until the era finishes
 
 !!! success
     Alright mate! You are all set :D

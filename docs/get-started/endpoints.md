@@ -16,9 +16,9 @@ const{ ApiPromise, WsProvider } = require('@polkadot/api')
     const api = await ApiPromise.create({ provider })
     // ...
 ```
-or in SwapDEX Substrate Explorer by clicking on the top-left corner of the screen and opening up the TEST NETWORK group and selecting SwapDEX and **via Starkley Tech**
+or in SwapDEX Substrate Explorer by clicking on the top-left corner of the screen and opening up the LIVE NETWORKS group and selecting SwapDEX and **via Swapdex**
 
-![img](assets/phoenix-endpoint.png#center)
+![img](assets/swapdex-endpoint.png#center)
 
 <br></br>
 

@@ -210,7 +210,7 @@ Whether you're a blockchain <a href="https://docs.swapdex.network/dev-guides/" t
 
 
 * [https://substrate.dev/docs/en/knowledgebase/smart-contracts/](https://substrate.dev/docs/en/knowledgebase/smart-contracts/)
-* [https://substrate.dev/docs/](https://substrate.dev/docs)
+* [https://substrate.dev/](https://substrate.dev/)
 
 <br></br>
 

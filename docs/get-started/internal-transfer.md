@@ -2,7 +2,7 @@
 ---
 Cheers Friends, 
 
-This guide will teach you how to transfer your funds from our "substrate" side to our Ethereum-Virtual-Machine (EVM).
+This guide will teach you how to send your funds from our "substrate" side to our Ethereum-Virtual-Machine (EVM).
 Remember, the EVM side of our chain allows you to interact with many eth-based smart contracts and projects that eventually will move to SwapDEX.
 Moreover, our cross-chain bridges will be attached to our EVM module, so for you to utilize cross-chain trades, you must use the EVM.
 
@@ -12,92 +12,82 @@ Second, I will elaborate a bit more on the concept so that the interested lads c
 
 ## <b> PART 1 - WALKTHROUGH </b>
 !!! Hint
-    You can access the TRANSFER function here: <a href="https://app.swapdex.network/#/transfers" target="_blank"> Visit Dashboard </a> <br>
+    You can access the WALLETS function here: <a href="https://app.swapdex.network/#/swapdex/wallets" target="_blank"> Visit Dashboard </a> <br>
     You can watch me walk you through the process in this video: <a href="https://youtu.be/oZM_EoZgCAo" target="_blank"> Visit YouTube </a> 
 
 The transfer is done in four (4) steps:
 
-- Setup 
-- Origin and Destination Address
-- Amount    
+- Choose an account to send the SDX from 
+- Choose an account that will receive the SDX
+- Specify amount    
 - Confirmation
 
-### <b> STEP 01 - Setup </b>
+### <b> STEP 01 - Choose an account to send the SDX from </b>
 
 !!! Hint
-    Make sure you have selected the "Transfers" function of our DApp (see picture below)
+    Make sure you have selected the "Wallets" function of our DApp (see picture below)
 
 ![img](assets/Internal-transfer-step-01.png#center)
 
 !!! hint 
-    You can change the transfer direction with the center button.
-    Confirm the direction by clicking on next
+    In the wallet list find the wallet to send from and click the button `send` on the right side. This account needs to hold the funds you wish to transfer.
 
 ![img](assets/Internal-transfer-step-011.png#center)
 
+### <b> STEP 02 - Choose an account that will receive the SDX </b>
+
 !!! Hint 
-    Click on "Connect SwapDEX Account" to connect your substrate wallet to the DApp. 
-    This substrate address needs to hold the funds you wish to transfer.
-    If you use the polkadot.js browser extension to manage your addresses, the DApp will offer you a dropdown menu.
-
-![img](assets/Internal-transfer-step-012.png#center)
-
-!!! hint
-    Click next once you have selected your address.
-    If you have trouble seeing the dropdown menu, please reload the page or close your browser and restart the process.
-
-### <b> STEP 02 - Origin and Destination Address </b>
-
-In this step, you can choose to either connect to your MetaMask wallet and automatically fetch the correct address, or you can paste any eth-based address.
+    Click on `Send To Account` field and select an account you want to transfer the funds to from the dropdown menu. 
 
 ![img](assets/Internal-transfer-step-02.png#center)
 
-!!! hint
-    Once you have selected a target address, you can confirm by clicking next.
-    You need to confirm the selected accounts and click on "Ok".
+### <b> STEP 03 - Specify amount </b>
 
-![img](assets/Internal-transfer-step-021.png#center)
-
-### <b> STEP 03 - Amount </b>
-
-In this step, you need to select the amount you want to transfer and confirm by clicking on the "Transfer Amount" button.
-
-!!! Warning
-    It is generally advised to test a transaction with a small amount, especially if you are not familiar with the transfer function so far.
-    The correct transfer of funds is your sole responsibility! No refunds are possible.
+Set the amount of SDX you want to send in the `Amount` field.
 
 ![img](assets/Internal-transfer-step-03.png#center)
+
+!!! hint
+    Do not use `MAX` button to send all your funds. A small amount of SDX is needed to pay the gas fees
+
+### <b> STEP 04 - Confirmation </b>
+
+Click `Make Transfer` button and double check the `Sending From Account` and `Amount` values are correct.
+
+!!! Warning
+    It is generally advised to test a transaction with a small amount, especially if you are not familiar with the wallets so far.
+    The correct transfer of funds is your sole responsibility! No refunds are possible.
+
+![img](assets/Internal-transfer-step-04.png#center)
 
 !!! hint
     Open the substrate or EVM explorer to be prepared to check that the transfer went through successfully. <br>
     <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/explorer" target="_blank"> Substrate Explorer </a> <br>
     <a href="https://evm.swapdex.network/blocks" target="_blank"> EVM Explorer </a>
 
-### <b> STEP 04 - Confirmation </b>
+Confirm the transfer by hitting the `Sign and Submit` button.
 
-Confirm the transfer by hitting the "Sign and Send" button.
-
-![img](assets/Internal-transfer-step-04.png#center)
+![img](assets/Internal-transfer-step-041.png#center)
 
 !!! Hint
     Sign with your substrate account.
 
-![img](assets/Internal-transfer-step-041.png#center)
+![img](assets/Internal-transfer-step-042.png#center)
 
 !!! hint 
     If everything went fine, you are going to see a success message at the button of the page
 
-![img](assets/Internal-transfer-step-042.png#center)
+![img](assets/Internal-transfer-step-043.png#center)
 
 !!! hint 
     Now head over to the substrate explorer to check if the DApp successfully wrote the transfer into a block
 
-![img](assets/Internal-transfer-step-043.png#center)
+![img](assets/Internal-transfer-step-044.png#center)
 
 
 !!! Success
     Congrats, you successfully swapped SDX from the substrate to the EVM side.
-    Feel free to reverse the swap and use the transfer function to your needs. 
+    Feel free to reverse the swap and use the wallets function to your needs. 
 
 
 ## <b> PART 2 - WHAT HAPPENS IN THE BACKGROUND </b>

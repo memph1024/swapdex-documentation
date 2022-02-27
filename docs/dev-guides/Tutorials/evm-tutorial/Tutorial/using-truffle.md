@@ -438,7 +438,7 @@ Summary
 
 ### **Check Deployment on Network Explorer**
 
-To verfiy the successfull deployment head over to the [EVM Testnet Explorer](https://evm-explorer-testnet.swapdex.network/) and search for your {==Contract Address==}.
+To verfiy the successfull deployment head over to the <a href="https://evm.swapdex.network/" target="_blank">EVM Testnet Explorer</a> and search for your {==Contract Address==}.
 
 ![img](assets/contract-deployed-explorer.png)
 

@@ -1,4 +1,4 @@
-# <b>Kusari and EVM</b>
+# <b>SwapDEX and EVM</b>
 ---
 ![eth-logo](assets/eth-logo.png#center)
 

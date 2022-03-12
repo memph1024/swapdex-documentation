@@ -25,6 +25,10 @@ You can follow the <a href="https://docs.swapdex.network/validator-guides/valida
 
 Once your new VPS is fully synced you can continue with the next steps.
 
+You can check the snyc status on the <a href="https://telemetry.polkadot.io/#list/0x15bac4f0a9aad3f46c5fc067fdb59b3ff29738dcd491fe5e37b4b76121163471" target="_blank"> Telemetry UI </a>.
+
+![img](assets/change-vps-step-01_1.png#center)
+
 ---
 
 ## Step 2 - Generate New Session Keys

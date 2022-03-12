@@ -28,7 +28,7 @@ We benchmarked the transactions weights on the SwapDEX network on standard hardw
 - 16GB ram, 300 GB Storage, 6 CPU, <strong>stable server uplink connection with fixed IP</strong>
 
 !!! info
-    Anything between the lower-end and ideal hardware should be sufficient to run a validator on the SwapDEX test network. 
+    Anything between the lower-end and ideal hardware should be sufficient to run a validator on the SwapDEX network. 
 
 
 ## Using Ubuntu 21.10: 

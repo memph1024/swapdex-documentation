@@ -1,4 +1,4 @@
-site_name: SwapDEX Knowledge Base
+site_name: SwapDEX Documentation
 copyright: Copyright &copy; 2022 SwapDEX
 repo_url: https://github.com/Swapdex-Protocol/swapdex-documentation
 
@@ -51,6 +51,11 @@ extra:
     - name: English
       link: ""
       lang: en
+  social: 
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/swapdexo
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/6pTHUQNtYv
 extra_css:
   - stylesheets/extra.css
 
@@ -84,6 +89,7 @@ nav:
       - 'Create an Account': 'validator-guides/account-generation.md'
       - 'Validator Payout Overview': 'validator-guides/validator-payout-overview.md'
       - 'Secure your Validator': 'validator-guides/secure-validator.md'
+      - 'Change VPS Provider' : 'validator-guides/change-vps-provider.md'
       - 'Stop Validating': 'validator-guides/stop-validating.md'
   - 'Troubleshooting':
       - 'Resolve Errors' : 'troubleshooting/01-substrate-error-codes.md'

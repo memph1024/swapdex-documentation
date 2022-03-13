@@ -86,6 +86,7 @@ nav:
       - 'Use the Treasury': 'what-to-try/treasury.md'
   - 'Validator Guides':
       - 'Become a Validator': 'validator-guides/validator.md'
+      - 'Validator Monitoring': 'validator-guides/node-monitoring.md'
       - 'Create an Account': 'validator-guides/account-generation.md'
       - 'Validator Payout Overview': 'validator-guides/validator-payout-overview.md'
       - 'Secure your Validator': 'validator-guides/secure-validator.md'

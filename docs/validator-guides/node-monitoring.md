@@ -1,17 +1,15 @@
 # <b>HOW TO VISUALIZE NODE METRICS</b>
 ---
 
+![img](assets/dashboard.png#center)
+
 This guide will teach you how to use Prometheus and Grafana to implement a basic validator monitoring. 
 We can do this because every SwapDEX node exposes metrics such as the chain height, number of connected peers or the amount of memory used on a Prometheus metric endpoint. 
 
 To visualize these metrics we will use <a href="https://prometheus.io/" target="_blank"> Prometheus</a> to collect the data and <a href="https://grafana.com/" target="_blank"> Grafana</a> to visualize them on a nice looking dashboard.
 
-We will implement the monitoring in the following three steps:
-1. Install Prometheus and Grafana
-2. Configure Prometheus to scrape your SwapDEX node
-3. Visualize Prometheus Metrics with Grafana
 
-## **Architecture**
+## **Example Monitoring Architecture**
 ---
 
 ```
@@ -127,7 +125,7 @@ Now we can safely delete the downloaded folder:
 cd .. && rm -rf prometheus*
 ```
 
-**Let's configure Prometheus**
+### **Configure Prometheus**
 
 Before Prometheus can be started, it needs some configuration. We will manage the configuration in a `.yml` file which we will now create:
 
@@ -185,7 +183,7 @@ And let's change the ownership of the config file to our Prometheus user:
 sudo chown prometheus:prometheus /etc/prometheus/prometheus.yml
 ```
 
-**Let's Start Prometheus**
+### **Start Prometheus**
 
 Before we start Prometheus let's make sure that our firewall is not blocking port 9090
 ```
@@ -278,8 +276,269 @@ sudo systemctl daemon-reload && systemctl enable prometheus && systemctl start p
 !!! success
     Prometheus should be running now, and we should be able to access its front-end again end by re-visiting `{==IP_ADDRESS==}:9090/`.
 
+## **Step 2 - Install Node Exporter**
 
-### **Let's install Grafana**
+Now we will install Prometheus's Node Exporter module which exposes hardware metrics like CPU load, RAM and storage usage.
+
+Create Node Exporter User
+```
+sudo useradd --no-create-home --shell /usr/sbin/nologin node_exporter
+```
+Create the directories required to store the configuration and executable files:
+
+```
+sudo mkdir /etc/node_exporter
+sudo mkdir /var/lib/node_exporter
+```
+
+Change the ownership of those files to our `Node_Exporter` user
+
+```
+sudo chown -R node_exporter:node_exporter /etc/node_exporter
+sudo chown -R prometheus:node_exporter /var/lib/node_exporter
+```
+
+
+Install the latest version of Node Exporter from <a href="https://prometheus.io/download/#node_exporter" target="_blank"> downloads</a> page:
+
+```
+wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
+tar xvfz node_exporter-*.*-amd64.tar.gz
+```
+
+Change directory into the downloaded file: 
+```
+cd node_exporter-*.*-amd64
+```
+
+Let's copy the binary `node_exporter` to our local binary folder `/usr/local/bin/`
+
+```
+sudo cp ./node_exporter /usr/local/bin/
+```
+
+Let's also change the ownership of the binary file:
+```
+sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
+```
+
+Now we can delete the downloaded node_exporter folder:
+```
+cd .. && rm -rf node_exporter*
+```
+
+Since the `Node Exporter` will run on port 9100 we need to allow that port on our firewall
+
+```
+ufw allow 9100
+```
+
+Let's test-run the node_exporter:
+
+```
+cd /usr/local/bin
+./node_exporter
+```
+
+We can now observe the exposed metrics in our browser at:
+
+```
+http://{==SERVER_IP_ADDRESS==}:9100/metrics
+
+```
+
+After we confirmed that the `node_exporter` is running we can exit the process on our VPS by hitting ++ctrl+c++
+
+Now that everything is running we want to automatically start the `node_exporter` during the boot process, so we have to create a new systemd configuration file with the following config:
+
+```
+sudo nano /etc/systemd/system/node_exporter.service
+```
+
+```
+[Unit]
+  Description=Node Exporter Monitoring
+  Wants=network-online.target
+  After=network-online.target
+
+[Service]
+  User=node_exporter
+  Group=node_exporter
+  Type=simple
+  ExecStart=/usr/local/bin/node_exporter
+  ExecReload=/bin/kill -HUP $MAINPID
+
+[Install]
+  WantedBy=multi-user.target
+```
+
+After we saved the file, we want to reload `systemd` and enable the service so that it will be loaded automatically during the operating system's startup.
+
+```
+sudo systemctl daemon-reload && systemctl enable node_exporter && systemctl start node_exporter
+```
+
+Finally, we must tell our Prometheus server to scrape the metrics exposed by the `node_exporter`.
+We do this by configuring the `prometheus.yml` file we created earlier.
+
+```
+sudo nano /etc/prometheus/prometheus.yml
+```
+
+```
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  # - "first.rules"
+  # - "second.rules"
+
+scrape_configs:
+  - job_name: "prometheus"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:9090"]
+  - job_name: "SwapDEX_Node"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:9615"]
+  - job_name: "Node_Exporter"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:9100"]
+```
+
+Now we need to reboot the VPS:
+
+```
+reboot
+```
+
+After the reboot we can revisit our Prometheus server at:
+
+```
+http://{==SERVER_IP_ADDRESS==}/targets
+```
+You should see the following in your browser:
+
+![img](assets/node_exporter_01.png#center)
+
+
+## **Step 3 - Install Alert Manager**
+
+In this section, let's configure the Alertmanager that helps to predict the potential problems or notify you of the current problem on your server. Alerts can be sent in Slack, Email, Matrix, or others. In this guide, we will show you how to configure the email notifications using Gmail if your node goes down.
+
+First, download the latest binary of AlertManager and unzip it by running the command below:
+
+```
+wget https://github.com/prometheus/alertmanager/releases/download/v0.23.0/alertmanager-0.23.0.linux-amd64.tar.gz
+tar xvfz alertmanager-*.*-amd64.tar.gz
+mv alertmanager-*.*-amd64/alertmanager /usr/local/bin/
+```
+### **Gmail Setup**
+
+To allow AlertManager to send an email to you, you will need to generate something called an app password in your Gmail account. For details, click <a href="https://support.google.com/accounts/answer/185833?hl=en" target="_blank"> Prometheus</a> to follow the whole setup.
+
+!!! hint
+    Copy or save your app password! We need it soon.
+
+### **Alert Manager Configuration**
+
+We will now create a new folder for the alertmanager's config file:
+
+```
+mkdir /etc/alertmanager
+```
+
+Now need to create a new configuration file called `alertmanager.yml` under `/etc/alertmanager`
+
+```
+sudo nano /etc/alertmanager/alertmanager.yml
+```
+and specify the file as follows:
+
+```
+global:
+ resolve_timeout: 1m
+
+route:
+ receiver: 'gmail-notifications'
+
+receivers:
+- name: 'gmail-notifications'
+  email_configs:
+  - to: {==YOUR_EMAIL==}
+    from: {==YOUR_EMAIL==}
+    smarthost: smtp.gmail.com:587
+    auth_username: {==YOUR_EMAIL==}
+    auth_identity: {==YOUR_EMAIL==}
+    auth_password: {==YOUR_APP_PASSWORD==}
+    send_resolved: true
+```
+
+!!! note
+    With the above configuration, alerts will be sent using the email you set above. Remember to change {==YOUR_EMAIL==} to your email and paste the app password you just saved earlier to the `YOUR_APP_PASSWORD`.
+
+Now we change the ownership to our Prometheus user:
+
+```
+sudo chown -R prometheus:prometheus /etc/alertmanager
+```
+Now let's open another port on our firewall for the alter manager:
+
+```
+ufw allow 9093
+```
+
+Next, we will create another `systemd` file to make sure that the alert manager will start everytime the server reboots:
+
+```
+sudo nano /etc/systemd/system/alertmanager.service
+```
+
+```
+[Unit]
+Description=AlertManager Server Service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=root
+Group=root
+Type=simple
+ExecStart=/usr/local/bin/alertmanager --config.file /etc/alertmanager/alertmanager.yml --web.external-url=http://{==SERVER_IP==}:9093 --cluster.advertise-address='0.0.0.0:9093'
+
+
+[Install]
+WantedBy=multi-user.target
+```
+!!! note
+    SERVER_IP - Change it to your host IP address.
+
+Finally, we can start the alert manager with the following command:
+```
+sudo systemctl daemon-reload && sudo systemctl enable alertmanager && sudo systemctl start alertmanager && sudo systemctl status alertmanager
+```
+
+!!! note
+    You should see: Active: active (running)
+```
+Created symlink /etc/systemd/system/multi-user.target.wants/alertmanager.service → /etc/systemd/system/alertmanager.service.
+● alertmanager.service - AlertManager Server Service
+     Loaded: loaded (/etc/systemd/system/alertmanager.service; enabled; vendor preset: enabled)
+     {==Active: active (running)==} since Sun 2022-03-13 22:17:12 UTC; 12ms ago
+   Main PID: 2484 (alertmanager)
+      Tasks: 4 (limit: 9457)
+     Memory: 948.0K
+        CPU: 10ms
+```
+
+!!! tip
+    For now that's it, but we will need to install a Grafana Plug-In later in this process but for now let's first install Grafana.
+    Hang on buddy we are done soon :rocket:
+
+## **Step 4 - Install Grafana**
 
 To visualize those metrics Prometheus collects we use Grafana. We run the following commands to install it:
 
@@ -301,7 +560,19 @@ sudo systemctl start grafana-server
 ufw allow 3000
 ```
 
-Now we can access it by going to `http://`{==SERVER_IP_ADDRESS==}:3000/login`. The default user and password is admin/admin.
+Before we start to wire everything together, let's take care of the aforementioned alert manager plugin. It will help you to monitor the alert information. To install it, execute the command below:
+
+```
+sudo grafana-cli plugins install camptocamp-prometheus-alertmanager-datasource
+```
+
+and restart Grafana:
+
+```
+sudo systemctl restart grafana-server
+```
+
+Now we can access Grafana by going to `http://`{==SERVER_IP_ADDRESS==}:3000/login`. The default user and password is admin/admin.
 
 !!! note
     If you want to change the port on which Grafana runs (3000 is a popular port), edit the file `/usr/share/grafana/conf/defaults.ini` with a command like `sudo vim /usr/share/grafana/conf/defaults.ini` and change the `http_port` value to something else. Then restart grafana with `sudo systemctl restart grafana-server`.
@@ -310,11 +581,11 @@ Now we can access it by going to `http://`{==SERVER_IP_ADDRESS==}:3000/login`. T
 ![img](assets/grafana_01.png#center)
 
 !!! success
-    We successfully installed and configured Prometheus and Grafana at this point :heart:
+    We successfully installed and configured Prometheus, Node Exporter, Alert Manager and Grafana at this point :heart:
 
-### **Let's visualize the node metrics**
+### **Let's us wire it all together**
 
-Now that everything is running we need to connect our Prometheus datasource to our Grafana server. We do this in the UI of Grafana by going to `Data Sources`
+Now that everything is running we need to connect our Prometheus and alert manager data source to our Grafana server. We do this in the UI of Grafana by going to `Data Sources`
 
 ![img](assets/grafana_02.png#center)
 
@@ -331,6 +602,12 @@ The only thing we need to input is the URL that is https://localhost:9090 and th
 !!! success
     We connected our Prometheus database with Grafana!
 
+Now let's wire the alertmanager in a similar fashion:
+
+![img](assets/grafana_10.png#center)
+
+![img](assets/grafana_11.png#center)
+
 ### **Let's use a Grafana Template Dashboard**
 
 For this guide we will use a standard Dashboard developed by substrate to monitor our node, but you can at all times customize or create your own Dashboards. 
@@ -339,4 +616,15 @@ For this guide we will use a standard Dashboard developed by substrate to monito
 
 ![img](assets/grafana_08.png#center)
 
+!!! tip
+    You can get the import code here: <a href="https://grafana.com/grafana/dashboards/15891" target="_blank"> Grafana Labs</a>.  May also consider to give it a review :smile:
+
 ![img](assets/grafana_09.png#center)
+
+!!! success
+    There you go mate :fire: :rocket:
+
+
+<br></br>
+
+<p align=right> Written by Petar </p>

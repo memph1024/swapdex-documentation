@@ -6,7 +6,7 @@
 This guide will teach you how to use Prometheus and Grafana to implement a basic validator monitoring. 
 We can do this because every SwapDEX node exposes metrics such as the chain height, number of connected peers or the amount of memory used on a Prometheus metric endpoint. 
 
-To visualize these metrics we will use <a href="https://prometheus.io/" target="_blank"> Prometheus</a> to collect the data and <a href="https://grafana.com/" target="_blank"> Grafana</a> to visualize them on a nice looking dashboard.
+We will use <a href="https://prometheus.io/" target="_blank"> Prometheus</a> to collect the data and <a href="https://grafana.com/" target="_blank"> Grafana</a> to visualize them on a nice looking dashboard.
 
 
 ## **Example Monitoring Architecture**
@@ -73,7 +73,7 @@ wget https://github.com/prometheus/prometheus/releases/download/v2.33.5/promethe
 tar xfz prometheus-*.tar.gz
 ```
 
-Lets inspect the unzipped file we downloaded by changing directories:
+Let's inspect the unzipped file we downloaded by changing directories:
 ```
 cd prometheus-2.33.5.linux-amd64
 ```
@@ -127,13 +127,14 @@ cd .. && rm -rf prometheus*
 
 ### **Configure Prometheus**
 
-Before Prometheus can be started, it needs some configuration. We will manage the configuration in a `.yml` file which we will now create:
+Before Prometheus can be started, it needs some configuration. We will manage the configuration in a `.yml` file which we will create now:
 
 ```
 sudo nano /etc/prometheus/prometheus.yml
 ```
 
 The config file is divided into three parts:
+
 1. `global`
 2. `rule_files`
 3. `scrape_configs`
@@ -185,12 +186,12 @@ sudo chown prometheus:prometheus /etc/prometheus/prometheus.yml
 
 ### **Start Prometheus**
 
-Before we start Prometheus let's make sure that our firewall is not blocking port 9090
+Before we start Prometheus let's make sure that our firewall isn't blocking port 9090
 ```
 ufw allow 9090
 ```
 
-To test that Prometheus is set up properly we will execute a command to inspect the logs while Prometheus is running:
+To test that Prometheus is set up properly we will execute a command to inspect the logs:
 Remember, we need to run this command as the Prometheus user due to the ownership of the files:
 
 ```
@@ -234,7 +235,7 @@ http://{==SERVER_IP_ADDRESS==}:9090/graph
 
 ![img](assets/prometheus_01.png#center)
 
-We can also quickly verify if our SwapDEX node gets scraped by Prometheus by visiting the `Status-> Targets` page.
+We can also quickly verify if our SwapDEX node gets scraped by visiting the `Status-> Targets` page.
 
 ![img](assets/prometheus_02.png#center)
 
@@ -274,7 +275,7 @@ sudo systemctl daemon-reload && systemctl enable prometheus && systemctl start p
 ```
 
 !!! success
-    Prometheus should be running now, and we should be able to access its front-end again end by re-visiting `{==IP_ADDRESS==}:9090/`.
+    Prometheus should be running now, and we should be able to access its front-end again by re-visiting `{==IP_ADDRESS==}:9090/`.
 
 ## **Step 2 - Install Node Exporter**
 
@@ -349,7 +350,7 @@ http://{==SERVER_IP_ADDRESS==}:9100/metrics
 
 After we confirmed that the `node_exporter` is running we can exit the process on our VPS by hitting ++ctrl+c++
 
-Now that everything is running we want to automatically start the `node_exporter` during the boot process, so we have to create a new systemd configuration file with the following config:
+Now that everything is running we want to automatically start the `node_exporter` during the boot process, so we have to create a new `systemd` configuration file with the following config:
 
 ```
 sudo nano /etc/systemd/system/node_exporter.service
@@ -427,9 +428,9 @@ You should see the following in your browser:
 
 ## **Step 3 - Install Alert Manager**
 
-In this section, let's configure the Alertmanager that helps to predict the potential problems or notify you of the current problem on your server. Alerts can be sent in Slack, Email, Matrix, or others. In this guide, we will show you how to configure the email notifications using Gmail if your node goes down.
+In this section, let's configure the Alert Manager that notifies you if problems occour on your server. Alerts can be sent in Slack, Email, Matrix, or others. In this guide, we will configure an outage email alerting using Gmail.
 
-First, download the latest binary of AlertManager and unzip it by running the command below:
+First, download the latest binary of Alert Manager and unzip it by running the command below:
 
 ```
 wget https://github.com/prometheus/alertmanager/releases/download/v0.23.0/alertmanager-0.23.0.linux-amd64.tar.gz
@@ -438,14 +439,14 @@ mv alertmanager-*.*-amd64/alertmanager /usr/local/bin/
 ```
 ### **Gmail Setup**
 
-To allow AlertManager to send an email to you, you will need to generate something called an app password in your Gmail account. For details, click <a href="https://support.google.com/accounts/answer/185833?hl=en" target="_blank"> Prometheus</a> to follow the whole setup.
+To allow Alert Manager to email you, you will need to generate something called an app password in your Gmail account. For details, click <a href="https://support.google.com/accounts/answer/185833?hl=en" target="_blank"> here</a> to follow the whole setup.
 
 !!! hint
     Copy or save your app password! We need it soon.
 
 ### **Alert Manager Configuration**
 
-We will now create a new folder for the alertmanager's config file:
+We will now create a new folder for the Alert Manager's config file:
 
 ```
 mkdir /etc/alertmanager
@@ -485,13 +486,13 @@ Now we change the ownership to our Prometheus user:
 ```
 sudo chown -R prometheus:prometheus /etc/alertmanager
 ```
-Now let's open another port on our firewall for the alter manager:
+Now let's open another port on our firewall for the Alert Manager:
 
 ```
 ufw allow 9093
 ```
 
-Next, we will create another `systemd` file to make sure that the alert manager will start everytime the server reboots:
+Next, we will create another `systemd` file to make sure that the alert manager will start every time the server reboots:
 
 ```
 sudo nano /etc/systemd/system/alertmanager.service
@@ -516,7 +517,7 @@ WantedBy=multi-user.target
 !!! note
     SERVER_IP - Change it to your host IP address.
 
-Finally, we can start the alert manager with the following command:
+Finally, we can start the Alert Manager with the following command:
 ```
 sudo systemctl daemon-reload && sudo systemctl enable alertmanager && sudo systemctl start alertmanager && sudo systemctl status alertmanager
 ```
@@ -535,12 +536,12 @@ Created symlink /etc/systemd/system/multi-user.target.wants/alertmanager.service
 ```
 
 !!! tip
-    For now that's it, but we will need to install a Grafana Plug-In later in this process but for now let's first install Grafana.
+    For now that's it, but we will need to install a Grafana Plug-In later in this process but let's first install Grafana.
     Hang on buddy we are done soon :rocket:
 
 ## **Step 4 - Install Grafana**
 
-To visualize those metrics Prometheus collects we use Grafana. We run the following commands to install it:
+To visualize those metrics we will use Grafana. We run the following commands to install it:
 
 ```
 sudo apt-get install -y adduser libfontconfig1
@@ -593,7 +594,7 @@ Now that everything is running we need to connect our Prometheus and alert manag
 
 ![img](assets/grafana_04.png#center)
 
-The only thing we need to input is the URL that is https://localhost:9090 and then click Save & Test. If you see Data source is working, your connection is configured correctly.
+The only thing we need to input is the URL that is `https://localhost:9090` and then click Save & Test. If you see Data source is working, your connection is configured correctly.
 
 ![img](assets/grafana_05.png#center)
 
@@ -602,15 +603,15 @@ The only thing we need to input is the URL that is https://localhost:9090 and th
 !!! success
     We connected our Prometheus database with Grafana!
 
-Now let's wire the alertmanager in a similar fashion:
+Now let's wire the Alert Manager similarly:
 
 ![img](assets/grafana_10.png#center)
 
 ![img](assets/grafana_11.png#center)
 
-### **Let's use a Grafana Template Dashboard**
+### **Let's use our SwapDEX Template Dashboard**
 
-For this guide we will use a standard Dashboard developed by substrate to monitor our node, but you can at all times customize or create your own Dashboards. 
+For this guide we will use a customized SwapDEX Dashboard to monitor our node, but you can always start to customize or create your own Dashboards. 
 
 ![img](assets/grafana_07.png#center)
 

@@ -5,7 +5,7 @@ If you are interested in obtaining SDX for building or research, you can apply t
 
 Please reach out to us on:
 
-- <a href="https://discord.gg/Z4u5ZXxe" target="_blank"> Discord </a>
+- <a href="https://discord.gg/swapdex" target="_blank"> Discord </a>
 - <a href="https://t.me/officialswapdexgroup" target="_blank"> Telegram </a>
 
 <br></br>

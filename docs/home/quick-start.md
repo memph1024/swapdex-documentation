@@ -42,7 +42,7 @@ Functionalities you can already access are:
 
 Connect with an outstanding and helpful community whenever you feel the need to ask questions, discuss topics or simply hang out with like-minded DeFi enthusiasts. <br>
 
-- :fontawesome-brands-discord: – <a href="https://discord.gg/NxxaU3Xf" target="_blank">Discord</a>
+- :fontawesome-brands-discord: – <a href="https://discord.gg/swapdex" target="_blank">Discord</a>
 - :fontawesome-brands-telegram: – <a href="https://t.me/officialswapdexgroup" target="_blank">Telegram</a>
 - :fontawesome-brands-youtube: – <a href="https://www.youtube.com/channel/UCSeVQXDI3kdDS_U0gWBgmgQ" target="_blank">YouTube</a>
 - :fontawesome-brands-twitter: – <a href="https://twitter.com/swapdexo" target="_blank">Twitter</a>

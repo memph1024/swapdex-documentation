@@ -2,7 +2,7 @@
 
 Errors in Substrate-based chains are usually accompanied by descriptive messages. The substrate explorer translates and displays those descriptive messages to help users understand what might have caused the error or inform the user about performed on-chain actions.
 
-If this page does not answer your question, try to reach out to the community and us on [Discord](https://discord.gg/NeExTVSs) for more information on troubleshooting your issue.
+If this page does not answer your question, try to reach out to the community and us on [Discord](https://discord.gg/swapdex) for more information on troubleshooting your issue.
 
 ---
 

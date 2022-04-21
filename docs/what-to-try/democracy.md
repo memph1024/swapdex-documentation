@@ -89,7 +89,7 @@ Even though combined both Lucious and Petar vote with more SDX than Grandad, the
 
 ### **Tallying**
 
-Thre are Three different scenarios depending on which entity proposed the proposal and whether all council members voted yes. We can use the following table for reference.
+There are Three different scenarios depending on which entity proposed the proposal and whether all council members voted yes. We can use the following table for reference.
 
 | Entity        | Metric     |
 |--------------|-----------|
@@ -296,7 +296,7 @@ Fast-tracked referenda are the only type of referenda that can be active alongsi
 
 In some circumstances, you may want to appeal to the on-chain council to enact a change on your behalf. One example of this circumstance is the case of lost or locked funds when the funds were lost due to a human interface error (such as inputting an address for another network). When these circumstances can be proven beyond a reasonable doubt to be an error, the council may consider a governance motion to correct it.
 
-The first step to appeal to the council is to get in contact with the councillors. There is no singular place where you are guaranteed to grab every councillor's ear with your message. However, there are a handful of good places to start where you can get the attention of some of them. Our <a href="https://discord.gg/NadFhHSY" target="_blank">Discord Server</a> is one such place. After creating an account and joining our server, you can post a well-thought-through message here that lays down your case and provides justification for why you think the council should consider enacting a change to the protocol on your behalf.
+The first step to appeal to the council is to get in contact with the councillors. There is no singular place where you are guaranteed to grab every councillor's ear with your message. However, there are a handful of good places to start where you can get the attention of some of them. Our <a href="https://discord.gg/swapdex" target="_blank">Discord Server</a> is one such place. After creating an account and joining our server, you can post a well-thought-through message here that lays down your case and provides justification for why you think the council should consider enacting a change to the protocol on your behalf.
 
 At some point you will likely need a place for a longer-form discussion. When you write a post on Discord make sure you present all the evidence for your circumstances and state clearly what kind of change you would suggest to the councillors to enact. Remember - the councillors do not need to make the change, it is your responsibility to make a strong case for why the change should be made.
 

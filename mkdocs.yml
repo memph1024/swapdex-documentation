@@ -55,7 +55,7 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/swapdexo
     - icon: fontawesome/brands/discord
-      link: https://discord.gg/6pTHUQNtYv
+      link: https://discord.gg/swapdex
 extra_css:
   - stylesheets/extra.css
 

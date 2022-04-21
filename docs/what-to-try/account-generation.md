@@ -5,7 +5,7 @@ To start interacting with SwapDEX, you need a wallet or account that enables you
 
 The following guide will show you how easy setting up a SwapDEX account is and what exact steps you need to take. 
 
-If you encounter any issues or problems, please feel free to reach out to us on <a href="https://discord.gg/DAHehdnP" target="_blank">Discord</a>.
+If you encounter any issues or problems, please feel free to reach out to us on <a href="https://discord.gg/swapdex" target="_blank">Discord</a>.
 
 ---
 

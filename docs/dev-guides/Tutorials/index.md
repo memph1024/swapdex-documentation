@@ -17,7 +17,7 @@ We would love for you to give feedback in these early stages, so please feel fre
 
 **Technical Chats**
 
-- [Discord DApps Channel](https://discord.gg/fxnuMPwC)
+- [Discord DApps Channel](https://discord.gg/swapdex)
 
 <br></br>
 

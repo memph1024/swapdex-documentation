@@ -80,7 +80,7 @@ As the sale of tokens is a nascent practice, the treatment of SDX by regulatory 
 
 ### **How can I add SwapDEX to MetaMask?**
 
-KUSARI RPC URL : `https://rpc.swapdex.network/` <br>
+RPC URL : `https://rpc.swapdex.network/` <br>
 Chain ID : `70` <br>
 Currency Symbol : `SDX` <br>
 Explorer: `https://evm.swapdex.network/` <br>
@@ -147,11 +147,12 @@ Upcoming events concerning the chain can be found on the upcoming <a href="https
 
 ### **Where can I buy SDX?**
 
-Work in Progress
+
+You can buy SDX at <a href="https://pancakeswap.finance/swap?inputCurrency=0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56&outputCurrency=0x351494731D28f35d648C200b35E628aecba3E577" target="_blank">PancakeSwap</a>
 
 ### **Where can I find the tokenomics?**
 
-Link is coming soon
+The tokenomics can be found on our website: <a href="https://swapdex.network" target="_blank">https://swapdex.network</a>
 
 ### **Where do I find further information on how to become a validator?**
 
@@ -210,13 +211,13 @@ One way to estimate the minimum amount of SDX your validator needs to make it to
 
 Yes, you can set your validator into the "chill" status by going to your "<a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/staking/targets" target="_blank">account actions</a>" page and click on the "STOP" button. This will move your validator into a sleeping stance without losing funds.
 Reasons for pausing might be intended migration to another server or an upcoming extended server maintenance.
-You might want to inform your Nominators on the SwapDEX <a href="https://forum.swapdex.network/" target="_blank">Forum</a> or on <a href="https://discord.com/invite/kC5gwsu25k" target="_blank">Discord</a> to give them a heads-up about missing payouts.
+You might want to inform your Nominators on the SwapDEX <a href="https://forum.swapdex.network/" target="_blank">Forum</a> or on <a href="https://discord.gg/swapdex" target="_blank">Discord</a> to give them a heads-up about missing payouts.
 
 You can find further information in the <a href="https://docs.swapdex.network/deep-dives/staking/#chilling" target="_blank">deep dive</a>.
 
 ### **I want to switch my VPS provider/Change my server hardware. What do I need to consider?**
 
-WHAT ABOUT CHILLING AND SESSION KEYS DO I USE OLD ONE AND I AM GOOD TO GO?
+You can follow our <a href="https://docs.swapdex.network/validator-guides/change-vps-provider/" target="_blank">guide</a> to change the VPS provider.
 
 ### **I ran out of storage on my Validator. How do I migrate without the risk of getting slashed/losing funds?**
 -> look above
@@ -225,7 +226,7 @@ WHAT ABOUT CHILLING AND SESSION KEYS DO I USE OLD ONE AND I AM GOOD TO GO?
 
 Being on the waiting list means that your validator has successfully connected to the chain and is - from a technical standpoint - working as intended. The most likely reason for being in the waiting list is that the amount of SDX nominated (staked) is not high enough to be in the top 300. The amount of nominated (staked) SDX on your validator will determine if you can make it into the top 300. You can go to the targets page of the explorer to check your rank and see how much is needed for you to move into the active set of validators <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/staking/targets" target="_blank">here</a> (sort for total stake and check which has the least amount to be eligible for the next era to determine the threshold)
 
-Other reasons may be connectivity issues from you or your providers side. You can check out <a href="https://discord.com/invite/kC5gwsu25k" target="_blank">Discord</a> or the <a href="https://forum.swapdex.network/" target="_blank">Forum</a> and seek help there.
+Other reasons may be connectivity issues from you or your providers side. You can check out <a href="https://discord.gg/swapdex" target="_blank">Discord</a> or the <a href="https://forum.swapdex.network/" target="_blank">Forum</a> and seek help there.
 
 ## **Networking FAQs**
 ---
@@ -262,7 +263,7 @@ Send an Email to: `marketing@swapdex.network`
 
 ### **Where does the community action take place?**
 
-Find us on <a href="https://discord.com/invite/kC5gwsu25k" target="_blank">Discord</a>, <a href="https://twitter.com/swapdexo" target="_blank">Twitter</a> , <a href="https://t.me/officialswapdexgroup" target="_blank">Telegram</a> on <a href="https://www.reddit.com/r/swapdex/" target="_blank">reddit</a> and in our <a href="https://forum.swapdex.network/" target="_blank">Forum</a>
+Find us on <a href="https://discord.gg/swapdex" target="_blank">Discord</a>, <a href="https://twitter.com/swapdexo" target="_blank">Twitter</a> , <a href="https://t.me/officialswapdexgroup" target="_blank">Telegram</a> on <a href="https://www.reddit.com/r/swapdex/" target="_blank">reddit</a> and in our <a href="https://forum.swapdex.network/" target="_blank">Forum</a>
 
 You can find further information on <a href="https://swapdex.medium.com/" target="_blank">Medium</a>.
 

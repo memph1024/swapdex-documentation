@@ -201,7 +201,7 @@ Reported and confirmed slashes in that category can lead to the transfer of the 
 |              | Isolated Event                                                 | >10% of validators offending                                                                               | >33% of validators offending                                |
 |:------------:|----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
 | Liveliness   | Chill, no slash                                                | Chill, plus penalties that increase linearly with the number of corresponding validators that are offline  | Slash increases, requires 44% to attain a maximum slash of 7% |
-| Equivocation | Chill, plus slash of 0,0004% (assuming 1500 active validators) | Slash, increases in a linear manner                                                                        | Maximum slash of 100%                                       |
+| Equivocation | Chill, plus slash of 0,01% (assuming 300 active validators) | Slash, increases in a linear manner                                                                        | Maximum slash of 100%                                       |
 | Misconduct   | 100% Slash                                                     | 100% Slash                                                                                                 | 100% Slash                                                  |
 
 !!! warning

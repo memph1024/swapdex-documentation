@@ -185,7 +185,7 @@ The inflation rate is based on the amount of SDX tokens locked in staking. Assum
 SwapDEX opted to start with an active set of 300 validators to create a reasonable and solid foundation for the chain. It's important to note that different projects have different definitions of their validators/nodes, whereas for SwapDEX, every validator is running their own validating node that performs full verification of the Chain, votes on finality and produces blocks in their decided slots. Comparable projects operate on about 150 active validators.
 
 Additionally, the validation is not the sole source of staking. Nominators participate in the staking system as well and receive rewards on the funds they are willing to commit/bond.
-For every validator, there is a maximum of 256 Nominations possible, with a total of 76,800 possible participants for the reward system for now.
+For every validator, there is a maximum of 256 Nominations possible, with a total of 76,800 possible participants in the staking system for now.
 The amount of active validators can be changed later by decision of the community through fair and decentralised governance decisions.
 
 - Further Information can be found here: <a href="https://docs.swapdex.network/validator-guides/validator/" target="_blank">Validation</a> and <a href="https://docs.swapdex.network/what-to-try/nominator/" target="_blank">Nomination</a>

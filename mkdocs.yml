@@ -17,7 +17,7 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
 
 theme:
   font:
@@ -32,26 +32,25 @@ theme:
     - navigation.indexes
     - navigation.top
     - toc.integrate
-    
+
   name: material
   custom_dir: overrides
   logo: assets/swapdex-logo-circlewhite.png
   favicon: assets/swapdex-icon.png
   language: en
-  
+
 plugins:
   - search
   - mkdocs-video
-  
 
 extra:
   # Default mkdocs-material alternate links for untranslated pages
   # https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
   alternate:
     - name: English
-      link: ""
+      link: ''
       lang: en
-  social: 
+  social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/swapdexo
     - icon: fontawesome/brands/discord
@@ -64,18 +63,17 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-
 nav:
-  - Home: 
+  - Home:
       - 'index.md'
-      - 'Quick Start' : 'home/quick-start.md'
+      - 'Quick Start': 'home/quick-start.md'
       - 'FAQs': 'home/FAQs.md'
   - 'Credits': 'credits.md'
-  - 'Get Started': 
+  - 'Get Started':
       - 'get-started/index.md'
       - 'Faucet': 'get-started/faucet.md'
       - 'Claims': 'get-started/claims.md'
-      - 'EVM <-> Substrate Transfers' : 'get-started/internal-transfer.md'
+      - 'EVM <-> Substrate Transfers': 'get-started/internal-transfer.md'
       - 'Endpoints': 'get-started/endpoints.md'
       - 'Transfer Balances': 'get-started/transfer-balances.md'
   - 'What to Try?':
@@ -90,18 +88,19 @@ nav:
       - 'Create an Account': 'validator-guides/account-generation.md'
       - 'Validator Payout Overview': 'validator-guides/validator-payout-overview.md'
       - 'Secure your Validator': 'validator-guides/secure-validator.md'
-      - 'Change VPS Provider' : 'validator-guides/change-vps-provider.md'
+      - 'Change VPS Provider': 'validator-guides/change-vps-provider.md'
+      - 'Update Binaries': 'validator-guides/update-binaries.md'
       - 'Stop Validating': 'validator-guides/stop-validating.md'
   - 'Troubleshooting':
-      - 'Resolve Errors' : 'troubleshooting/01-substrate-error-codes.md'
-      - 'Glossary' : 'troubleshooting/02-Glossary.md'
+      - 'Resolve Errors': 'troubleshooting/01-substrate-error-codes.md'
+      - 'Glossary': 'troubleshooting/02-Glossary.md'
   - 'Developer Guides':
       - 'dev-guides/index.md'
       - 'Tutorials':
           - 'dev-guides/Tutorials/index.md'
           - 'EVM Tutorial':
               - 'dev-guides/Tutorials/evm-tutorial/index.md'
-              - 'Tools and Resources': 
+              - 'Tools and Resources':
                   - 'Libraries': 'dev-guides/Tutorials/evm-tutorial/evm-tools-and-res/eth-libs.md'
                   - 'Tools': 'dev-guides/Tutorials/evm-tutorial/evm-tools-and-res/waffle.md'
                   - 'EVM Balances': 'dev-guides/Tutorials/evm-tutorial/evm-tools-and-res/evm-balances.md'
@@ -111,12 +110,6 @@ nav:
   - 'Deep Dives':
       - 'EVM Pallet': 'deep-dives/evm-pallet.md'
       - 'Keys': 'deep-dives/substrate_keys.md'
-      - 'Using Web3.js': 'deep-dives/Using-Web3js.md' 
+      - 'Using Web3.js': 'deep-dives/Using-Web3js.md'
       - 'Staking': 'deep-dives/staking.md'
-      - 'Bridges': 'deep-dives/bridges.md'       
-
-
-
-
-    
-    
+      - 'Bridges': 'deep-dives/bridges.md'

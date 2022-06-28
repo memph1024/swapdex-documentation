@@ -1,4 +1,4 @@
-# **HONOR TO WHON HONOR IS DUE** :sparkles:
+# **HONOR TO WHOM HONOR IS DUE** :sparkles:
 ---
 
 This documentation is standing on the shoulders of many brilliant minds within the blockchain universe.

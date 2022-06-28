@@ -247,7 +247,7 @@ Upon seeing their proposal removed, a submitter who is not properly introduced t
 
 All stakeholders are free to signal their approval of any of the registered candidates.
 
-Council elections are handled by the same <a href="https://arxiv.org/pdf/2004.12990.pdf" target="_blank">Phragmén election process</a> that selects validators from the available pool based on nominations. However, coin holders' votes for councillors are isolated from any of the nominations they may have on validators. Council terms last for one day on SwapDEX.
+Council elections are handled by the same <a href="https://arxiv.org/pdf/2004.12990.pdf" target="_blank">Phragmén election process</a> that selects validators from the available pool based on nominations. However, coin holders' votes for councillors are isolated from any of the nominations they may have on validators. Council terms last for 24 days on SwapDEX.
 
 At the end of each term, Phragmén election algorithm runs and the result will choose the new councillors based on the vote configurations of all voters. The election also chooses a set number of runners up (currently 19 on Kusari) that will remain in the queue with their votes intact.
 

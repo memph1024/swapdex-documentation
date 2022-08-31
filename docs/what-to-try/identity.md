@@ -10,7 +10,7 @@ Users can set an identity by registering through default fields such as legal na
 
 Users must reserve funds in a bond to store their information on chain: 0.033333, and 0.008333 per each field beyond the legal name. These funds are locked, not spent - they are returned when the identity is cleared.
 
-The easierst way to create a on-chain identiy is to click the gear icon next to your account on the <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/explorer" target="_blank">Substrate Explorer App</a> and select "Set on-chain identity".
+The easiest way to create a on-chain identiy is to click the gear icon next to your account on the <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.swapdex.network#/explorer" target="_blank">Substrate Explorer App</a> and select "Set on-chain identity".
 
 ![set-identiy](assets/set-identiy-01.png#center)
 

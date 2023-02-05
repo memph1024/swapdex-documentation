@@ -66,9 +66,9 @@ extra_javascript:
 nav:
   - Home:
       - 'index.md'
+      - 'Tokenomics': 'home/tokenomics.md'
       - 'Quick Start': 'home/quick-start.md'
       - 'FAQs': 'home/FAQs.md'
-  - 'Credits': 'credits.md'
   - 'Get Started':
       - 'get-started/index.md'
       - 'Faucet': 'get-started/faucet.md'
@@ -94,8 +94,12 @@ nav:
   - 'Troubleshooting':
       - 'Resolve Errors': 'troubleshooting/01-substrate-error-codes.md'
       - 'Glossary': 'troubleshooting/02-Glossary.md'
-  - 'Developer Guides':
+  - 'Developers':
       - 'dev-guides/index.md'
+      - 'SDX Academy': 'dev-guides/sdx-academy.md'
+      - 'Chain documentation': 'dev-guides/chain-docs.md'
+      - 'NFT documentation': 'dev-guides/nft-docs.md'
+      - 'Bug bounty': 'dev-guides/bug-bounty.md'
       - 'Tutorials':
           - 'dev-guides/Tutorials/index.md'
           - 'EVM Tutorial':
@@ -107,9 +111,16 @@ nav:
               - 'Guides':
                   - 'Connect to SwapDEX': 'dev-guides/Tutorials/evm-tutorial/Tutorial/using-mm.md'
                   - 'Deploy with Truffle': 'dev-guides/Tutorials/evm-tutorial/Tutorial/using-truffle.md'
+  - 'Web3 Projects':
+      - 'web3-projects/index.md'
+      - 'DEX Listing': 'web3-projects/dex-listing.md'
+      - 'NFT Creators': 'web3-projects/nft-creators.md'
+      - 'Migration Guide': 'web3-projects/migration-guide.md'
+      - 'Partnerships': 'web3-projects/partnerships.md'
   - 'Deep Dives':
       - 'EVM Pallet': 'deep-dives/evm-pallet.md'
       - 'Keys': 'deep-dives/substrate_keys.md'
       - 'Using Web3.js': 'deep-dives/Using-Web3js.md'
       - 'Staking': 'deep-dives/staking.md'
       - 'Bridges': 'deep-dives/bridges.md'
+  - 'Credits': 'credits.md'
